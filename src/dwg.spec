@@ -7474,6 +7474,10 @@ DWG_OBJECT(POINTCLOUD)
   DECODE_UNKNOWN_BITS
 DWG_OBJECT_END
 
+DWG_OBJECT(POINTCLOUDEX)
+  DECODE_UNKNOWN_BITS
+DWG_OBJECT_END
+
 // NanoSPDS License Parser (flexlm) or nanoCAD SPDS.
 // Probably used by 3rd party extensions or
 // AEC/MAP/MECH to mark or protect their objects.
