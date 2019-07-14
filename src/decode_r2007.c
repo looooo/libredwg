@@ -1198,14 +1198,12 @@ int
 obj_handle_stream (Bit_Chain *restrict dat, Dwg_Object *restrict obj,
                    Bit_Chain *restrict hdl_dat)
 {
-  long unsigned int bit8 = obj->bitsize / 8;
   long unsigned int pos = dat->byte;
   // The handle stream offset, i.e. end of the object, right after
   // the has_strings bit.
-  obj->hdlpos = obj->bitsize; // relative to dat
-  // restrict it to 0-end
-  hdl_dat->byte = bit8;
-  hdl_dat->bit = obj->bitsize % 8;
+  // Restrict it to 0 - end
+  hdl_dat->byte = obj->hdlpos / 8;
+  hdl_dat->bit = obj->hdlpos % 8;
   // bit_reset_chain (hdl_dat); //but keep the same start
   if (!obj->handlestream_size)
     {
@@ -1213,9 +1211,9 @@ obj_handle_stream (Bit_Chain *restrict dat, Dwg_Object *restrict obj,
       LOG_TRACE (" Hdlsize: %lu,", obj->handlestream_size);
     }
   hdl_dat->size = obj->size;
-  pos = (pos * 8) + obj->bitsize + obj->handlestream_size;
-  LOG_HANDLE (" hdl_dat: @%lu.%u - @%lu.%lu (%lu)", bit8, hdl_dat->bit,
-              pos / 8, pos % 8, hdl_dat->size);
+  pos = (pos*8) + obj->bitsize + obj->handlestream_size;
+  LOG_HANDLE (" hdl_dat: @%lu.%u - @%lu.%lu (%lu)", hdl_dat->byte, hdl_dat->bit, pos / 8,
+              pos % 8, hdl_dat->size);
   LOG_TRACE ("\n")
   return 0;
 }
@@ -1263,7 +1261,7 @@ obj_string_stream (Bit_Chain *restrict dat, Dwg_Object *restrict obj,
 
   bit_advance_position (str, -1); //-17
   str->byte -= 2;
-  LOG_HANDLE (" @%lu.%u", str->byte, str->bit & 7);
+  // LOG_HANDLE (" @%lu.%u", str->byte, str->bit & 7);
   data_size = (BITCODE_RL)bit_read_RS (str);
   LOG_HANDLE (" data_size: %u/0x%x", data_size, data_size);
 
@@ -1283,8 +1281,8 @@ obj_string_stream (Bit_Chain *restrict dat, Dwg_Object *restrict obj,
   str->byte -= 2;
   if (data_size > obj->bitsize)
     {
-      LOG_WARN ("Invalid string stream data_size: @%lu.%u\n", str->byte,
-                str->bit & 7);
+      LOG_WARN ("Invalid string stream data_size: @%lu.%u", str->byte,
+                 str->bit & 7);
       obj->has_strings = 0;
       bit_reset_chain (str);
       return DWG_ERR_NOTYETSUPPORTED; // a very low severity error
