@@ -64,6 +64,10 @@ int dwg_decode_add_object (Dwg_Data *restrict dwg, Bit_Chain *dat,
                            Bit_Chain *hdl_dat, long unsigned int address);
 void bfr_read (void *restrict dst, BITCODE_RC *restrict *restrict src,
                size_t size);
+void bfr_read_32 (void *restrict dst, BITCODE_RC *restrict *restrict src,
+                  size_t size);
+void bfr_read_64 (void *restrict dst, BITCODE_RC *restrict *restrict src,
+                  size_t size);
 
 /* reused with free */
 void dwg_free_xdata_resbuf (Dwg_Resbuf *rbuf);
