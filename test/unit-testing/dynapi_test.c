@@ -21585,6 +21585,3066 @@ static int test_ACSH_SWEEP_CLASS (const Dwg_Object *obj)
   }
   return failed;
 }
+static int test_AEC_AECDBDISPREPBDGELEVLINEPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPBDGELEVLINEPLAN100 *restrict aec_aecdbdisprepbdgelevlineplan100 = obj->tio.object->tio.AEC_AECDBDISPREPBDGELEVLINEPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepbdgelevlineplan100, "AEC_AECDBDISPREPBDGELEVLINEPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepbdgelevlineplan100->parent, sizeof (aec_aecdbdisprepbdgelevlineplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPBDGELEVLINEPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPBDGELEVLINEPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPBDGELEVLINEPLAN50 *restrict aec_aecdbdisprepbdgelevlineplan50 = obj->tio.object->tio.AEC_AECDBDISPREPBDGELEVLINEPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepbdgelevlineplan50, "AEC_AECDBDISPREPBDGELEVLINEPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepbdgelevlineplan50->parent, sizeof (aec_aecdbdisprepbdgelevlineplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPBDGELEVLINEPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100 *restrict aec_aecdbdisprepbdgsectionlineplan100 = obj->tio.object->tio.AEC_AECDBDISPREPBDGSECTIONLINEPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepbdgsectionlineplan100, "AEC_AECDBDISPREPBDGSECTIONLINEPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepbdgsectionlineplan100->parent, sizeof (aec_aecdbdisprepbdgsectionlineplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPBDGSECTIONLINEPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50 *restrict aec_aecdbdisprepbdgsectionlineplan50 = obj->tio.object->tio.AEC_AECDBDISPREPBDGSECTIONLINEPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepbdgsectionlineplan50, "AEC_AECDBDISPREPBDGSECTIONLINEPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepbdgsectionlineplan50->parent, sizeof (aec_aecdbdisprepbdgsectionlineplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPBDGSECTIONLINEPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPCEILINGGRIDPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPCEILINGGRIDPLAN100 *restrict aec_aecdbdisprepceilinggridplan100 = obj->tio.object->tio.AEC_AECDBDISPREPCEILINGGRIDPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepceilinggridplan100, "AEC_AECDBDISPREPCEILINGGRIDPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepceilinggridplan100->parent, sizeof (aec_aecdbdisprepceilinggridplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPCEILINGGRIDPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPCEILINGGRIDPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPCEILINGGRIDPLAN50 *restrict aec_aecdbdisprepceilinggridplan50 = obj->tio.object->tio.AEC_AECDBDISPREPCEILINGGRIDPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepceilinggridplan50, "AEC_AECDBDISPREPCEILINGGRIDPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepceilinggridplan50->parent, sizeof (aec_aecdbdisprepceilinggridplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPCEILINGGRIDPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPCOLUMNGRIDPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPCOLUMNGRIDPLAN100 *restrict aec_aecdbdisprepcolumngridplan100 = obj->tio.object->tio.AEC_AECDBDISPREPCOLUMNGRIDPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepcolumngridplan100, "AEC_AECDBDISPREPCOLUMNGRIDPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepcolumngridplan100->parent, sizeof (aec_aecdbdisprepcolumngridplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPCOLUMNGRIDPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPCOLUMNGRIDPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPCOLUMNGRIDPLAN50 *restrict aec_aecdbdisprepcolumngridplan50 = obj->tio.object->tio.AEC_AECDBDISPREPCOLUMNGRIDPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepcolumngridplan50, "AEC_AECDBDISPREPCOLUMNGRIDPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepcolumngridplan50->parent, sizeof (aec_aecdbdisprepcolumngridplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPCOLUMNGRIDPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100 *restrict aec_aecdbdisprepcurtainwalllayoutplan100 = obj->tio.object->tio.AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepcurtainwalllayoutplan100, "AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepcurtainwalllayoutplan100->parent, sizeof (aec_aecdbdisprepcurtainwalllayoutplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50 *restrict aec_aecdbdisprepcurtainwalllayoutplan50 = obj->tio.object->tio.AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepcurtainwalllayoutplan50, "AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepcurtainwalllayoutplan50->parent, sizeof (aec_aecdbdisprepcurtainwalllayoutplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100 *restrict aec_aecdbdisprepcurtainwallunitplan100 = obj->tio.object->tio.AEC_AECDBDISPREPCURTAINWALLUNITPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepcurtainwallunitplan100, "AEC_AECDBDISPREPCURTAINWALLUNITPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepcurtainwallunitplan100->parent, sizeof (aec_aecdbdisprepcurtainwallunitplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPCURTAINWALLUNITPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50 *restrict aec_aecdbdisprepcurtainwallunitplan50 = obj->tio.object->tio.AEC_AECDBDISPREPCURTAINWALLUNITPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepcurtainwallunitplan50, "AEC_AECDBDISPREPCURTAINWALLUNITPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepcurtainwallunitplan50->parent, sizeof (aec_aecdbdisprepcurtainwallunitplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPCURTAINWALLUNITPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPMVBLOCKREFPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPMVBLOCKREFPLAN100 *restrict aec_aecdbdisprepmvblockrefplan100 = obj->tio.object->tio.AEC_AECDBDISPREPMVBLOCKREFPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepmvblockrefplan100, "AEC_AECDBDISPREPMVBLOCKREFPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepmvblockrefplan100->parent, sizeof (aec_aecdbdisprepmvblockrefplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPMVBLOCKREFPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPMVBLOCKREFPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPMVBLOCKREFPLAN50 *restrict aec_aecdbdisprepmvblockrefplan50 = obj->tio.object->tio.AEC_AECDBDISPREPMVBLOCKREFPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepmvblockrefplan50, "AEC_AECDBDISPREPMVBLOCKREFPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepmvblockrefplan50->parent, sizeof (aec_aecdbdisprepmvblockrefplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPMVBLOCKREFPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPROOFPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPROOFPLAN100 *restrict aec_aecdbdispreproofplan100 = obj->tio.object->tio.AEC_AECDBDISPREPROOFPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdispreproofplan100, "AEC_AECDBDISPREPROOFPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdispreproofplan100->parent, sizeof (aec_aecdbdispreproofplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPROOFPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPROOFPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPROOFPLAN50 *restrict aec_aecdbdispreproofplan50 = obj->tio.object->tio.AEC_AECDBDISPREPROOFPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdispreproofplan50, "AEC_AECDBDISPREPROOFPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdispreproofplan50->parent, sizeof (aec_aecdbdispreproofplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPROOFPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPROOFSLABPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPROOFSLABPLAN100 *restrict aec_aecdbdispreproofslabplan100 = obj->tio.object->tio.AEC_AECDBDISPREPROOFSLABPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdispreproofslabplan100, "AEC_AECDBDISPREPROOFSLABPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdispreproofslabplan100->parent, sizeof (aec_aecdbdispreproofslabplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPROOFSLABPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPROOFSLABPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPROOFSLABPLAN50 *restrict aec_aecdbdispreproofslabplan50 = obj->tio.object->tio.AEC_AECDBDISPREPROOFSLABPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdispreproofslabplan50, "AEC_AECDBDISPREPROOFSLABPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdispreproofslabplan50->parent, sizeof (aec_aecdbdispreproofslabplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPROOFSLABPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPSLABPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPSLABPLAN100 *restrict aec_aecdbdisprepslabplan100 = obj->tio.object->tio.AEC_AECDBDISPREPSLABPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepslabplan100, "AEC_AECDBDISPREPSLABPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepslabplan100->parent, sizeof (aec_aecdbdisprepslabplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPSLABPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPSLABPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPSLABPLAN50 *restrict aec_aecdbdisprepslabplan50 = obj->tio.object->tio.AEC_AECDBDISPREPSLABPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepslabplan50, "AEC_AECDBDISPREPSLABPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepslabplan50->parent, sizeof (aec_aecdbdisprepslabplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPSLABPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPSPACEPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPSPACEPLAN100 *restrict aec_aecdbdisprepspaceplan100 = obj->tio.object->tio.AEC_AECDBDISPREPSPACEPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepspaceplan100, "AEC_AECDBDISPREPSPACEPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepspaceplan100->parent, sizeof (aec_aecdbdisprepspaceplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPSPACEPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPSPACEPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPSPACEPLAN50 *restrict aec_aecdbdisprepspaceplan50 = obj->tio.object->tio.AEC_AECDBDISPREPSPACEPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepspaceplan50, "AEC_AECDBDISPREPSPACEPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepspaceplan50->parent, sizeof (aec_aecdbdisprepspaceplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPSPACEPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPWALLPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPWALLPLAN100 *restrict aec_aecdbdisprepwallplan100 = obj->tio.object->tio.AEC_AECDBDISPREPWALLPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepwallplan100, "AEC_AECDBDISPREPWALLPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepwallplan100->parent, sizeof (aec_aecdbdisprepwallplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPWALLPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPWALLPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPWALLPLAN50 *restrict aec_aecdbdisprepwallplan50 = obj->tio.object->tio.AEC_AECDBDISPREPWALLPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepwallplan50, "AEC_AECDBDISPREPWALLPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepwallplan50->parent, sizeof (aec_aecdbdisprepwallplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPWALLPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100 *restrict aec_aecdbdisprepwindowassemblyplan100 = obj->tio.object->tio.AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepwindowassemblyplan100, "AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepwindowassemblyplan100->parent, sizeof (aec_aecdbdisprepwindowassemblyplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50 *restrict aec_aecdbdisprepwindowassemblyplan50 = obj->tio.object->tio.AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepwindowassemblyplan50, "AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepwindowassemblyplan50->parent, sizeof (aec_aecdbdisprepwindowassemblyplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPZONE100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPZONE100 *restrict aec_aecdbdisprepzone100 = obj->tio.object->tio.AEC_AECDBDISPREPZONE100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepzone100, "AEC_AECDBDISPREPZONE100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepzone100->parent, sizeof (aec_aecdbdisprepzone100->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPZONE100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_AECDBDISPREPZONE50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_AECDBDISPREPZONE50 *restrict aec_aecdbdisprepzone50 = obj->tio.object->tio.AEC_AECDBDISPREPZONE50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_aecdbdisprepzone50, "AEC_AECDBDISPREPZONE50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_aecdbdisprepzone50->parent, sizeof (aec_aecdbdisprepzone50->parent)))
+        pass ();
+    else
+        fail ("AEC_AECDBDISPREPZONE50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DB_DISP_REP_DIM_GROUP_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DB_DISP_REP_DIM_GROUP_PLAN *restrict aec_db_disp_rep_dim_group_plan = obj->tio.object->tio.AEC_DB_DISP_REP_DIM_GROUP_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_db_disp_rep_dim_group_plan, "AEC_DB_DISP_REP_DIM_GROUP_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_db_disp_rep_dim_group_plan->parent, sizeof (aec_db_disp_rep_dim_group_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DB_DISP_REP_DIM_GROUP_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DB_DISP_REP_DIM_GROUP_PLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DB_DISP_REP_DIM_GROUP_PLAN100 *restrict aec_db_disp_rep_dim_group_plan100 = obj->tio.object->tio.AEC_DB_DISP_REP_DIM_GROUP_PLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_db_disp_rep_dim_group_plan100, "AEC_DB_DISP_REP_DIM_GROUP_PLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_db_disp_rep_dim_group_plan100->parent, sizeof (aec_db_disp_rep_dim_group_plan100->parent)))
+        pass ();
+    else
+        fail ("AEC_DB_DISP_REP_DIM_GROUP_PLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DB_DISP_REP_DIM_GROUP_PLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DB_DISP_REP_DIM_GROUP_PLAN50 *restrict aec_db_disp_rep_dim_group_plan50 = obj->tio.object->tio.AEC_DB_DISP_REP_DIM_GROUP_PLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_db_disp_rep_dim_group_plan50, "AEC_DB_DISP_REP_DIM_GROUP_PLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_db_disp_rep_dim_group_plan50->parent, sizeof (aec_db_disp_rep_dim_group_plan50->parent)))
+        pass ();
+    else
+        fail ("AEC_DB_DISP_REP_DIM_GROUP_PLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100 *restrict aec_disprepaecdbdisprepmasselemplan100 = obj->tio.object->tio.AEC_DISPREPAECDBDISPREPMASSELEMPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disprepaecdbdisprepmasselemplan100, "AEC_DISPREPAECDBDISPREPMASSELEMPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disprepaecdbdisprepmasselemplan100->parent, sizeof (aec_disprepaecdbdisprepmasselemplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPREPAECDBDISPREPMASSELEMPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50 *restrict aec_disprepaecdbdisprepmasselemplan50 = obj->tio.object->tio.AEC_DISPREPAECDBDISPREPMASSELEMPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disprepaecdbdisprepmasselemplan50, "AEC_DISPREPAECDBDISPREPMASSELEMPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disprepaecdbdisprepmasselemplan50->parent, sizeof (aec_disprepaecdbdisprepmasselemplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPREPAECDBDISPREPMASSELEMPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100 *restrict aec_disprepaecdbdisprepmassgroupplan100 = obj->tio.object->tio.AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disprepaecdbdisprepmassgroupplan100, "AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disprepaecdbdisprepmassgroupplan100->parent, sizeof (aec_disprepaecdbdisprepmassgroupplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50 *restrict aec_disprepaecdbdisprepmassgroupplan50 = obj->tio.object->tio.AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disprepaecdbdisprepmassgroupplan50, "AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disprepaecdbdisprepmassgroupplan50->parent, sizeof (aec_disprepaecdbdisprepmassgroupplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPREPAECDBDISPREPOPENINGPLAN100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPREPAECDBDISPREPOPENINGPLAN100 *restrict aec_disprepaecdbdisprepopeningplan100 = obj->tio.object->tio.AEC_DISPREPAECDBDISPREPOPENINGPLAN100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disprepaecdbdisprepopeningplan100, "AEC_DISPREPAECDBDISPREPOPENINGPLAN100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disprepaecdbdisprepopeningplan100->parent, sizeof (aec_disprepaecdbdisprepopeningplan100->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPREPAECDBDISPREPOPENINGPLAN100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPREPAECDBDISPREPOPENINGPLAN50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPREPAECDBDISPREPOPENINGPLAN50 *restrict aec_disprepaecdbdisprepopeningplan50 = obj->tio.object->tio.AEC_DISPREPAECDBDISPREPOPENINGPLAN50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disprepaecdbdisprepopeningplan50, "AEC_DISPREPAECDBDISPREPOPENINGPLAN50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disprepaecdbdisprepopeningplan50->parent, sizeof (aec_disprepaecdbdisprepopeningplan50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPREPAECDBDISPREPOPENINGPLAN50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED *restrict aec_disprepaecdbdisprepopeningplanreflected = obj->tio.object->tio.AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disprepaecdbdisprepopeningplanreflected, "AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disprepaecdbdisprepopeningplanreflected->parent, sizeof (aec_disprepaecdbdisprepopeningplanreflected->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN *restrict aec_disprepaecdbdisprepopeningsillplan = obj->tio.object->tio.AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disprepaecdbdisprepopeningsillplan, "AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disprepaecdbdisprepopeningsillplan->parent, sizeof (aec_disprepaecdbdisprepopeningsillplan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPROPSMASSELEMPLANCOMMON (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPROPSMASSELEMPLANCOMMON *restrict aec_dispropsmasselemplancommon = obj->tio.object->tio.AEC_DISPROPSMASSELEMPLANCOMMON;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_dispropsmasselemplancommon, "AEC_DISPROPSMASSELEMPLANCOMMON", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_dispropsmasselemplancommon->parent, sizeof (aec_dispropsmasselemplancommon->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPROPSMASSELEMPLANCOMMON.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPROPSMASSGROUPPLANCOMMON (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPROPSMASSGROUPPLANCOMMON *restrict aec_dispropsmassgroupplancommon = obj->tio.object->tio.AEC_DISPROPSMASSGROUPPLANCOMMON;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_dispropsmassgroupplancommon, "AEC_DISPROPSMASSGROUPPLANCOMMON", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_dispropsmassgroupplancommon->parent, sizeof (aec_dispropsmassgroupplancommon->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPROPSMASSGROUPPLANCOMMON.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPROPSOPENINGPLANCOMMON (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPROPSOPENINGPLANCOMMON *restrict aec_dispropsopeningplancommon = obj->tio.object->tio.AEC_DISPROPSOPENINGPLANCOMMON;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_dispropsopeningplancommon, "AEC_DISPROPSOPENINGPLANCOMMON", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_dispropsopeningplancommon->parent, sizeof (aec_dispropsopeningplancommon->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPROPSOPENINGPLANCOMMON.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPROPSOPENINGPLANCOMMONHATCHED (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPROPSOPENINGPLANCOMMONHATCHED *restrict aec_dispropsopeningplancommonhatched = obj->tio.object->tio.AEC_DISPROPSOPENINGPLANCOMMONHATCHED;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_dispropsopeningplancommonhatched, "AEC_DISPROPSOPENINGPLANCOMMONHATCHED", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_dispropsopeningplancommonhatched->parent, sizeof (aec_dispropsopeningplancommonhatched->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPROPSOPENINGPLANCOMMONHATCHED.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISPROPSOPENINGSILLPLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISPROPSOPENINGSILLPLAN *restrict aec_dispropsopeningsillplan = obj->tio.object->tio.AEC_DISPROPSOPENINGSILLPLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_dispropsopeningsillplan, "AEC_DISPROPSOPENINGSILLPLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_dispropsopeningsillplan->parent, sizeof (aec_dispropsopeningsillplan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISPROPSOPENINGSILLPLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_2D_SECTION (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_2D_SECTION *restrict aec_disp_props_2d_section = obj->tio.object->tio.AEC_DISP_PROPS_2D_SECTION;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_2d_section, "AEC_DISP_PROPS_2D_SECTION", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_2d_section->parent, sizeof (aec_disp_props_2d_section->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_2D_SECTION.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_CLIP_VOLUME (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_CLIP_VOLUME *restrict aec_disp_props_clip_volume = obj->tio.object->tio.AEC_DISP_PROPS_CLIP_VOLUME;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_clip_volume, "AEC_DISP_PROPS_CLIP_VOLUME", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_clip_volume->parent, sizeof (aec_disp_props_clip_volume->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_CLIP_VOLUME.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_CLIP_VOLUME_RESULT (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_CLIP_VOLUME_RESULT *restrict aec_disp_props_clip_volume_result = obj->tio.object->tio.AEC_DISP_PROPS_CLIP_VOLUME_RESULT;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_clip_volume_result, "AEC_DISP_PROPS_CLIP_VOLUME_RESULT", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_clip_volume_result->parent, sizeof (aec_disp_props_clip_volume_result->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_CLIP_VOLUME_RESULT.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_DIM (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_DIM *restrict aec_disp_props_dim = obj->tio.object->tio.AEC_DISP_PROPS_DIM;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_dim, "AEC_DISP_PROPS_DIM", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_dim->parent, sizeof (aec_disp_props_dim->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_DIM.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_DISPLAYTHEME (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_DISPLAYTHEME *restrict aec_disp_props_displaytheme = obj->tio.object->tio.AEC_DISP_PROPS_DISPLAYTHEME;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_displaytheme, "AEC_DISP_PROPS_DISPLAYTHEME", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_displaytheme->parent, sizeof (aec_disp_props_displaytheme->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_DISPLAYTHEME.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_DOOR (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_DOOR *restrict aec_disp_props_door = obj->tio.object->tio.AEC_DISP_PROPS_DOOR;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_door, "AEC_DISP_PROPS_DOOR", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_door->parent, sizeof (aec_disp_props_door->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_DOOR.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_DOOR_NOMINAL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_DOOR_NOMINAL *restrict aec_disp_props_door_nominal = obj->tio.object->tio.AEC_DISP_PROPS_DOOR_NOMINAL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_door_nominal, "AEC_DISP_PROPS_DOOR_NOMINAL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_door_nominal->parent, sizeof (aec_disp_props_door_nominal->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_DOOR_NOMINAL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_DOOR_PLAN_100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_DOOR_PLAN_100 *restrict aec_disp_props_door_plan_100 = obj->tio.object->tio.AEC_DISP_PROPS_DOOR_PLAN_100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_door_plan_100, "AEC_DISP_PROPS_DOOR_PLAN_100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_door_plan_100->parent, sizeof (aec_disp_props_door_plan_100->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_DOOR_PLAN_100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_DOOR_PLAN_50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_DOOR_PLAN_50 *restrict aec_disp_props_door_plan_50 = obj->tio.object->tio.AEC_DISP_PROPS_DOOR_PLAN_50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_door_plan_50, "AEC_DISP_PROPS_DOOR_PLAN_50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_door_plan_50->parent, sizeof (aec_disp_props_door_plan_50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_DOOR_PLAN_50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN *restrict aec_disp_props_door_threshold_plan = obj->tio.object->tio.AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_door_threshold_plan, "AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_door_threshold_plan->parent, sizeof (aec_disp_props_door_threshold_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN *restrict aec_disp_props_door_threshold_symbol_plan = obj->tio.object->tio.AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_door_threshold_symbol_plan, "AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_door_threshold_symbol_plan->parent, sizeof (aec_disp_props_door_threshold_symbol_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL *restrict aec_disp_props_editinplaceprofile_model = obj->tio.object->tio.AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_editinplaceprofile_model, "AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_editinplaceprofile_model->parent, sizeof (aec_disp_props_editinplaceprofile_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_ENT (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_ENT *restrict aec_disp_props_ent = obj->tio.object->tio.AEC_DISP_PROPS_ENT;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_ent, "AEC_DISP_PROPS_ENT", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_ent->parent, sizeof (aec_disp_props_ent->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_ENT.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_ENT_REF (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_ENT_REF *restrict aec_disp_props_ent_ref = obj->tio.object->tio.AEC_DISP_PROPS_ENT_REF;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_ent_ref, "AEC_DISP_PROPS_ENT_REF", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_ent_ref->parent, sizeof (aec_disp_props_ent_ref->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_ENT_REF.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL *restrict aec_disp_props_grid_assembly_model = obj->tio.object->tio.AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_grid_assembly_model, "AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_grid_assembly_model->parent, sizeof (aec_disp_props_grid_assembly_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN *restrict aec_disp_props_grid_assembly_plan = obj->tio.object->tio.AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_grid_assembly_plan, "AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_grid_assembly_plan->parent, sizeof (aec_disp_props_grid_assembly_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_LAYOUT_CURVE (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_LAYOUT_CURVE *restrict aec_disp_props_layout_curve = obj->tio.object->tio.AEC_DISP_PROPS_LAYOUT_CURVE;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_layout_curve, "AEC_DISP_PROPS_LAYOUT_CURVE", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_layout_curve->parent, sizeof (aec_disp_props_layout_curve->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_LAYOUT_CURVE.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_LAYOUT_GRID2D (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_LAYOUT_GRID2D *restrict aec_disp_props_layout_grid2d = obj->tio.object->tio.AEC_DISP_PROPS_LAYOUT_GRID2D;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_layout_grid2d, "AEC_DISP_PROPS_LAYOUT_GRID2D", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_layout_grid2d->parent, sizeof (aec_disp_props_layout_grid2d->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_LAYOUT_GRID2D.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_LAYOUT_GRID3D (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_LAYOUT_GRID3D *restrict aec_disp_props_layout_grid3d = obj->tio.object->tio.AEC_DISP_PROPS_LAYOUT_GRID3D;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_layout_grid3d, "AEC_DISP_PROPS_LAYOUT_GRID3D", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_layout_grid3d->parent, sizeof (aec_disp_props_layout_grid3d->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_LAYOUT_GRID3D.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_MASKBLOCK (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_MASKBLOCK *restrict aec_disp_props_maskblock = obj->tio.object->tio.AEC_DISP_PROPS_MASKBLOCK;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_maskblock, "AEC_DISP_PROPS_MASKBLOCK", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_maskblock->parent, sizeof (aec_disp_props_maskblock->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_MASKBLOCK.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_MASS_ELEM_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_MASS_ELEM_MODEL *restrict aec_disp_props_mass_elem_model = obj->tio.object->tio.AEC_DISP_PROPS_MASS_ELEM_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_mass_elem_model, "AEC_DISP_PROPS_MASS_ELEM_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_mass_elem_model->parent, sizeof (aec_disp_props_mass_elem_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_MASS_ELEM_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_MASS_GROUP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_MASS_GROUP *restrict aec_disp_props_mass_group = obj->tio.object->tio.AEC_DISP_PROPS_MASS_GROUP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_mass_group, "AEC_DISP_PROPS_MASS_GROUP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_mass_group->parent, sizeof (aec_disp_props_mass_group->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_MASS_GROUP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_MATERIAL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_MATERIAL *restrict aec_disp_props_material = obj->tio.object->tio.AEC_DISP_PROPS_MATERIAL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_material, "AEC_DISP_PROPS_MATERIAL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_material->parent, sizeof (aec_disp_props_material->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_MATERIAL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_OPENING (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_OPENING *restrict aec_disp_props_opening = obj->tio.object->tio.AEC_DISP_PROPS_OPENING;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_opening, "AEC_DISP_PROPS_OPENING", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_opening->parent, sizeof (aec_disp_props_opening->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_OPENING.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_POLYGON_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_POLYGON_MODEL *restrict aec_disp_props_polygon_model = obj->tio.object->tio.AEC_DISP_PROPS_POLYGON_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_polygon_model, "AEC_DISP_PROPS_POLYGON_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_polygon_model->parent, sizeof (aec_disp_props_polygon_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_POLYGON_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_POLYGON_TRUECOLOUR (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_POLYGON_TRUECOLOUR *restrict aec_disp_props_polygon_truecolour = obj->tio.object->tio.AEC_DISP_PROPS_POLYGON_TRUECOLOUR;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_polygon_truecolour, "AEC_DISP_PROPS_POLYGON_TRUECOLOUR", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_polygon_truecolour->parent, sizeof (aec_disp_props_polygon_truecolour->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_POLYGON_TRUECOLOUR.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_RAILING_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_RAILING_MODEL *restrict aec_disp_props_railing_model = obj->tio.object->tio.AEC_DISP_PROPS_RAILING_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_railing_model, "AEC_DISP_PROPS_RAILING_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_railing_model->parent, sizeof (aec_disp_props_railing_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_RAILING_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_RAILING_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_RAILING_PLAN *restrict aec_disp_props_railing_plan = obj->tio.object->tio.AEC_DISP_PROPS_RAILING_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_railing_plan, "AEC_DISP_PROPS_RAILING_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_railing_plan->parent, sizeof (aec_disp_props_railing_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_RAILING_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_ROOF (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_ROOF *restrict aec_disp_props_roof = obj->tio.object->tio.AEC_DISP_PROPS_ROOF;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_roof, "AEC_DISP_PROPS_ROOF", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_roof->parent, sizeof (aec_disp_props_roof->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_ROOF.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_ROOFSLAB (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_ROOFSLAB *restrict aec_disp_props_roofslab = obj->tio.object->tio.AEC_DISP_PROPS_ROOFSLAB;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_roofslab, "AEC_DISP_PROPS_ROOFSLAB", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_roofslab->parent, sizeof (aec_disp_props_roofslab->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_ROOFSLAB.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_ROOFSLAB_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_ROOFSLAB_PLAN *restrict aec_disp_props_roofslab_plan = obj->tio.object->tio.AEC_DISP_PROPS_ROOFSLAB_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_roofslab_plan, "AEC_DISP_PROPS_ROOFSLAB_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_roofslab_plan->parent, sizeof (aec_disp_props_roofslab_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_ROOFSLAB_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_SCHEDULE_TABLE (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_SCHEDULE_TABLE *restrict aec_disp_props_schedule_table = obj->tio.object->tio.AEC_DISP_PROPS_SCHEDULE_TABLE;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_schedule_table, "AEC_DISP_PROPS_SCHEDULE_TABLE", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_schedule_table->parent, sizeof (aec_disp_props_schedule_table->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_SCHEDULE_TABLE.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_SLAB (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_SLAB *restrict aec_disp_props_slab = obj->tio.object->tio.AEC_DISP_PROPS_SLAB;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_slab, "AEC_DISP_PROPS_SLAB", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_slab->parent, sizeof (aec_disp_props_slab->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_SLAB.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_SLAB_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_SLAB_PLAN *restrict aec_disp_props_slab_plan = obj->tio.object->tio.AEC_DISP_PROPS_SLAB_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_slab_plan, "AEC_DISP_PROPS_SLAB_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_slab_plan->parent, sizeof (aec_disp_props_slab_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_SLAB_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_SLICE (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_SLICE *restrict aec_disp_props_slice = obj->tio.object->tio.AEC_DISP_PROPS_SLICE;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_slice, "AEC_DISP_PROPS_SLICE", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_slice->parent, sizeof (aec_disp_props_slice->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_SLICE.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_SPACE_DECOMPOSED (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_SPACE_DECOMPOSED *restrict aec_disp_props_space_decomposed = obj->tio.object->tio.AEC_DISP_PROPS_SPACE_DECOMPOSED;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_space_decomposed, "AEC_DISP_PROPS_SPACE_DECOMPOSED", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_space_decomposed->parent, sizeof (aec_disp_props_space_decomposed->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_SPACE_DECOMPOSED.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_SPACE_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_SPACE_MODEL *restrict aec_disp_props_space_model = obj->tio.object->tio.AEC_DISP_PROPS_SPACE_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_space_model, "AEC_DISP_PROPS_SPACE_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_space_model->parent, sizeof (aec_disp_props_space_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_SPACE_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_SPACE_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_SPACE_PLAN *restrict aec_disp_props_space_plan = obj->tio.object->tio.AEC_DISP_PROPS_SPACE_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_space_plan, "AEC_DISP_PROPS_SPACE_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_space_plan->parent, sizeof (aec_disp_props_space_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_SPACE_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_STAIR_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_STAIR_MODEL *restrict aec_disp_props_stair_model = obj->tio.object->tio.AEC_DISP_PROPS_STAIR_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_stair_model, "AEC_DISP_PROPS_STAIR_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_stair_model->parent, sizeof (aec_disp_props_stair_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_STAIR_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_STAIR_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_STAIR_PLAN *restrict aec_disp_props_stair_plan = obj->tio.object->tio.AEC_DISP_PROPS_STAIR_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_stair_plan, "AEC_DISP_PROPS_STAIR_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_stair_plan->parent, sizeof (aec_disp_props_stair_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_STAIR_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING *restrict aec_disp_props_stair_plan_overlapping = obj->tio.object->tio.AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_stair_plan_overlapping, "AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_stair_plan_overlapping->parent, sizeof (aec_disp_props_stair_plan_overlapping->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_WALL_GRAPH (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_WALL_GRAPH *restrict aec_disp_props_wall_graph = obj->tio.object->tio.AEC_DISP_PROPS_WALL_GRAPH;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_wall_graph, "AEC_DISP_PROPS_WALL_GRAPH", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_wall_graph->parent, sizeof (aec_disp_props_wall_graph->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_WALL_GRAPH.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_WALL_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_WALL_MODEL *restrict aec_disp_props_wall_model = obj->tio.object->tio.AEC_DISP_PROPS_WALL_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_wall_model, "AEC_DISP_PROPS_WALL_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_wall_model->parent, sizeof (aec_disp_props_wall_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_WALL_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_WALL_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_WALL_PLAN *restrict aec_disp_props_wall_plan = obj->tio.object->tio.AEC_DISP_PROPS_WALL_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_wall_plan, "AEC_DISP_PROPS_WALL_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_wall_plan->parent, sizeof (aec_disp_props_wall_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_WALL_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_WALL_SCHEM (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_WALL_SCHEM *restrict aec_disp_props_wall_schem = obj->tio.object->tio.AEC_DISP_PROPS_WALL_SCHEM;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_wall_schem, "AEC_DISP_PROPS_WALL_SCHEM", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_wall_schem->parent, sizeof (aec_disp_props_wall_schem->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_WALL_SCHEM.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_WINDOW (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_WINDOW *restrict aec_disp_props_window = obj->tio.object->tio.AEC_DISP_PROPS_WINDOW;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_window, "AEC_DISP_PROPS_WINDOW", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_window->parent, sizeof (aec_disp_props_window->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_WINDOW.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN *restrict aec_disp_props_window_assembly_sill_plan = obj->tio.object->tio.AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_window_assembly_sill_plan, "AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_window_assembly_sill_plan->parent, sizeof (aec_disp_props_window_assembly_sill_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_WINDOW_NOMINAL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_WINDOW_NOMINAL *restrict aec_disp_props_window_nominal = obj->tio.object->tio.AEC_DISP_PROPS_WINDOW_NOMINAL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_window_nominal, "AEC_DISP_PROPS_WINDOW_NOMINAL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_window_nominal->parent, sizeof (aec_disp_props_window_nominal->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_WINDOW_NOMINAL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_WINDOW_PLAN_100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_WINDOW_PLAN_100 *restrict aec_disp_props_window_plan_100 = obj->tio.object->tio.AEC_DISP_PROPS_WINDOW_PLAN_100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_window_plan_100, "AEC_DISP_PROPS_WINDOW_PLAN_100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_window_plan_100->parent, sizeof (aec_disp_props_window_plan_100->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_WINDOW_PLAN_100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_WINDOW_PLAN_50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_WINDOW_PLAN_50 *restrict aec_disp_props_window_plan_50 = obj->tio.object->tio.AEC_DISP_PROPS_WINDOW_PLAN_50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_window_plan_50, "AEC_DISP_PROPS_WINDOW_PLAN_50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_window_plan_50->parent, sizeof (aec_disp_props_window_plan_50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_WINDOW_PLAN_50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_WINDOW_SILL_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_WINDOW_SILL_PLAN *restrict aec_disp_props_window_sill_plan = obj->tio.object->tio.AEC_DISP_PROPS_WINDOW_SILL_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_window_sill_plan, "AEC_DISP_PROPS_WINDOW_SILL_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_window_sill_plan->parent, sizeof (aec_disp_props_window_sill_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_WINDOW_SILL_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_PROPS_ZONE (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_PROPS_ZONE *restrict aec_disp_props_zone = obj->tio.object->tio.AEC_DISP_PROPS_ZONE;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_props_zone, "AEC_DISP_PROPS_ZONE", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_props_zone->parent, sizeof (aec_disp_props_zone->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_PROPS_ZONE.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_2D_SECTION (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_2D_SECTION *restrict aec_disp_rep_2d_section = obj->tio.object->tio.AEC_DISP_REP_2D_SECTION;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_2d_section, "AEC_DISP_REP_2D_SECTION", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_2d_section->parent, sizeof (aec_disp_rep_2d_section->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_2D_SECTION.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ANCHOR (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ANCHOR *restrict aec_disp_rep_anchor = obj->tio.object->tio.AEC_DISP_REP_ANCHOR;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_anchor, "AEC_DISP_REP_ANCHOR", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_anchor->parent, sizeof (aec_disp_rep_anchor->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ANCHOR.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ANCHOR_BUB_TO_GRID (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ANCHOR_BUB_TO_GRID *restrict aec_disp_rep_anchor_bub_to_grid = obj->tio.object->tio.AEC_DISP_REP_ANCHOR_BUB_TO_GRID;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_anchor_bub_to_grid, "AEC_DISP_REP_ANCHOR_BUB_TO_GRID", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_anchor_bub_to_grid->parent, sizeof (aec_disp_rep_anchor_bub_to_grid->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ANCHOR_BUB_TO_GRID.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL *restrict aec_disp_rep_anchor_bub_to_grid_model = obj->tio.object->tio.AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_anchor_bub_to_grid_model, "AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_anchor_bub_to_grid_model->parent, sizeof (aec_disp_rep_anchor_bub_to_grid_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP *restrict aec_disp_rep_anchor_bub_to_grid_rcp = obj->tio.object->tio.AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_anchor_bub_to_grid_rcp, "AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_anchor_bub_to_grid_rcp->parent, sizeof (aec_disp_rep_anchor_bub_to_grid_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ANCHOR_ENT_TO_NODE (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ANCHOR_ENT_TO_NODE *restrict aec_disp_rep_anchor_ent_to_node = obj->tio.object->tio.AEC_DISP_REP_ANCHOR_ENT_TO_NODE;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_anchor_ent_to_node, "AEC_DISP_REP_ANCHOR_ENT_TO_NODE", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_anchor_ent_to_node->parent, sizeof (aec_disp_rep_anchor_ent_to_node->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ANCHOR_ENT_TO_NODE.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT *restrict aec_disp_rep_anchor_ext_tag_to_ent = obj->tio.object->tio.AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_anchor_ext_tag_to_ent, "AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_anchor_ext_tag_to_ent->parent, sizeof (aec_disp_rep_anchor_ext_tag_to_ent->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ANCHOR_TAG_TO_ENT (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ANCHOR_TAG_TO_ENT *restrict aec_disp_rep_anchor_tag_to_ent = obj->tio.object->tio.AEC_DISP_REP_ANCHOR_TAG_TO_ENT;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_anchor_tag_to_ent, "AEC_DISP_REP_ANCHOR_TAG_TO_ENT", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_anchor_tag_to_ent->parent, sizeof (aec_disp_rep_anchor_tag_to_ent->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ANCHOR_TAG_TO_ENT.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_BDG_ELEVLINE_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_BDG_ELEVLINE_MODEL *restrict aec_disp_rep_bdg_elevline_model = obj->tio.object->tio.AEC_DISP_REP_BDG_ELEVLINE_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_bdg_elevline_model, "AEC_DISP_REP_BDG_ELEVLINE_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_bdg_elevline_model->parent, sizeof (aec_disp_rep_bdg_elevline_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_BDG_ELEVLINE_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_BDG_ELEVLINE_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_BDG_ELEVLINE_RCP *restrict aec_disp_rep_bdg_elevline_rcp = obj->tio.object->tio.AEC_DISP_REP_BDG_ELEVLINE_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_bdg_elevline_rcp, "AEC_DISP_REP_BDG_ELEVLINE_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_bdg_elevline_rcp->parent, sizeof (aec_disp_rep_bdg_elevline_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_BDG_ELEVLINE_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_BDG_SECTIONLINE_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_BDG_SECTIONLINE_MODEL *restrict aec_disp_rep_bdg_sectionline_model = obj->tio.object->tio.AEC_DISP_REP_BDG_SECTIONLINE_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_bdg_sectionline_model, "AEC_DISP_REP_BDG_SECTIONLINE_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_bdg_sectionline_model->parent, sizeof (aec_disp_rep_bdg_sectionline_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_BDG_SECTIONLINE_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_BDG_SECTIONLINE_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_BDG_SECTIONLINE_PLAN *restrict aec_disp_rep_bdg_sectionline_plan = obj->tio.object->tio.AEC_DISP_REP_BDG_SECTIONLINE_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_bdg_sectionline_plan, "AEC_DISP_REP_BDG_SECTIONLINE_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_bdg_sectionline_plan->parent, sizeof (aec_disp_rep_bdg_sectionline_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_BDG_SECTIONLINE_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_BDG_SECTIONLINE_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_BDG_SECTIONLINE_RCP *restrict aec_disp_rep_bdg_sectionline_rcp = obj->tio.object->tio.AEC_DISP_REP_BDG_SECTIONLINE_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_bdg_sectionline_rcp, "AEC_DISP_REP_BDG_SECTIONLINE_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_bdg_sectionline_rcp->parent, sizeof (aec_disp_rep_bdg_sectionline_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_BDG_SECTIONLINE_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_BDG_SECTION_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_BDG_SECTION_MODEL *restrict aec_disp_rep_bdg_section_model = obj->tio.object->tio.AEC_DISP_REP_BDG_SECTION_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_bdg_section_model, "AEC_DISP_REP_BDG_SECTION_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_bdg_section_model->parent, sizeof (aec_disp_rep_bdg_section_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_BDG_SECTION_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_BDG_SECTION_SUBDIV (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_BDG_SECTION_SUBDIV *restrict aec_disp_rep_bdg_section_subdiv = obj->tio.object->tio.AEC_DISP_REP_BDG_SECTION_SUBDIV;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_bdg_section_subdiv, "AEC_DISP_REP_BDG_SECTION_SUBDIV", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_bdg_section_subdiv->parent, sizeof (aec_disp_rep_bdg_section_subdiv->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_BDG_SECTION_SUBDIV.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CEILING_GRID (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CEILING_GRID *restrict aec_disp_rep_ceiling_grid = obj->tio.object->tio.AEC_DISP_REP_CEILING_GRID;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_ceiling_grid, "AEC_DISP_REP_CEILING_GRID", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_ceiling_grid->parent, sizeof (aec_disp_rep_ceiling_grid->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CEILING_GRID.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CEILING_GRID_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CEILING_GRID_MODEL *restrict aec_disp_rep_ceiling_grid_model = obj->tio.object->tio.AEC_DISP_REP_CEILING_GRID_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_ceiling_grid_model, "AEC_DISP_REP_CEILING_GRID_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_ceiling_grid_model->parent, sizeof (aec_disp_rep_ceiling_grid_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CEILING_GRID_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CEILING_GRID_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CEILING_GRID_RCP *restrict aec_disp_rep_ceiling_grid_rcp = obj->tio.object->tio.AEC_DISP_REP_CEILING_GRID_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_ceiling_grid_rcp, "AEC_DISP_REP_CEILING_GRID_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_ceiling_grid_rcp->parent, sizeof (aec_disp_rep_ceiling_grid_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CEILING_GRID_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CLIP_VOLUME_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CLIP_VOLUME_MODEL *restrict aec_disp_rep_clip_volume_model = obj->tio.object->tio.AEC_DISP_REP_CLIP_VOLUME_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_clip_volume_model, "AEC_DISP_REP_CLIP_VOLUME_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_clip_volume_model->parent, sizeof (aec_disp_rep_clip_volume_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CLIP_VOLUME_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CLIP_VOLUME_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CLIP_VOLUME_PLAN *restrict aec_disp_rep_clip_volume_plan = obj->tio.object->tio.AEC_DISP_REP_CLIP_VOLUME_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_clip_volume_plan, "AEC_DISP_REP_CLIP_VOLUME_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_clip_volume_plan->parent, sizeof (aec_disp_rep_clip_volume_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CLIP_VOLUME_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CLIP_VOLUME_RESULT (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CLIP_VOLUME_RESULT *restrict aec_disp_rep_clip_volume_result = obj->tio.object->tio.AEC_DISP_REP_CLIP_VOLUME_RESULT;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_clip_volume_result, "AEC_DISP_REP_CLIP_VOLUME_RESULT", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_clip_volume_result->parent, sizeof (aec_disp_rep_clip_volume_result->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CLIP_VOLUME_RESULT.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV *restrict aec_disp_rep_clip_volume_result_subdiv = obj->tio.object->tio.AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_clip_volume_result_subdiv, "AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_clip_volume_result_subdiv->parent, sizeof (aec_disp_rep_clip_volume_result_subdiv->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_COLUMN_GRID (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_COLUMN_GRID *restrict aec_disp_rep_column_grid = obj->tio.object->tio.AEC_DISP_REP_COLUMN_GRID;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_column_grid, "AEC_DISP_REP_COLUMN_GRID", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_column_grid->parent, sizeof (aec_disp_rep_column_grid->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_COLUMN_GRID.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_COLUMN_GRID_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_COLUMN_GRID_MODEL *restrict aec_disp_rep_column_grid_model = obj->tio.object->tio.AEC_DISP_REP_COLUMN_GRID_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_column_grid_model, "AEC_DISP_REP_COLUMN_GRID_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_column_grid_model->parent, sizeof (aec_disp_rep_column_grid_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_COLUMN_GRID_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_COLUMN_GRID_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_COLUMN_GRID_RCP *restrict aec_disp_rep_column_grid_rcp = obj->tio.object->tio.AEC_DISP_REP_COLUMN_GRID_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_column_grid_rcp, "AEC_DISP_REP_COLUMN_GRID_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_column_grid_rcp->parent, sizeof (aec_disp_rep_column_grid_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_COLUMN_GRID_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CONFIG (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CONFIG *restrict aec_disp_rep_config = obj->tio.object->tio.AEC_DISP_REP_CONFIG;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_config, "AEC_DISP_REP_CONFIG", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_config->parent, sizeof (aec_disp_rep_config->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CONFIG.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL *restrict aec_disp_rep_curtain_wall_layout_model = obj->tio.object->tio.AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_curtain_wall_layout_model, "AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_curtain_wall_layout_model->parent, sizeof (aec_disp_rep_curtain_wall_layout_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN *restrict aec_disp_rep_curtain_wall_layout_plan = obj->tio.object->tio.AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_curtain_wall_layout_plan, "AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_curtain_wall_layout_plan->parent, sizeof (aec_disp_rep_curtain_wall_layout_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL *restrict aec_disp_rep_curtain_wall_unit_model = obj->tio.object->tio.AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_curtain_wall_unit_model, "AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_curtain_wall_unit_model->parent, sizeof (aec_disp_rep_curtain_wall_unit_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN *restrict aec_disp_rep_curtain_wall_unit_plan = obj->tio.object->tio.AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_curtain_wall_unit_plan, "AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_curtain_wall_unit_plan->parent, sizeof (aec_disp_rep_curtain_wall_unit_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_DISPLAYTHEME (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_DISPLAYTHEME *restrict aec_disp_rep_displaytheme = obj->tio.object->tio.AEC_DISP_REP_DISPLAYTHEME;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_displaytheme, "AEC_DISP_REP_DISPLAYTHEME", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_displaytheme->parent, sizeof (aec_disp_rep_displaytheme->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_DISPLAYTHEME.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_DOOR_ELEV (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_DOOR_ELEV *restrict aec_disp_rep_door_elev = obj->tio.object->tio.AEC_DISP_REP_DOOR_ELEV;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_door_elev, "AEC_DISP_REP_DOOR_ELEV", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_door_elev->parent, sizeof (aec_disp_rep_door_elev->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_DOOR_ELEV.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_DOOR_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_DOOR_MODEL *restrict aec_disp_rep_door_model = obj->tio.object->tio.AEC_DISP_REP_DOOR_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_door_model, "AEC_DISP_REP_DOOR_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_door_model->parent, sizeof (aec_disp_rep_door_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_DOOR_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_DOOR_NOMINAL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_DOOR_NOMINAL *restrict aec_disp_rep_door_nominal = obj->tio.object->tio.AEC_DISP_REP_DOOR_NOMINAL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_door_nominal, "AEC_DISP_REP_DOOR_NOMINAL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_door_nominal->parent, sizeof (aec_disp_rep_door_nominal->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_DOOR_NOMINAL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_DOOR_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_DOOR_PLAN *restrict aec_disp_rep_door_plan = obj->tio.object->tio.AEC_DISP_REP_DOOR_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_door_plan, "AEC_DISP_REP_DOOR_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_door_plan->parent, sizeof (aec_disp_rep_door_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_DOOR_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_DOOR_PLAN_50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_DOOR_PLAN_50 *restrict aec_disp_rep_door_plan_50 = obj->tio.object->tio.AEC_DISP_REP_DOOR_PLAN_50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_door_plan_50, "AEC_DISP_REP_DOOR_PLAN_50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_door_plan_50->parent, sizeof (aec_disp_rep_door_plan_50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_DOOR_PLAN_50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_DOOR_PLAN_HEKTO (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_DOOR_PLAN_HEKTO *restrict aec_disp_rep_door_plan_hekto = obj->tio.object->tio.AEC_DISP_REP_DOOR_PLAN_HEKTO;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_door_plan_hekto, "AEC_DISP_REP_DOOR_PLAN_HEKTO", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_door_plan_hekto->parent, sizeof (aec_disp_rep_door_plan_hekto->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_DOOR_PLAN_HEKTO.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_DOOR_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_DOOR_RCP *restrict aec_disp_rep_door_rcp = obj->tio.object->tio.AEC_DISP_REP_DOOR_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_door_rcp, "AEC_DISP_REP_DOOR_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_door_rcp->parent, sizeof (aec_disp_rep_door_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_DOOR_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_DOOR_THRESHOLD_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_DOOR_THRESHOLD_PLAN *restrict aec_disp_rep_door_threshold_plan = obj->tio.object->tio.AEC_DISP_REP_DOOR_THRESHOLD_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_door_threshold_plan, "AEC_DISP_REP_DOOR_THRESHOLD_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_door_threshold_plan->parent, sizeof (aec_disp_rep_door_threshold_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_DOOR_THRESHOLD_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN *restrict aec_disp_rep_door_threshold_symbol_plan = obj->tio.object->tio.AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_door_threshold_symbol_plan, "AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_door_threshold_symbol_plan->parent, sizeof (aec_disp_rep_door_threshold_symbol_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_EDITINPLACEPROFILE (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_EDITINPLACEPROFILE *restrict aec_disp_rep_editinplaceprofile = obj->tio.object->tio.AEC_DISP_REP_EDITINPLACEPROFILE;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_editinplaceprofile, "AEC_DISP_REP_EDITINPLACEPROFILE", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_editinplaceprofile->parent, sizeof (aec_disp_rep_editinplaceprofile->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_EDITINPLACEPROFILE.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ENT_REF (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ENT_REF *restrict aec_disp_rep_ent_ref = obj->tio.object->tio.AEC_DISP_REP_ENT_REF;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_ent_ref, "AEC_DISP_REP_ENT_REF", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_ent_ref->parent, sizeof (aec_disp_rep_ent_ref->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ENT_REF.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_LAYOUT_CURVE (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_LAYOUT_CURVE *restrict aec_disp_rep_layout_curve = obj->tio.object->tio.AEC_DISP_REP_LAYOUT_CURVE;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_layout_curve, "AEC_DISP_REP_LAYOUT_CURVE", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_layout_curve->parent, sizeof (aec_disp_rep_layout_curve->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_LAYOUT_CURVE.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_LAYOUT_GRID2D (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_LAYOUT_GRID2D *restrict aec_disp_rep_layout_grid2d = obj->tio.object->tio.AEC_DISP_REP_LAYOUT_GRID2D;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_layout_grid2d, "AEC_DISP_REP_LAYOUT_GRID2D", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_layout_grid2d->parent, sizeof (aec_disp_rep_layout_grid2d->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_LAYOUT_GRID2D.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_LAYOUT_GRID3D (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_LAYOUT_GRID3D *restrict aec_disp_rep_layout_grid3d = obj->tio.object->tio.AEC_DISP_REP_LAYOUT_GRID3D;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_layout_grid3d, "AEC_DISP_REP_LAYOUT_GRID3D", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_layout_grid3d->parent, sizeof (aec_disp_rep_layout_grid3d->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_LAYOUT_GRID3D.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MASKBLOCK_REF (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MASKBLOCK_REF *restrict aec_disp_rep_maskblock_ref = obj->tio.object->tio.AEC_DISP_REP_MASKBLOCK_REF;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_maskblock_ref, "AEC_DISP_REP_MASKBLOCK_REF", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_maskblock_ref->parent, sizeof (aec_disp_rep_maskblock_ref->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MASKBLOCK_REF.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MASKBLOCK_REF_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MASKBLOCK_REF_RCP *restrict aec_disp_rep_maskblock_ref_rcp = obj->tio.object->tio.AEC_DISP_REP_MASKBLOCK_REF_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_maskblock_ref_rcp, "AEC_DISP_REP_MASKBLOCK_REF_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_maskblock_ref_rcp->parent, sizeof (aec_disp_rep_maskblock_ref_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MASKBLOCK_REF_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MASS_ELEM_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MASS_ELEM_MODEL *restrict aec_disp_rep_mass_elem_model = obj->tio.object->tio.AEC_DISP_REP_MASS_ELEM_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_mass_elem_model, "AEC_DISP_REP_MASS_ELEM_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_mass_elem_model->parent, sizeof (aec_disp_rep_mass_elem_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MASS_ELEM_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MASS_ELEM_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MASS_ELEM_RCP *restrict aec_disp_rep_mass_elem_rcp = obj->tio.object->tio.AEC_DISP_REP_MASS_ELEM_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_mass_elem_rcp, "AEC_DISP_REP_MASS_ELEM_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_mass_elem_rcp->parent, sizeof (aec_disp_rep_mass_elem_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MASS_ELEM_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MASS_ELEM_SCHEM (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MASS_ELEM_SCHEM *restrict aec_disp_rep_mass_elem_schem = obj->tio.object->tio.AEC_DISP_REP_MASS_ELEM_SCHEM;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_mass_elem_schem, "AEC_DISP_REP_MASS_ELEM_SCHEM", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_mass_elem_schem->parent, sizeof (aec_disp_rep_mass_elem_schem->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MASS_ELEM_SCHEM.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MASS_GROUP_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MASS_GROUP_MODEL *restrict aec_disp_rep_mass_group_model = obj->tio.object->tio.AEC_DISP_REP_MASS_GROUP_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_mass_group_model, "AEC_DISP_REP_MASS_GROUP_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_mass_group_model->parent, sizeof (aec_disp_rep_mass_group_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MASS_GROUP_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MASS_GROUP_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MASS_GROUP_PLAN *restrict aec_disp_rep_mass_group_plan = obj->tio.object->tio.AEC_DISP_REP_MASS_GROUP_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_mass_group_plan, "AEC_DISP_REP_MASS_GROUP_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_mass_group_plan->parent, sizeof (aec_disp_rep_mass_group_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MASS_GROUP_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MASS_GROUP_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MASS_GROUP_RCP *restrict aec_disp_rep_mass_group_rcp = obj->tio.object->tio.AEC_DISP_REP_MASS_GROUP_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_mass_group_rcp, "AEC_DISP_REP_MASS_GROUP_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_mass_group_rcp->parent, sizeof (aec_disp_rep_mass_group_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MASS_GROUP_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MATERIAL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MATERIAL *restrict aec_disp_rep_material = obj->tio.object->tio.AEC_DISP_REP_MATERIAL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_material, "AEC_DISP_REP_MATERIAL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_material->parent, sizeof (aec_disp_rep_material->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MATERIAL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MVBLOCK_REF (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MVBLOCK_REF *restrict aec_disp_rep_mvblock_ref = obj->tio.object->tio.AEC_DISP_REP_MVBLOCK_REF;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_mvblock_ref, "AEC_DISP_REP_MVBLOCK_REF", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_mvblock_ref->parent, sizeof (aec_disp_rep_mvblock_ref->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MVBLOCK_REF.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MVBLOCK_REF_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MVBLOCK_REF_MODEL *restrict aec_disp_rep_mvblock_ref_model = obj->tio.object->tio.AEC_DISP_REP_MVBLOCK_REF_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_mvblock_ref_model, "AEC_DISP_REP_MVBLOCK_REF_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_mvblock_ref_model->parent, sizeof (aec_disp_rep_mvblock_ref_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MVBLOCK_REF_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_MVBLOCK_REF_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_MVBLOCK_REF_RCP *restrict aec_disp_rep_mvblock_ref_rcp = obj->tio.object->tio.AEC_DISP_REP_MVBLOCK_REF_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_mvblock_ref_rcp, "AEC_DISP_REP_MVBLOCK_REF_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_mvblock_ref_rcp->parent, sizeof (aec_disp_rep_mvblock_ref_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_MVBLOCK_REF_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_OPENING (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_OPENING *restrict aec_disp_rep_opening = obj->tio.object->tio.AEC_DISP_REP_OPENING;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_opening, "AEC_DISP_REP_OPENING", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_opening->parent, sizeof (aec_disp_rep_opening->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_OPENING.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_OPENING_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_OPENING_MODEL *restrict aec_disp_rep_opening_model = obj->tio.object->tio.AEC_DISP_REP_OPENING_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_opening_model, "AEC_DISP_REP_OPENING_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_opening_model->parent, sizeof (aec_disp_rep_opening_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_OPENING_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_POLYGON_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_POLYGON_MODEL *restrict aec_disp_rep_polygon_model = obj->tio.object->tio.AEC_DISP_REP_POLYGON_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_polygon_model, "AEC_DISP_REP_POLYGON_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_polygon_model->parent, sizeof (aec_disp_rep_polygon_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_POLYGON_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_POLYGON_TRUECOLOUR (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_POLYGON_TRUECOLOUR *restrict aec_disp_rep_polygon_truecolour = obj->tio.object->tio.AEC_DISP_REP_POLYGON_TRUECOLOUR;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_polygon_truecolour, "AEC_DISP_REP_POLYGON_TRUECOLOUR", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_polygon_truecolour->parent, sizeof (aec_disp_rep_polygon_truecolour->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_POLYGON_TRUECOLOUR.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_RAILING_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_RAILING_MODEL *restrict aec_disp_rep_railing_model = obj->tio.object->tio.AEC_DISP_REP_RAILING_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_railing_model, "AEC_DISP_REP_RAILING_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_railing_model->parent, sizeof (aec_disp_rep_railing_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_RAILING_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_RAILING_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_RAILING_PLAN *restrict aec_disp_rep_railing_plan = obj->tio.object->tio.AEC_DISP_REP_RAILING_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_railing_plan, "AEC_DISP_REP_RAILING_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_railing_plan->parent, sizeof (aec_disp_rep_railing_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_RAILING_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_RAILING_PLAN_100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_RAILING_PLAN_100 *restrict aec_disp_rep_railing_plan_100 = obj->tio.object->tio.AEC_DISP_REP_RAILING_PLAN_100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_railing_plan_100, "AEC_DISP_REP_RAILING_PLAN_100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_railing_plan_100->parent, sizeof (aec_disp_rep_railing_plan_100->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_RAILING_PLAN_100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_RAILING_PLAN_50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_RAILING_PLAN_50 *restrict aec_disp_rep_railing_plan_50 = obj->tio.object->tio.AEC_DISP_REP_RAILING_PLAN_50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_railing_plan_50, "AEC_DISP_REP_RAILING_PLAN_50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_railing_plan_50->parent, sizeof (aec_disp_rep_railing_plan_50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_RAILING_PLAN_50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ROOFSLAB_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ROOFSLAB_MODEL *restrict aec_disp_rep_roofslab_model = obj->tio.object->tio.AEC_DISP_REP_ROOFSLAB_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_roofslab_model, "AEC_DISP_REP_ROOFSLAB_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_roofslab_model->parent, sizeof (aec_disp_rep_roofslab_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ROOFSLAB_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ROOFSLAB_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ROOFSLAB_PLAN *restrict aec_disp_rep_roofslab_plan = obj->tio.object->tio.AEC_DISP_REP_ROOFSLAB_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_roofslab_plan, "AEC_DISP_REP_ROOFSLAB_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_roofslab_plan->parent, sizeof (aec_disp_rep_roofslab_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ROOFSLAB_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ROOF_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ROOF_MODEL *restrict aec_disp_rep_roof_model = obj->tio.object->tio.AEC_DISP_REP_ROOF_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_roof_model, "AEC_DISP_REP_ROOF_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_roof_model->parent, sizeof (aec_disp_rep_roof_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ROOF_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ROOF_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ROOF_PLAN *restrict aec_disp_rep_roof_plan = obj->tio.object->tio.AEC_DISP_REP_ROOF_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_roof_plan, "AEC_DISP_REP_ROOF_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_roof_plan->parent, sizeof (aec_disp_rep_roof_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ROOF_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ROOF_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ROOF_RCP *restrict aec_disp_rep_roof_rcp = obj->tio.object->tio.AEC_DISP_REP_ROOF_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_roof_rcp, "AEC_DISP_REP_ROOF_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_roof_rcp->parent, sizeof (aec_disp_rep_roof_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ROOF_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_SCHEDULE_TABLE (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_SCHEDULE_TABLE *restrict aec_disp_rep_schedule_table = obj->tio.object->tio.AEC_DISP_REP_SCHEDULE_TABLE;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_schedule_table, "AEC_DISP_REP_SCHEDULE_TABLE", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_schedule_table->parent, sizeof (aec_disp_rep_schedule_table->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_SCHEDULE_TABLE.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_SET (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_SET *restrict aec_disp_rep_set = obj->tio.object->tio.AEC_DISP_REP_SET;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_set, "AEC_DISP_REP_SET", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_set->parent, sizeof (aec_disp_rep_set->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_SET.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_SLAB_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_SLAB_MODEL *restrict aec_disp_rep_slab_model = obj->tio.object->tio.AEC_DISP_REP_SLAB_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_slab_model, "AEC_DISP_REP_SLAB_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_slab_model->parent, sizeof (aec_disp_rep_slab_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_SLAB_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_SLAB_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_SLAB_PLAN *restrict aec_disp_rep_slab_plan = obj->tio.object->tio.AEC_DISP_REP_SLAB_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_slab_plan, "AEC_DISP_REP_SLAB_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_slab_plan->parent, sizeof (aec_disp_rep_slab_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_SLAB_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_SLICE (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_SLICE *restrict aec_disp_rep_slice = obj->tio.object->tio.AEC_DISP_REP_SLICE;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_slice, "AEC_DISP_REP_SLICE", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_slice->parent, sizeof (aec_disp_rep_slice->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_SLICE.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_SPACE_DECOMPOSED (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_SPACE_DECOMPOSED *restrict aec_disp_rep_space_decomposed = obj->tio.object->tio.AEC_DISP_REP_SPACE_DECOMPOSED;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_space_decomposed, "AEC_DISP_REP_SPACE_DECOMPOSED", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_space_decomposed->parent, sizeof (aec_disp_rep_space_decomposed->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_SPACE_DECOMPOSED.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_SPACE_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_SPACE_MODEL *restrict aec_disp_rep_space_model = obj->tio.object->tio.AEC_DISP_REP_SPACE_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_space_model, "AEC_DISP_REP_SPACE_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_space_model->parent, sizeof (aec_disp_rep_space_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_SPACE_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_SPACE_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_SPACE_PLAN *restrict aec_disp_rep_space_plan = obj->tio.object->tio.AEC_DISP_REP_SPACE_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_space_plan, "AEC_DISP_REP_SPACE_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_space_plan->parent, sizeof (aec_disp_rep_space_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_SPACE_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_SPACE_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_SPACE_RCP *restrict aec_disp_rep_space_rcp = obj->tio.object->tio.AEC_DISP_REP_SPACE_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_space_rcp, "AEC_DISP_REP_SPACE_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_space_rcp->parent, sizeof (aec_disp_rep_space_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_SPACE_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_SPACE_VOLUME (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_SPACE_VOLUME *restrict aec_disp_rep_space_volume = obj->tio.object->tio.AEC_DISP_REP_SPACE_VOLUME;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_space_volume, "AEC_DISP_REP_SPACE_VOLUME", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_space_volume->parent, sizeof (aec_disp_rep_space_volume->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_SPACE_VOLUME.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_STAIR_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_STAIR_MODEL *restrict aec_disp_rep_stair_model = obj->tio.object->tio.AEC_DISP_REP_STAIR_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_stair_model, "AEC_DISP_REP_STAIR_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_stair_model->parent, sizeof (aec_disp_rep_stair_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_STAIR_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_STAIR_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_STAIR_PLAN *restrict aec_disp_rep_stair_plan = obj->tio.object->tio.AEC_DISP_REP_STAIR_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_stair_plan, "AEC_DISP_REP_STAIR_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_stair_plan->parent, sizeof (aec_disp_rep_stair_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_STAIR_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_STAIR_PLAN_100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_STAIR_PLAN_100 *restrict aec_disp_rep_stair_plan_100 = obj->tio.object->tio.AEC_DISP_REP_STAIR_PLAN_100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_stair_plan_100, "AEC_DISP_REP_STAIR_PLAN_100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_stair_plan_100->parent, sizeof (aec_disp_rep_stair_plan_100->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_STAIR_PLAN_100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_STAIR_PLAN_50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_STAIR_PLAN_50 *restrict aec_disp_rep_stair_plan_50 = obj->tio.object->tio.AEC_DISP_REP_STAIR_PLAN_50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_stair_plan_50, "AEC_DISP_REP_STAIR_PLAN_50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_stair_plan_50->parent, sizeof (aec_disp_rep_stair_plan_50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_STAIR_PLAN_50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING *restrict aec_disp_rep_stair_plan_overlapping = obj->tio.object->tio.AEC_DISP_REP_STAIR_PLAN_OVERLAPPING;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_stair_plan_overlapping, "AEC_DISP_REP_STAIR_PLAN_OVERLAPPING", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_stair_plan_overlapping->parent, sizeof (aec_disp_rep_stair_plan_overlapping->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_STAIR_PLAN_OVERLAPPING.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_STAIR_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_STAIR_RCP *restrict aec_disp_rep_stair_rcp = obj->tio.object->tio.AEC_DISP_REP_STAIR_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_stair_rcp, "AEC_DISP_REP_STAIR_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_stair_rcp->parent, sizeof (aec_disp_rep_stair_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_STAIR_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WALL_GRAPH (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WALL_GRAPH *restrict aec_disp_rep_wall_graph = obj->tio.object->tio.AEC_DISP_REP_WALL_GRAPH;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_wall_graph, "AEC_DISP_REP_WALL_GRAPH", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_wall_graph->parent, sizeof (aec_disp_rep_wall_graph->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WALL_GRAPH.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WALL_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WALL_MODEL *restrict aec_disp_rep_wall_model = obj->tio.object->tio.AEC_DISP_REP_WALL_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_wall_model, "AEC_DISP_REP_WALL_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_wall_model->parent, sizeof (aec_disp_rep_wall_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WALL_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WALL_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WALL_PLAN *restrict aec_disp_rep_wall_plan = obj->tio.object->tio.AEC_DISP_REP_WALL_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_wall_plan, "AEC_DISP_REP_WALL_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_wall_plan->parent, sizeof (aec_disp_rep_wall_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WALL_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WALL_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WALL_RCP *restrict aec_disp_rep_wall_rcp = obj->tio.object->tio.AEC_DISP_REP_WALL_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_wall_rcp, "AEC_DISP_REP_WALL_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_wall_rcp->parent, sizeof (aec_disp_rep_wall_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WALL_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WALL_SCHEM (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WALL_SCHEM *restrict aec_disp_rep_wall_schem = obj->tio.object->tio.AEC_DISP_REP_WALL_SCHEM;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_wall_schem, "AEC_DISP_REP_WALL_SCHEM", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_wall_schem->parent, sizeof (aec_disp_rep_wall_schem->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WALL_SCHEM.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN *restrict aec_disp_rep_windowassembly_sill_plan = obj->tio.object->tio.AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_windowassembly_sill_plan, "AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_windowassembly_sill_plan->parent, sizeof (aec_disp_rep_windowassembly_sill_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL *restrict aec_disp_rep_window_assembly_model = obj->tio.object->tio.AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_window_assembly_model, "AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_window_assembly_model->parent, sizeof (aec_disp_rep_window_assembly_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN *restrict aec_disp_rep_window_assembly_plan = obj->tio.object->tio.AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_window_assembly_plan, "AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_window_assembly_plan->parent, sizeof (aec_disp_rep_window_assembly_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOW_ELEV (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOW_ELEV *restrict aec_disp_rep_window_elev = obj->tio.object->tio.AEC_DISP_REP_WINDOW_ELEV;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_window_elev, "AEC_DISP_REP_WINDOW_ELEV", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_window_elev->parent, sizeof (aec_disp_rep_window_elev->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOW_ELEV.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOW_MODEL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOW_MODEL *restrict aec_disp_rep_window_model = obj->tio.object->tio.AEC_DISP_REP_WINDOW_MODEL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_window_model, "AEC_DISP_REP_WINDOW_MODEL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_window_model->parent, sizeof (aec_disp_rep_window_model->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOW_MODEL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOW_NOMINAL (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOW_NOMINAL *restrict aec_disp_rep_window_nominal = obj->tio.object->tio.AEC_DISP_REP_WINDOW_NOMINAL;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_window_nominal, "AEC_DISP_REP_WINDOW_NOMINAL", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_window_nominal->parent, sizeof (aec_disp_rep_window_nominal->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOW_NOMINAL.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOW_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOW_PLAN *restrict aec_disp_rep_window_plan = obj->tio.object->tio.AEC_DISP_REP_WINDOW_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_window_plan, "AEC_DISP_REP_WINDOW_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_window_plan->parent, sizeof (aec_disp_rep_window_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOW_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOW_PLAN_100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOW_PLAN_100 *restrict aec_disp_rep_window_plan_100 = obj->tio.object->tio.AEC_DISP_REP_WINDOW_PLAN_100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_window_plan_100, "AEC_DISP_REP_WINDOW_PLAN_100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_window_plan_100->parent, sizeof (aec_disp_rep_window_plan_100->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOW_PLAN_100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOW_PLAN_50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOW_PLAN_50 *restrict aec_disp_rep_window_plan_50 = obj->tio.object->tio.AEC_DISP_REP_WINDOW_PLAN_50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_window_plan_50, "AEC_DISP_REP_WINDOW_PLAN_50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_window_plan_50->parent, sizeof (aec_disp_rep_window_plan_50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOW_PLAN_50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOW_RCP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOW_RCP *restrict aec_disp_rep_window_rcp = obj->tio.object->tio.AEC_DISP_REP_WINDOW_RCP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_window_rcp, "AEC_DISP_REP_WINDOW_RCP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_window_rcp->parent, sizeof (aec_disp_rep_window_rcp->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOW_RCP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_WINDOW_SILL_PLAN (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_WINDOW_SILL_PLAN *restrict aec_disp_rep_window_sill_plan = obj->tio.object->tio.AEC_DISP_REP_WINDOW_SILL_PLAN;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_window_sill_plan, "AEC_DISP_REP_WINDOW_SILL_PLAN", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_window_sill_plan->parent, sizeof (aec_disp_rep_window_sill_plan->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_WINDOW_SILL_PLAN.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_REP_ZONE (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_REP_ZONE *restrict aec_disp_rep_zone = obj->tio.object->tio.AEC_DISP_REP_ZONE;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rep_zone, "AEC_DISP_REP_ZONE", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rep_zone->parent, sizeof (aec_disp_rep_zone->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_REP_ZONE.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_ROPS_RAILING_PLAN_100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_ROPS_RAILING_PLAN_100 *restrict aec_disp_rops_railing_plan_100 = obj->tio.object->tio.AEC_DISP_ROPS_RAILING_PLAN_100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rops_railing_plan_100, "AEC_DISP_ROPS_RAILING_PLAN_100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rops_railing_plan_100->parent, sizeof (aec_disp_rops_railing_plan_100->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_ROPS_RAILING_PLAN_100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_ROPS_RAILING_PLAN_50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_ROPS_RAILING_PLAN_50 *restrict aec_disp_rops_railing_plan_50 = obj->tio.object->tio.AEC_DISP_ROPS_RAILING_PLAN_50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rops_railing_plan_50, "AEC_DISP_ROPS_RAILING_PLAN_50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rops_railing_plan_50->parent, sizeof (aec_disp_rops_railing_plan_50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_ROPS_RAILING_PLAN_50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_ROPS_STAIR_PLAN_100 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_ROPS_STAIR_PLAN_100 *restrict aec_disp_rops_stair_plan_100 = obj->tio.object->tio.AEC_DISP_ROPS_STAIR_PLAN_100;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rops_stair_plan_100, "AEC_DISP_ROPS_STAIR_PLAN_100", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rops_stair_plan_100->parent, sizeof (aec_disp_rops_stair_plan_100->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_ROPS_STAIR_PLAN_100.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_DISP_ROPS_STAIR_PLAN_50 (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_DISP_ROPS_STAIR_PLAN_50 *restrict aec_disp_rops_stair_plan_50 = obj->tio.object->tio.AEC_DISP_ROPS_STAIR_PLAN_50;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_disp_rops_stair_plan_50, "AEC_DISP_ROPS_STAIR_PLAN_50", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_disp_rops_stair_plan_50->parent, sizeof (aec_disp_rops_stair_plan_50->parent)))
+        pass ();
+    else
+        fail ("AEC_DISP_ROPS_STAIR_PLAN_50.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
+static int test_AEC_VARS_DWG_SETUP (const Dwg_Object *obj)
+{
+  int error = 0;
+  const Dwg_Object_Object *restrict obj_obj = obj->tio.object;
+  Dwg_Object_AEC_VARS_DWG_SETUP *restrict aec_vars_dwg_setup = obj->tio.object->tio.AEC_VARS_DWG_SETUP;
+  {
+    struct _dwg_object_object* parent;
+    if (dwg_dynapi_entity_value (aec_vars_dwg_setup, "AEC_VARS_DWG_SETUP", "parent", &parent, NULL)
+        && !memcmp (&parent, &aec_vars_dwg_setup->parent, sizeof (aec_vars_dwg_setup->parent)))
+        pass ();
+    else
+        fail ("AEC_VARS_DWG_SETUP.parent [struct _dwg_object_object*]");
+  }
+  return failed;
+}
 static int test_ANNOTSCALEOBJECTCONTEXTDATA (const Dwg_Object *obj)
 {
   int error = 0;
@@ -22287,22 +25347,6 @@ static int test_ASSOCACTION (const Dwg_Object *obj)
 
   }
   {
-    BITCODE_BL num_deps;
-    if (dwg_dynapi_entity_value (assocaction, "ASSOCACTION", "num_deps", &num_deps, NULL)
-        && num_deps == assocaction->num_deps)
-      pass ();
-    else
-      fail ("ASSOCACTION.num_deps [BL] %u != %u", assocaction->num_deps, num_deps);
-    num_deps++;
-    if (dwg_dynapi_entity_set_value (assocaction, "ASSOCACTION", "num_deps", &num_deps, 0)
-        && num_deps == assocaction->num_deps)
-      pass ();
-    else
-      fail ("ASSOCACTION.num_deps [BL] set+1 %u != %u", assocaction->num_deps, num_deps);
-    assocaction->num_deps--;
-
-  }
-  {
     BITCODE_H owningnetwork;
     if (dwg_dynapi_entity_value (assocaction, "ASSOCACTION", "owningnetwork", &owningnetwork, NULL)
         && !memcmp (&owningnetwork, &assocaction->owningnetwork, sizeof (assocaction->owningnetwork)))
@@ -22340,22 +25384,6 @@ static int test_ASSOCACTION (const Dwg_Object *obj)
     else
       fail ("ASSOCACTION.solution_status [BL] set+1 %u != %u", assocaction->solution_status, solution_status);
     assocaction->solution_status--;
-
-  }
-  {
-    BITCODE_BL status;
-    if (dwg_dynapi_entity_value (assocaction, "ASSOCACTION", "status", &status, NULL)
-        && status == assocaction->status)
-      pass ();
-    else
-      fail ("ASSOCACTION.status [BL] %u != %u", assocaction->status, status);
-    status++;
-    if (dwg_dynapi_entity_set_value (assocaction, "ASSOCACTION", "status", &status, 0)
-        && status == assocaction->status)
-      pass ();
-    else
-      fail ("ASSOCACTION.status [BL] set+1 %u != %u", assocaction->status, status);
-    assocaction->status--;
 
   }
   {
@@ -22524,22 +25552,6 @@ static int test_ASSOCALIGNEDDIMACTIONBODY (const Dwg_Object *obj)
         pass ();
     else
         fail ("ASSOCALIGNEDDIMACTIONBODY.r_node [H]");
-  }
-  {
-    BITCODE_H readdep;
-    if (dwg_dynapi_entity_value (assocaligneddimactionbody, "ASSOCALIGNEDDIMACTIONBODY", "readdep", &readdep, NULL)
-        && !memcmp (&readdep, &assocaligneddimactionbody->readdep, sizeof (assocaligneddimactionbody->readdep)))
-        pass ();
-    else
-        fail ("ASSOCALIGNEDDIMACTIONBODY.readdep [H]");
-  }
-  {
-    BITCODE_H writedep;
-    if (dwg_dynapi_entity_value (assocaligneddimactionbody, "ASSOCALIGNEDDIMACTIONBODY", "writedep", &writedep, NULL)
-        && !memcmp (&writedep, &assocaligneddimactionbody->writedep, sizeof (assocaligneddimactionbody->writedep)))
-        pass ();
-    else
-        fail ("ASSOCALIGNEDDIMACTIONBODY.writedep [H]");
   }
   return failed;
 }
@@ -22827,6 +25839,22 @@ static int test_ASSOCNETWORK (const Dwg_Object *obj)
     else
       fail ("ASSOCNETWORK.num_actions [BL] set+1 %u != %u", assocnetwork->num_actions, num_actions);
     assocnetwork->num_actions--;
+
+  }
+  {
+    BITCODE_BL num_deps;
+    if (dwg_dynapi_entity_value (assocnetwork, "ASSOCNETWORK", "num_deps", &num_deps, NULL)
+        && num_deps == assocnetwork->num_deps)
+      pass ();
+    else
+      fail ("ASSOCNETWORK.num_deps [BL] %u != %u", assocnetwork->num_deps, num_deps);
+    num_deps++;
+    if (dwg_dynapi_entity_set_value (assocnetwork, "ASSOCNETWORK", "num_deps", &num_deps, 0)
+        && num_deps == assocnetwork->num_deps)
+      pass ();
+    else
+      fail ("ASSOCNETWORK.num_deps [BL] set+1 %u != %u", assocnetwork->num_deps, num_deps);
+    assocnetwork->num_deps--;
 
   }
   {
@@ -36745,6 +39773,414 @@ test_object (const Dwg_Data *restrict dwg, const Dwg_Object *restrict obj)
     error += test_XLINE(obj);
   else  if (obj->fixedtype == DWG_TYPE_ACSH_SWEEP_CLASS)
     error += test_ACSH_SWEEP_CLASS(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPBDGELEVLINEPLAN100)
+    error += test_AEC_AECDBDISPREPBDGELEVLINEPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPBDGELEVLINEPLAN50)
+    error += test_AEC_AECDBDISPREPBDGELEVLINEPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100)
+    error += test_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50)
+    error += test_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCEILINGGRIDPLAN100)
+    error += test_AEC_AECDBDISPREPCEILINGGRIDPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCEILINGGRIDPLAN50)
+    error += test_AEC_AECDBDISPREPCEILINGGRIDPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCOLUMNGRIDPLAN100)
+    error += test_AEC_AECDBDISPREPCOLUMNGRIDPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCOLUMNGRIDPLAN50)
+    error += test_AEC_AECDBDISPREPCOLUMNGRIDPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100)
+    error += test_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50)
+    error += test_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100)
+    error += test_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50)
+    error += test_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPMVBLOCKREFPLAN100)
+    error += test_AEC_AECDBDISPREPMVBLOCKREFPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPMVBLOCKREFPLAN50)
+    error += test_AEC_AECDBDISPREPMVBLOCKREFPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPROOFPLAN100)
+    error += test_AEC_AECDBDISPREPROOFPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPROOFPLAN50)
+    error += test_AEC_AECDBDISPREPROOFPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPROOFSLABPLAN100)
+    error += test_AEC_AECDBDISPREPROOFSLABPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPROOFSLABPLAN50)
+    error += test_AEC_AECDBDISPREPROOFSLABPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPSLABPLAN100)
+    error += test_AEC_AECDBDISPREPSLABPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPSLABPLAN50)
+    error += test_AEC_AECDBDISPREPSLABPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPSPACEPLAN100)
+    error += test_AEC_AECDBDISPREPSPACEPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPSPACEPLAN50)
+    error += test_AEC_AECDBDISPREPSPACEPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPWALLPLAN100)
+    error += test_AEC_AECDBDISPREPWALLPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPWALLPLAN50)
+    error += test_AEC_AECDBDISPREPWALLPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100)
+    error += test_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50)
+    error += test_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPZONE100)
+    error += test_AEC_AECDBDISPREPZONE100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPZONE50)
+    error += test_AEC_AECDBDISPREPZONE50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN)
+    error += test_AEC_DB_DISP_REP_DIM_GROUP_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN100)
+    error += test_AEC_DB_DISP_REP_DIM_GROUP_PLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN50)
+    error += test_AEC_DB_DISP_REP_DIM_GROUP_PLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100)
+    error += test_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50)
+    error += test_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100)
+    error += test_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50)
+    error += test_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLAN100)
+    error += test_AEC_DISPREPAECDBDISPREPOPENINGPLAN100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLAN50)
+    error += test_AEC_DISPREPAECDBDISPREPOPENINGPLAN50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED)
+    error += test_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN)
+    error += test_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPROPSMASSELEMPLANCOMMON)
+    error += test_AEC_DISPROPSMASSELEMPLANCOMMON(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPROPSMASSGROUPPLANCOMMON)
+    error += test_AEC_DISPROPSMASSGROUPPLANCOMMON(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPROPSOPENINGPLANCOMMON)
+    error += test_AEC_DISPROPSOPENINGPLANCOMMON(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPROPSOPENINGPLANCOMMONHATCHED)
+    error += test_AEC_DISPROPSOPENINGPLANCOMMONHATCHED(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPROPSOPENINGSILLPLAN)
+    error += test_AEC_DISPROPSOPENINGSILLPLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_2D_SECTION)
+    error += test_AEC_DISP_PROPS_2D_SECTION(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_CLIP_VOLUME)
+    error += test_AEC_DISP_PROPS_CLIP_VOLUME(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_CLIP_VOLUME_RESULT)
+    error += test_AEC_DISP_PROPS_CLIP_VOLUME_RESULT(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DIM)
+    error += test_AEC_DISP_PROPS_DIM(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DISPLAYTHEME)
+    error += test_AEC_DISP_PROPS_DISPLAYTHEME(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR)
+    error += test_AEC_DISP_PROPS_DOOR(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR_NOMINAL)
+    error += test_AEC_DISP_PROPS_DOOR_NOMINAL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR_PLAN_100)
+    error += test_AEC_DISP_PROPS_DOOR_PLAN_100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR_PLAN_50)
+    error += test_AEC_DISP_PROPS_DOOR_PLAN_50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN)
+    error += test_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN)
+    error += test_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL)
+    error += test_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ENT)
+    error += test_AEC_DISP_PROPS_ENT(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ENT_REF)
+    error += test_AEC_DISP_PROPS_ENT_REF(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL)
+    error += test_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN)
+    error += test_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_LAYOUT_CURVE)
+    error += test_AEC_DISP_PROPS_LAYOUT_CURVE(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_LAYOUT_GRID2D)
+    error += test_AEC_DISP_PROPS_LAYOUT_GRID2D(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_LAYOUT_GRID3D)
+    error += test_AEC_DISP_PROPS_LAYOUT_GRID3D(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_MASKBLOCK)
+    error += test_AEC_DISP_PROPS_MASKBLOCK(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_MASS_ELEM_MODEL)
+    error += test_AEC_DISP_PROPS_MASS_ELEM_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_MASS_GROUP)
+    error += test_AEC_DISP_PROPS_MASS_GROUP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_MATERIAL)
+    error += test_AEC_DISP_PROPS_MATERIAL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_OPENING)
+    error += test_AEC_DISP_PROPS_OPENING(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_POLYGON_MODEL)
+    error += test_AEC_DISP_PROPS_POLYGON_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_POLYGON_TRUECOLOUR)
+    error += test_AEC_DISP_PROPS_POLYGON_TRUECOLOUR(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_RAILING_MODEL)
+    error += test_AEC_DISP_PROPS_RAILING_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_RAILING_PLAN)
+    error += test_AEC_DISP_PROPS_RAILING_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ROOF)
+    error += test_AEC_DISP_PROPS_ROOF(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ROOFSLAB)
+    error += test_AEC_DISP_PROPS_ROOFSLAB(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ROOFSLAB_PLAN)
+    error += test_AEC_DISP_PROPS_ROOFSLAB_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SCHEDULE_TABLE)
+    error += test_AEC_DISP_PROPS_SCHEDULE_TABLE(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SLAB)
+    error += test_AEC_DISP_PROPS_SLAB(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SLAB_PLAN)
+    error += test_AEC_DISP_PROPS_SLAB_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SLICE)
+    error += test_AEC_DISP_PROPS_SLICE(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SPACE_DECOMPOSED)
+    error += test_AEC_DISP_PROPS_SPACE_DECOMPOSED(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SPACE_MODEL)
+    error += test_AEC_DISP_PROPS_SPACE_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SPACE_PLAN)
+    error += test_AEC_DISP_PROPS_SPACE_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_STAIR_MODEL)
+    error += test_AEC_DISP_PROPS_STAIR_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_STAIR_PLAN)
+    error += test_AEC_DISP_PROPS_STAIR_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING)
+    error += test_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WALL_GRAPH)
+    error += test_AEC_DISP_PROPS_WALL_GRAPH(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WALL_MODEL)
+    error += test_AEC_DISP_PROPS_WALL_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WALL_PLAN)
+    error += test_AEC_DISP_PROPS_WALL_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WALL_SCHEM)
+    error += test_AEC_DISP_PROPS_WALL_SCHEM(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW)
+    error += test_AEC_DISP_PROPS_WINDOW(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN)
+    error += test_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW_NOMINAL)
+    error += test_AEC_DISP_PROPS_WINDOW_NOMINAL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW_PLAN_100)
+    error += test_AEC_DISP_PROPS_WINDOW_PLAN_100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW_PLAN_50)
+    error += test_AEC_DISP_PROPS_WINDOW_PLAN_50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW_SILL_PLAN)
+    error += test_AEC_DISP_PROPS_WINDOW_SILL_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ZONE)
+    error += test_AEC_DISP_PROPS_ZONE(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_2D_SECTION)
+    error += test_AEC_DISP_REP_2D_SECTION(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR)
+    error += test_AEC_DISP_REP_ANCHOR(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID)
+    error += test_AEC_DISP_REP_ANCHOR_BUB_TO_GRID(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL)
+    error += test_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP)
+    error += test_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_ENT_TO_NODE)
+    error += test_AEC_DISP_REP_ANCHOR_ENT_TO_NODE(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT)
+    error += test_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_TAG_TO_ENT)
+    error += test_AEC_DISP_REP_ANCHOR_TAG_TO_ENT(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_ELEVLINE_MODEL)
+    error += test_AEC_DISP_REP_BDG_ELEVLINE_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_ELEVLINE_RCP)
+    error += test_AEC_DISP_REP_BDG_ELEVLINE_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_MODEL)
+    error += test_AEC_DISP_REP_BDG_SECTIONLINE_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_PLAN)
+    error += test_AEC_DISP_REP_BDG_SECTIONLINE_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_RCP)
+    error += test_AEC_DISP_REP_BDG_SECTIONLINE_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_SECTION_MODEL)
+    error += test_AEC_DISP_REP_BDG_SECTION_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_SECTION_SUBDIV)
+    error += test_AEC_DISP_REP_BDG_SECTION_SUBDIV(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CEILING_GRID)
+    error += test_AEC_DISP_REP_CEILING_GRID(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CEILING_GRID_MODEL)
+    error += test_AEC_DISP_REP_CEILING_GRID_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CEILING_GRID_RCP)
+    error += test_AEC_DISP_REP_CEILING_GRID_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_MODEL)
+    error += test_AEC_DISP_REP_CLIP_VOLUME_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_PLAN)
+    error += test_AEC_DISP_REP_CLIP_VOLUME_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_RESULT)
+    error += test_AEC_DISP_REP_CLIP_VOLUME_RESULT(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV)
+    error += test_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_COLUMN_GRID)
+    error += test_AEC_DISP_REP_COLUMN_GRID(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_COLUMN_GRID_MODEL)
+    error += test_AEC_DISP_REP_COLUMN_GRID_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_COLUMN_GRID_RCP)
+    error += test_AEC_DISP_REP_COLUMN_GRID_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CONFIG)
+    error += test_AEC_DISP_REP_CONFIG(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL)
+    error += test_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN)
+    error += test_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL)
+    error += test_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN)
+    error += test_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DISPLAYTHEME)
+    error += test_AEC_DISP_REP_DISPLAYTHEME(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_ELEV)
+    error += test_AEC_DISP_REP_DOOR_ELEV(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_MODEL)
+    error += test_AEC_DISP_REP_DOOR_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_NOMINAL)
+    error += test_AEC_DISP_REP_DOOR_NOMINAL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_PLAN)
+    error += test_AEC_DISP_REP_DOOR_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_PLAN_50)
+    error += test_AEC_DISP_REP_DOOR_PLAN_50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_PLAN_HEKTO)
+    error += test_AEC_DISP_REP_DOOR_PLAN_HEKTO(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_RCP)
+    error += test_AEC_DISP_REP_DOOR_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_THRESHOLD_PLAN)
+    error += test_AEC_DISP_REP_DOOR_THRESHOLD_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN)
+    error += test_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_EDITINPLACEPROFILE)
+    error += test_AEC_DISP_REP_EDITINPLACEPROFILE(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ENT_REF)
+    error += test_AEC_DISP_REP_ENT_REF(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_LAYOUT_CURVE)
+    error += test_AEC_DISP_REP_LAYOUT_CURVE(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_LAYOUT_GRID2D)
+    error += test_AEC_DISP_REP_LAYOUT_GRID2D(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_LAYOUT_GRID3D)
+    error += test_AEC_DISP_REP_LAYOUT_GRID3D(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASKBLOCK_REF)
+    error += test_AEC_DISP_REP_MASKBLOCK_REF(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASKBLOCK_REF_RCP)
+    error += test_AEC_DISP_REP_MASKBLOCK_REF_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_ELEM_MODEL)
+    error += test_AEC_DISP_REP_MASS_ELEM_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_ELEM_RCP)
+    error += test_AEC_DISP_REP_MASS_ELEM_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_ELEM_SCHEM)
+    error += test_AEC_DISP_REP_MASS_ELEM_SCHEM(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_GROUP_MODEL)
+    error += test_AEC_DISP_REP_MASS_GROUP_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_GROUP_PLAN)
+    error += test_AEC_DISP_REP_MASS_GROUP_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_GROUP_RCP)
+    error += test_AEC_DISP_REP_MASS_GROUP_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MATERIAL)
+    error += test_AEC_DISP_REP_MATERIAL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF)
+    error += test_AEC_DISP_REP_MVBLOCK_REF(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF_MODEL)
+    error += test_AEC_DISP_REP_MVBLOCK_REF_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF_RCP)
+    error += test_AEC_DISP_REP_MVBLOCK_REF_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_OPENING)
+    error += test_AEC_DISP_REP_OPENING(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_OPENING_MODEL)
+    error += test_AEC_DISP_REP_OPENING_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_POLYGON_MODEL)
+    error += test_AEC_DISP_REP_POLYGON_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_POLYGON_TRUECOLOUR)
+    error += test_AEC_DISP_REP_POLYGON_TRUECOLOUR(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_RAILING_MODEL)
+    error += test_AEC_DISP_REP_RAILING_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_RAILING_PLAN)
+    error += test_AEC_DISP_REP_RAILING_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_RAILING_PLAN_100)
+    error += test_AEC_DISP_REP_RAILING_PLAN_100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_RAILING_PLAN_50)
+    error += test_AEC_DISP_REP_RAILING_PLAN_50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ROOFSLAB_MODEL)
+    error += test_AEC_DISP_REP_ROOFSLAB_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ROOFSLAB_PLAN)
+    error += test_AEC_DISP_REP_ROOFSLAB_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ROOF_MODEL)
+    error += test_AEC_DISP_REP_ROOF_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ROOF_PLAN)
+    error += test_AEC_DISP_REP_ROOF_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ROOF_RCP)
+    error += test_AEC_DISP_REP_ROOF_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SCHEDULE_TABLE)
+    error += test_AEC_DISP_REP_SCHEDULE_TABLE(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SET)
+    error += test_AEC_DISP_REP_SET(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SLAB_MODEL)
+    error += test_AEC_DISP_REP_SLAB_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SLAB_PLAN)
+    error += test_AEC_DISP_REP_SLAB_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SLICE)
+    error += test_AEC_DISP_REP_SLICE(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SPACE_DECOMPOSED)
+    error += test_AEC_DISP_REP_SPACE_DECOMPOSED(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SPACE_MODEL)
+    error += test_AEC_DISP_REP_SPACE_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SPACE_PLAN)
+    error += test_AEC_DISP_REP_SPACE_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SPACE_RCP)
+    error += test_AEC_DISP_REP_SPACE_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SPACE_VOLUME)
+    error += test_AEC_DISP_REP_SPACE_VOLUME(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_MODEL)
+    error += test_AEC_DISP_REP_STAIR_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_PLAN)
+    error += test_AEC_DISP_REP_STAIR_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_100)
+    error += test_AEC_DISP_REP_STAIR_PLAN_100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_50)
+    error += test_AEC_DISP_REP_STAIR_PLAN_50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING)
+    error += test_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_RCP)
+    error += test_AEC_DISP_REP_STAIR_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WALL_GRAPH)
+    error += test_AEC_DISP_REP_WALL_GRAPH(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WALL_MODEL)
+    error += test_AEC_DISP_REP_WALL_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WALL_PLAN)
+    error += test_AEC_DISP_REP_WALL_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WALL_RCP)
+    error += test_AEC_DISP_REP_WALL_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WALL_SCHEM)
+    error += test_AEC_DISP_REP_WALL_SCHEM(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN)
+    error += test_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL)
+    error += test_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN)
+    error += test_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_ELEV)
+    error += test_AEC_DISP_REP_WINDOW_ELEV(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_MODEL)
+    error += test_AEC_DISP_REP_WINDOW_MODEL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_NOMINAL)
+    error += test_AEC_DISP_REP_WINDOW_NOMINAL(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN)
+    error += test_AEC_DISP_REP_WINDOW_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN_100)
+    error += test_AEC_DISP_REP_WINDOW_PLAN_100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN_50)
+    error += test_AEC_DISP_REP_WINDOW_PLAN_50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_RCP)
+    error += test_AEC_DISP_REP_WINDOW_RCP(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_SILL_PLAN)
+    error += test_AEC_DISP_REP_WINDOW_SILL_PLAN(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ZONE)
+    error += test_AEC_DISP_REP_ZONE(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_ROPS_RAILING_PLAN_100)
+    error += test_AEC_DISP_ROPS_RAILING_PLAN_100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_ROPS_RAILING_PLAN_50)
+    error += test_AEC_DISP_ROPS_RAILING_PLAN_50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_ROPS_STAIR_PLAN_100)
+    error += test_AEC_DISP_ROPS_STAIR_PLAN_100(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_ROPS_STAIR_PLAN_50)
+    error += test_AEC_DISP_ROPS_STAIR_PLAN_50(obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_VARS_DWG_SETUP)
+    error += test_AEC_VARS_DWG_SETUP(obj);
   else  if (obj->fixedtype == DWG_TYPE_ANNOTSCALEOBJECTCONTEXTDATA)
     error += test_ANNOTSCALEOBJECTCONTEXTDATA(obj);
   else  if (obj->fixedtype == DWG_TYPE_APPID)
@@ -37033,6 +40469,414 @@ test_object (const Dwg_Data *restrict dwg, const Dwg_Object *restrict obj)
     error += test_XLINE (obj);
   else  if (obj->fixedtype == DWG_TYPE_ACSH_SWEEP_CLASS)
     error += test_ACSH_SWEEP_CLASS (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPBDGELEVLINEPLAN100)
+    error += test_AEC_AECDBDISPREPBDGELEVLINEPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPBDGELEVLINEPLAN50)
+    error += test_AEC_AECDBDISPREPBDGELEVLINEPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100)
+    error += test_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50)
+    error += test_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCEILINGGRIDPLAN100)
+    error += test_AEC_AECDBDISPREPCEILINGGRIDPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCEILINGGRIDPLAN50)
+    error += test_AEC_AECDBDISPREPCEILINGGRIDPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCOLUMNGRIDPLAN100)
+    error += test_AEC_AECDBDISPREPCOLUMNGRIDPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCOLUMNGRIDPLAN50)
+    error += test_AEC_AECDBDISPREPCOLUMNGRIDPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100)
+    error += test_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50)
+    error += test_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100)
+    error += test_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50)
+    error += test_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPMVBLOCKREFPLAN100)
+    error += test_AEC_AECDBDISPREPMVBLOCKREFPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPMVBLOCKREFPLAN50)
+    error += test_AEC_AECDBDISPREPMVBLOCKREFPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPROOFPLAN100)
+    error += test_AEC_AECDBDISPREPROOFPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPROOFPLAN50)
+    error += test_AEC_AECDBDISPREPROOFPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPROOFSLABPLAN100)
+    error += test_AEC_AECDBDISPREPROOFSLABPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPROOFSLABPLAN50)
+    error += test_AEC_AECDBDISPREPROOFSLABPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPSLABPLAN100)
+    error += test_AEC_AECDBDISPREPSLABPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPSLABPLAN50)
+    error += test_AEC_AECDBDISPREPSLABPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPSPACEPLAN100)
+    error += test_AEC_AECDBDISPREPSPACEPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPSPACEPLAN50)
+    error += test_AEC_AECDBDISPREPSPACEPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPWALLPLAN100)
+    error += test_AEC_AECDBDISPREPWALLPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPWALLPLAN50)
+    error += test_AEC_AECDBDISPREPWALLPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100)
+    error += test_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50)
+    error += test_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPZONE100)
+    error += test_AEC_AECDBDISPREPZONE100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_AECDBDISPREPZONE50)
+    error += test_AEC_AECDBDISPREPZONE50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN)
+    error += test_AEC_DB_DISP_REP_DIM_GROUP_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN100)
+    error += test_AEC_DB_DISP_REP_DIM_GROUP_PLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN50)
+    error += test_AEC_DB_DISP_REP_DIM_GROUP_PLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100)
+    error += test_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50)
+    error += test_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100)
+    error += test_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50)
+    error += test_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLAN100)
+    error += test_AEC_DISPREPAECDBDISPREPOPENINGPLAN100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLAN50)
+    error += test_AEC_DISPREPAECDBDISPREPOPENINGPLAN50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED)
+    error += test_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN)
+    error += test_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPROPSMASSELEMPLANCOMMON)
+    error += test_AEC_DISPROPSMASSELEMPLANCOMMON (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPROPSMASSGROUPPLANCOMMON)
+    error += test_AEC_DISPROPSMASSGROUPPLANCOMMON (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPROPSOPENINGPLANCOMMON)
+    error += test_AEC_DISPROPSOPENINGPLANCOMMON (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPROPSOPENINGPLANCOMMONHATCHED)
+    error += test_AEC_DISPROPSOPENINGPLANCOMMONHATCHED (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISPROPSOPENINGSILLPLAN)
+    error += test_AEC_DISPROPSOPENINGSILLPLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_2D_SECTION)
+    error += test_AEC_DISP_PROPS_2D_SECTION (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_CLIP_VOLUME)
+    error += test_AEC_DISP_PROPS_CLIP_VOLUME (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_CLIP_VOLUME_RESULT)
+    error += test_AEC_DISP_PROPS_CLIP_VOLUME_RESULT (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DIM)
+    error += test_AEC_DISP_PROPS_DIM (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DISPLAYTHEME)
+    error += test_AEC_DISP_PROPS_DISPLAYTHEME (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR)
+    error += test_AEC_DISP_PROPS_DOOR (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR_NOMINAL)
+    error += test_AEC_DISP_PROPS_DOOR_NOMINAL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR_PLAN_100)
+    error += test_AEC_DISP_PROPS_DOOR_PLAN_100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR_PLAN_50)
+    error += test_AEC_DISP_PROPS_DOOR_PLAN_50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN)
+    error += test_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN)
+    error += test_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL)
+    error += test_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ENT)
+    error += test_AEC_DISP_PROPS_ENT (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ENT_REF)
+    error += test_AEC_DISP_PROPS_ENT_REF (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL)
+    error += test_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN)
+    error += test_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_LAYOUT_CURVE)
+    error += test_AEC_DISP_PROPS_LAYOUT_CURVE (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_LAYOUT_GRID2D)
+    error += test_AEC_DISP_PROPS_LAYOUT_GRID2D (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_LAYOUT_GRID3D)
+    error += test_AEC_DISP_PROPS_LAYOUT_GRID3D (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_MASKBLOCK)
+    error += test_AEC_DISP_PROPS_MASKBLOCK (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_MASS_ELEM_MODEL)
+    error += test_AEC_DISP_PROPS_MASS_ELEM_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_MASS_GROUP)
+    error += test_AEC_DISP_PROPS_MASS_GROUP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_MATERIAL)
+    error += test_AEC_DISP_PROPS_MATERIAL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_OPENING)
+    error += test_AEC_DISP_PROPS_OPENING (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_POLYGON_MODEL)
+    error += test_AEC_DISP_PROPS_POLYGON_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_POLYGON_TRUECOLOUR)
+    error += test_AEC_DISP_PROPS_POLYGON_TRUECOLOUR (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_RAILING_MODEL)
+    error += test_AEC_DISP_PROPS_RAILING_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_RAILING_PLAN)
+    error += test_AEC_DISP_PROPS_RAILING_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ROOF)
+    error += test_AEC_DISP_PROPS_ROOF (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ROOFSLAB)
+    error += test_AEC_DISP_PROPS_ROOFSLAB (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ROOFSLAB_PLAN)
+    error += test_AEC_DISP_PROPS_ROOFSLAB_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SCHEDULE_TABLE)
+    error += test_AEC_DISP_PROPS_SCHEDULE_TABLE (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SLAB)
+    error += test_AEC_DISP_PROPS_SLAB (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SLAB_PLAN)
+    error += test_AEC_DISP_PROPS_SLAB_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SLICE)
+    error += test_AEC_DISP_PROPS_SLICE (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SPACE_DECOMPOSED)
+    error += test_AEC_DISP_PROPS_SPACE_DECOMPOSED (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SPACE_MODEL)
+    error += test_AEC_DISP_PROPS_SPACE_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_SPACE_PLAN)
+    error += test_AEC_DISP_PROPS_SPACE_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_STAIR_MODEL)
+    error += test_AEC_DISP_PROPS_STAIR_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_STAIR_PLAN)
+    error += test_AEC_DISP_PROPS_STAIR_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING)
+    error += test_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WALL_GRAPH)
+    error += test_AEC_DISP_PROPS_WALL_GRAPH (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WALL_MODEL)
+    error += test_AEC_DISP_PROPS_WALL_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WALL_PLAN)
+    error += test_AEC_DISP_PROPS_WALL_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WALL_SCHEM)
+    error += test_AEC_DISP_PROPS_WALL_SCHEM (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW)
+    error += test_AEC_DISP_PROPS_WINDOW (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN)
+    error += test_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW_NOMINAL)
+    error += test_AEC_DISP_PROPS_WINDOW_NOMINAL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW_PLAN_100)
+    error += test_AEC_DISP_PROPS_WINDOW_PLAN_100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW_PLAN_50)
+    error += test_AEC_DISP_PROPS_WINDOW_PLAN_50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_WINDOW_SILL_PLAN)
+    error += test_AEC_DISP_PROPS_WINDOW_SILL_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_PROPS_ZONE)
+    error += test_AEC_DISP_PROPS_ZONE (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_2D_SECTION)
+    error += test_AEC_DISP_REP_2D_SECTION (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR)
+    error += test_AEC_DISP_REP_ANCHOR (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID)
+    error += test_AEC_DISP_REP_ANCHOR_BUB_TO_GRID (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL)
+    error += test_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP)
+    error += test_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_ENT_TO_NODE)
+    error += test_AEC_DISP_REP_ANCHOR_ENT_TO_NODE (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT)
+    error += test_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ANCHOR_TAG_TO_ENT)
+    error += test_AEC_DISP_REP_ANCHOR_TAG_TO_ENT (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_ELEVLINE_MODEL)
+    error += test_AEC_DISP_REP_BDG_ELEVLINE_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_ELEVLINE_RCP)
+    error += test_AEC_DISP_REP_BDG_ELEVLINE_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_MODEL)
+    error += test_AEC_DISP_REP_BDG_SECTIONLINE_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_PLAN)
+    error += test_AEC_DISP_REP_BDG_SECTIONLINE_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_RCP)
+    error += test_AEC_DISP_REP_BDG_SECTIONLINE_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_SECTION_MODEL)
+    error += test_AEC_DISP_REP_BDG_SECTION_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_BDG_SECTION_SUBDIV)
+    error += test_AEC_DISP_REP_BDG_SECTION_SUBDIV (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CEILING_GRID)
+    error += test_AEC_DISP_REP_CEILING_GRID (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CEILING_GRID_MODEL)
+    error += test_AEC_DISP_REP_CEILING_GRID_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CEILING_GRID_RCP)
+    error += test_AEC_DISP_REP_CEILING_GRID_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_MODEL)
+    error += test_AEC_DISP_REP_CLIP_VOLUME_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_PLAN)
+    error += test_AEC_DISP_REP_CLIP_VOLUME_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_RESULT)
+    error += test_AEC_DISP_REP_CLIP_VOLUME_RESULT (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV)
+    error += test_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_COLUMN_GRID)
+    error += test_AEC_DISP_REP_COLUMN_GRID (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_COLUMN_GRID_MODEL)
+    error += test_AEC_DISP_REP_COLUMN_GRID_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_COLUMN_GRID_RCP)
+    error += test_AEC_DISP_REP_COLUMN_GRID_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CONFIG)
+    error += test_AEC_DISP_REP_CONFIG (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL)
+    error += test_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN)
+    error += test_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL)
+    error += test_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN)
+    error += test_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DISPLAYTHEME)
+    error += test_AEC_DISP_REP_DISPLAYTHEME (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_ELEV)
+    error += test_AEC_DISP_REP_DOOR_ELEV (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_MODEL)
+    error += test_AEC_DISP_REP_DOOR_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_NOMINAL)
+    error += test_AEC_DISP_REP_DOOR_NOMINAL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_PLAN)
+    error += test_AEC_DISP_REP_DOOR_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_PLAN_50)
+    error += test_AEC_DISP_REP_DOOR_PLAN_50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_PLAN_HEKTO)
+    error += test_AEC_DISP_REP_DOOR_PLAN_HEKTO (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_RCP)
+    error += test_AEC_DISP_REP_DOOR_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_THRESHOLD_PLAN)
+    error += test_AEC_DISP_REP_DOOR_THRESHOLD_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN)
+    error += test_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_EDITINPLACEPROFILE)
+    error += test_AEC_DISP_REP_EDITINPLACEPROFILE (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ENT_REF)
+    error += test_AEC_DISP_REP_ENT_REF (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_LAYOUT_CURVE)
+    error += test_AEC_DISP_REP_LAYOUT_CURVE (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_LAYOUT_GRID2D)
+    error += test_AEC_DISP_REP_LAYOUT_GRID2D (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_LAYOUT_GRID3D)
+    error += test_AEC_DISP_REP_LAYOUT_GRID3D (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASKBLOCK_REF)
+    error += test_AEC_DISP_REP_MASKBLOCK_REF (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASKBLOCK_REF_RCP)
+    error += test_AEC_DISP_REP_MASKBLOCK_REF_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_ELEM_MODEL)
+    error += test_AEC_DISP_REP_MASS_ELEM_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_ELEM_RCP)
+    error += test_AEC_DISP_REP_MASS_ELEM_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_ELEM_SCHEM)
+    error += test_AEC_DISP_REP_MASS_ELEM_SCHEM (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_GROUP_MODEL)
+    error += test_AEC_DISP_REP_MASS_GROUP_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_GROUP_PLAN)
+    error += test_AEC_DISP_REP_MASS_GROUP_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MASS_GROUP_RCP)
+    error += test_AEC_DISP_REP_MASS_GROUP_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MATERIAL)
+    error += test_AEC_DISP_REP_MATERIAL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF)
+    error += test_AEC_DISP_REP_MVBLOCK_REF (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF_MODEL)
+    error += test_AEC_DISP_REP_MVBLOCK_REF_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF_RCP)
+    error += test_AEC_DISP_REP_MVBLOCK_REF_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_OPENING)
+    error += test_AEC_DISP_REP_OPENING (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_OPENING_MODEL)
+    error += test_AEC_DISP_REP_OPENING_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_POLYGON_MODEL)
+    error += test_AEC_DISP_REP_POLYGON_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_POLYGON_TRUECOLOUR)
+    error += test_AEC_DISP_REP_POLYGON_TRUECOLOUR (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_RAILING_MODEL)
+    error += test_AEC_DISP_REP_RAILING_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_RAILING_PLAN)
+    error += test_AEC_DISP_REP_RAILING_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_RAILING_PLAN_100)
+    error += test_AEC_DISP_REP_RAILING_PLAN_100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_RAILING_PLAN_50)
+    error += test_AEC_DISP_REP_RAILING_PLAN_50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ROOFSLAB_MODEL)
+    error += test_AEC_DISP_REP_ROOFSLAB_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ROOFSLAB_PLAN)
+    error += test_AEC_DISP_REP_ROOFSLAB_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ROOF_MODEL)
+    error += test_AEC_DISP_REP_ROOF_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ROOF_PLAN)
+    error += test_AEC_DISP_REP_ROOF_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ROOF_RCP)
+    error += test_AEC_DISP_REP_ROOF_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SCHEDULE_TABLE)
+    error += test_AEC_DISP_REP_SCHEDULE_TABLE (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SET)
+    error += test_AEC_DISP_REP_SET (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SLAB_MODEL)
+    error += test_AEC_DISP_REP_SLAB_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SLAB_PLAN)
+    error += test_AEC_DISP_REP_SLAB_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SLICE)
+    error += test_AEC_DISP_REP_SLICE (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SPACE_DECOMPOSED)
+    error += test_AEC_DISP_REP_SPACE_DECOMPOSED (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SPACE_MODEL)
+    error += test_AEC_DISP_REP_SPACE_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SPACE_PLAN)
+    error += test_AEC_DISP_REP_SPACE_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SPACE_RCP)
+    error += test_AEC_DISP_REP_SPACE_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_SPACE_VOLUME)
+    error += test_AEC_DISP_REP_SPACE_VOLUME (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_MODEL)
+    error += test_AEC_DISP_REP_STAIR_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_PLAN)
+    error += test_AEC_DISP_REP_STAIR_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_100)
+    error += test_AEC_DISP_REP_STAIR_PLAN_100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_50)
+    error += test_AEC_DISP_REP_STAIR_PLAN_50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING)
+    error += test_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_STAIR_RCP)
+    error += test_AEC_DISP_REP_STAIR_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WALL_GRAPH)
+    error += test_AEC_DISP_REP_WALL_GRAPH (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WALL_MODEL)
+    error += test_AEC_DISP_REP_WALL_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WALL_PLAN)
+    error += test_AEC_DISP_REP_WALL_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WALL_RCP)
+    error += test_AEC_DISP_REP_WALL_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WALL_SCHEM)
+    error += test_AEC_DISP_REP_WALL_SCHEM (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN)
+    error += test_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL)
+    error += test_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN)
+    error += test_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_ELEV)
+    error += test_AEC_DISP_REP_WINDOW_ELEV (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_MODEL)
+    error += test_AEC_DISP_REP_WINDOW_MODEL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_NOMINAL)
+    error += test_AEC_DISP_REP_WINDOW_NOMINAL (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN)
+    error += test_AEC_DISP_REP_WINDOW_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN_100)
+    error += test_AEC_DISP_REP_WINDOW_PLAN_100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN_50)
+    error += test_AEC_DISP_REP_WINDOW_PLAN_50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_RCP)
+    error += test_AEC_DISP_REP_WINDOW_RCP (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_WINDOW_SILL_PLAN)
+    error += test_AEC_DISP_REP_WINDOW_SILL_PLAN (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_REP_ZONE)
+    error += test_AEC_DISP_REP_ZONE (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_ROPS_RAILING_PLAN_100)
+    error += test_AEC_DISP_ROPS_RAILING_PLAN_100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_ROPS_RAILING_PLAN_50)
+    error += test_AEC_DISP_ROPS_RAILING_PLAN_50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_ROPS_STAIR_PLAN_100)
+    error += test_AEC_DISP_ROPS_STAIR_PLAN_100 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_DISP_ROPS_STAIR_PLAN_50)
+    error += test_AEC_DISP_ROPS_STAIR_PLAN_50 (obj);
+  else  if (obj->fixedtype == DWG_TYPE_AEC_VARS_DWG_SETUP)
+    error += test_AEC_VARS_DWG_SETUP (obj);
   else  if (obj->fixedtype == DWG_TYPE_ANNOTSCALEOBJECTCONTEXTDATA)
     error += test_ANNOTSCALEOBJECTCONTEXTDATA (obj);
   else  if (obj->fixedtype == DWG_TYPE_APPID)
