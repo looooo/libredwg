@@ -35,7 +35,7 @@ Dwg_Object *dwg_obj_generic_to_object (const void *restrict obj,
 #endif
 
 #define MAXLEN_ENTITIES 19
-#define MAXLEN_OBJECTS 44
+#define MAXLEN_OBJECTS 30
 
 /* sorted for bsearch. from typedef struct _dwg_entity_*: */
 static const char dwg_entity_names[][MAXLEN_ENTITIES] = {
@@ -108,290 +108,86 @@ static const char dwg_entity_names[][MAXLEN_ENTITIES] = {
 };
 /* sorted for bsearch. from typedef struct _dwg_object_*: */
 static const char dwg_object_names[][MAXLEN_OBJECTS] = {
-  "ACSH_SWEEP_CLASS" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 0 */
-  "AEC_AECDBDISPREPBDGELEVLINEPLAN100" "\0\0\0\0\0\0\0\0\0",	/* 1 */
-  "AEC_AECDBDISPREPBDGELEVLINEPLAN50" "\0\0\0\0\0\0\0\0\0\0",	/* 2 */
-  "AEC_AECDBDISPREPBDGSECTIONLINEPLAN100" "\0\0\0\0\0\0",	/* 3 */
-  "AEC_AECDBDISPREPBDGSECTIONLINEPLAN50" "\0\0\0\0\0\0\0",	/* 4 */
-  "AEC_AECDBDISPREPCEILINGGRIDPLAN100" "\0\0\0\0\0\0\0\0\0",	/* 5 */
-  "AEC_AECDBDISPREPCEILINGGRIDPLAN50" "\0\0\0\0\0\0\0\0\0\0",	/* 6 */
-  "AEC_AECDBDISPREPCOLUMNGRIDPLAN100" "\0\0\0\0\0\0\0\0\0\0",	/* 7 */
-  "AEC_AECDBDISPREPCOLUMNGRIDPLAN50" "\0\0\0\0\0\0\0\0\0\0\0",	/* 8 */
-  "AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100" "\0\0\0",	/* 9 */
-  "AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50" "\0\0\0\0",	/* 10 */
-  "AEC_AECDBDISPREPCURTAINWALLUNITPLAN100" "\0\0\0\0\0",	/* 11 */
-  "AEC_AECDBDISPREPCURTAINWALLUNITPLAN50" "\0\0\0\0\0\0",	/* 12 */
-  "AEC_AECDBDISPREPMVBLOCKREFPLAN100" "\0\0\0\0\0\0\0\0\0\0",	/* 13 */
-  "AEC_AECDBDISPREPMVBLOCKREFPLAN50" "\0\0\0\0\0\0\0\0\0\0\0",	/* 14 */
-  "AEC_AECDBDISPREPROOFPLAN100" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 15 */
-  "AEC_AECDBDISPREPROOFPLAN50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 16 */
-  "AEC_AECDBDISPREPROOFSLABPLAN100" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 17 */
-  "AEC_AECDBDISPREPROOFSLABPLAN50" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 18 */
-  "AEC_AECDBDISPREPSLABPLAN100" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 19 */
-  "AEC_AECDBDISPREPSLABPLAN50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 20 */
-  "AEC_AECDBDISPREPSPACEPLAN100" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 21 */
-  "AEC_AECDBDISPREPSPACEPLAN50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 22 */
-  "AEC_AECDBDISPREPWALLPLAN100" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 23 */
-  "AEC_AECDBDISPREPWALLPLAN50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 24 */
-  "AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100" "\0\0\0\0\0\0",	/* 25 */
-  "AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50" "\0\0\0\0\0\0\0",	/* 26 */
-  "AEC_AECDBDISPREPZONE100" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 27 */
-  "AEC_AECDBDISPREPZONE50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 28 */
-  "AEC_DB_DISP_REP_DIM_GROUP_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 29 */
-  "AEC_DB_DISP_REP_DIM_GROUP_PLAN100" "\0\0\0\0\0\0\0\0\0\0",	/* 30 */
-  "AEC_DB_DISP_REP_DIM_GROUP_PLAN50" "\0\0\0\0\0\0\0\0\0\0\0",	/* 31 */
-  "AEC_DISPREPAECDBDISPREPMASSELEMPLAN100" "\0\0\0\0\0",	/* 32 */
-  "AEC_DISPREPAECDBDISPREPMASSELEMPLAN50" "\0\0\0\0\0\0",	/* 33 */
-  "AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100" "\0\0\0\0",	/* 34 */
-  "AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50" "\0\0\0\0\0",	/* 35 */
-  "AEC_DISPREPAECDBDISPREPOPENINGPLAN100" "\0\0\0\0\0\0",	/* 36 */
-  "AEC_DISPREPAECDBDISPREPOPENINGPLAN50" "\0\0\0\0\0\0\0",	/* 37 */
-  "AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED" "",	/* 38 */
-  "AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN" "\0\0\0\0\0",	/* 39 */
-  "AEC_DISPROPSMASSELEMPLANCOMMON" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 40 */
-  "AEC_DISPROPSMASSGROUPPLANCOMMON" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 41 */
-  "AEC_DISPROPSOPENINGPLANCOMMON" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 42 */
-  "AEC_DISPROPSOPENINGPLANCOMMONHATCHED" "\0\0\0\0\0\0\0",	/* 43 */
-  "AEC_DISPROPSOPENINGSILLPLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 44 */
-  "AEC_DISP_PROPS_2D_SECTION" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 45 */
-  "AEC_DISP_PROPS_CLIP_VOLUME" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 46 */
-  "AEC_DISP_PROPS_CLIP_VOLUME_RESULT" "\0\0\0\0\0\0\0\0\0\0",	/* 47 */
-  "AEC_DISP_PROPS_DIM" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 48 */
-  "AEC_DISP_PROPS_DISPLAYTHEME" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 49 */
-  "AEC_DISP_PROPS_DOOR" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 50 */
-  "AEC_DISP_PROPS_DOOR_NOMINAL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 51 */
-  "AEC_DISP_PROPS_DOOR_PLAN_100" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 52 */
-  "AEC_DISP_PROPS_DOOR_PLAN_50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 53 */
-  "AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN" "\0\0\0\0\0\0\0\0\0",	/* 54 */
-  "AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN" "\0\0",	/* 55 */
-  "AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL" "\0\0\0\0",	/* 56 */
-  "AEC_DISP_PROPS_ENT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 57 */
-  "AEC_DISP_PROPS_ENT_REF" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 58 */
-  "AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL" "\0\0\0\0\0\0\0\0\0",	/* 59 */
-  "AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN" "\0\0\0\0\0\0\0\0\0\0",	/* 60 */
-  "AEC_DISP_PROPS_LAYOUT_CURVE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 61 */
-  "AEC_DISP_PROPS_LAYOUT_GRID2D" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 62 */
-  "AEC_DISP_PROPS_LAYOUT_GRID3D" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 63 */
-  "AEC_DISP_PROPS_MASKBLOCK" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 64 */
-  "AEC_DISP_PROPS_MASS_ELEM_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 65 */
-  "AEC_DISP_PROPS_MASS_GROUP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 66 */
-  "AEC_DISP_PROPS_MATERIAL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 67 */
-  "AEC_DISP_PROPS_OPENING" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 68 */
-  "AEC_DISP_PROPS_POLYGON_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 69 */
-  "AEC_DISP_PROPS_POLYGON_TRUECOLOUR" "\0\0\0\0\0\0\0\0\0\0",	/* 70 */
-  "AEC_DISP_PROPS_RAILING_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 71 */
-  "AEC_DISP_PROPS_RAILING_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 72 */
-  "AEC_DISP_PROPS_ROOF" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 73 */
-  "AEC_DISP_PROPS_ROOFSLAB" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 74 */
-  "AEC_DISP_PROPS_ROOFSLAB_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 75 */
-  "AEC_DISP_PROPS_SCHEDULE_TABLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 76 */
-  "AEC_DISP_PROPS_SLAB" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 77 */
-  "AEC_DISP_PROPS_SLAB_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 78 */
-  "AEC_DISP_PROPS_SLICE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 79 */
-  "AEC_DISP_PROPS_SPACE_DECOMPOSED" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 80 */
-  "AEC_DISP_PROPS_SPACE_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 81 */
-  "AEC_DISP_PROPS_SPACE_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 82 */
-  "AEC_DISP_PROPS_STAIR_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 83 */
-  "AEC_DISP_PROPS_STAIR_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 84 */
-  "AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING" "\0\0\0\0\0\0",	/* 85 */
-  "AEC_DISP_PROPS_WALL_GRAPH" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 86 */
-  "AEC_DISP_PROPS_WALL_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 87 */
-  "AEC_DISP_PROPS_WALL_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 88 */
-  "AEC_DISP_PROPS_WALL_SCHEM" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 89 */
-  "AEC_DISP_PROPS_WINDOW" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 90 */
-  "AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN" "\0\0\0",	/* 91 */
-  "AEC_DISP_PROPS_WINDOW_NOMINAL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 92 */
-  "AEC_DISP_PROPS_WINDOW_PLAN_100" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 93 */
-  "AEC_DISP_PROPS_WINDOW_PLAN_50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 94 */
-  "AEC_DISP_PROPS_WINDOW_SILL_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 95 */
-  "AEC_DISP_PROPS_ZONE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 96 */
-  "AEC_DISP_REP_2D_SECTION" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 97 */
-  "AEC_DISP_REP_ANCHOR" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 98 */
-  "AEC_DISP_REP_ANCHOR_BUB_TO_GRID" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 99 */
-  "AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL" "\0\0\0\0\0\0",	/* 100 */
-  "AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP" "\0\0\0\0\0\0\0\0",	/* 101 */
-  "AEC_DISP_REP_ANCHOR_ENT_TO_NODE" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 102 */
-  "AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT" "\0\0\0\0\0\0\0\0\0",	/* 103 */
-  "AEC_DISP_REP_ANCHOR_TAG_TO_ENT" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 104 */
-  "AEC_DISP_REP_BDG_ELEVLINE_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 105 */
-  "AEC_DISP_REP_BDG_ELEVLINE_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 106 */
-  "AEC_DISP_REP_BDG_SECTIONLINE_MODEL" "\0\0\0\0\0\0\0\0\0",	/* 107 */
-  "AEC_DISP_REP_BDG_SECTIONLINE_PLAN" "\0\0\0\0\0\0\0\0\0\0",	/* 108 */
-  "AEC_DISP_REP_BDG_SECTIONLINE_RCP" "\0\0\0\0\0\0\0\0\0\0\0",	/* 109 */
-  "AEC_DISP_REP_BDG_SECTION_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 110 */
-  "AEC_DISP_REP_BDG_SECTION_SUBDIV" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 111 */
-  "AEC_DISP_REP_CEILING_GRID" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 112 */
-  "AEC_DISP_REP_CEILING_GRID_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 113 */
-  "AEC_DISP_REP_CEILING_GRID_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 114 */
-  "AEC_DISP_REP_CLIP_VOLUME_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 115 */
-  "AEC_DISP_REP_CLIP_VOLUME_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 116 */
-  "AEC_DISP_REP_CLIP_VOLUME_RESULT" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 117 */
-  "AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV" "\0\0\0\0\0",	/* 118 */
-  "AEC_DISP_REP_COLUMN_GRID" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 119 */
-  "AEC_DISP_REP_COLUMN_GRID_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 120 */
-  "AEC_DISP_REP_COLUMN_GRID_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 121 */
-  "AEC_DISP_REP_CONFIG" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 122 */
-  "AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL" "\0\0\0\0\0",	/* 123 */
-  "AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN" "\0\0\0\0\0\0",	/* 124 */
-  "AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL" "\0\0\0\0\0\0\0",	/* 125 */
-  "AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN" "\0\0\0\0\0\0\0\0",	/* 126 */
-  "AEC_DISP_REP_DISPLAYTHEME" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 127 */
-  "AEC_DISP_REP_DOOR_ELEV" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 128 */
-  "AEC_DISP_REP_DOOR_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 129 */
-  "AEC_DISP_REP_DOOR_NOMINAL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 130 */
-  "AEC_DISP_REP_DOOR_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 131 */
-  "AEC_DISP_REP_DOOR_PLAN_50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 132 */
-  "AEC_DISP_REP_DOOR_PLAN_HEKTO" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 133 */
-  "AEC_DISP_REP_DOOR_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 134 */
-  "AEC_DISP_REP_DOOR_THRESHOLD_PLAN" "\0\0\0\0\0\0\0\0\0\0\0",	/* 135 */
-  "AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN" "\0\0\0\0",	/* 136 */
-  "AEC_DISP_REP_EDITINPLACEPROFILE" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 137 */
-  "AEC_DISP_REP_ENT_REF" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 138 */
-  "AEC_DISP_REP_LAYOUT_CURVE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 139 */
-  "AEC_DISP_REP_LAYOUT_GRID2D" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 140 */
-  "AEC_DISP_REP_LAYOUT_GRID3D" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 141 */
-  "AEC_DISP_REP_MASKBLOCK_REF" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 142 */
-  "AEC_DISP_REP_MASKBLOCK_REF_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 143 */
-  "AEC_DISP_REP_MASS_ELEM_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 144 */
-  "AEC_DISP_REP_MASS_ELEM_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 145 */
-  "AEC_DISP_REP_MASS_ELEM_SCHEM" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 146 */
-  "AEC_DISP_REP_MASS_GROUP_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 147 */
-  "AEC_DISP_REP_MASS_GROUP_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 148 */
-  "AEC_DISP_REP_MASS_GROUP_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 149 */
-  "AEC_DISP_REP_MATERIAL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 150 */
-  "AEC_DISP_REP_MVBLOCK_REF" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 151 */
-  "AEC_DISP_REP_MVBLOCK_REF_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 152 */
-  "AEC_DISP_REP_MVBLOCK_REF_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 153 */
-  "AEC_DISP_REP_OPENING" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 154 */
-  "AEC_DISP_REP_OPENING_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 155 */
-  "AEC_DISP_REP_POLYGON_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 156 */
-  "AEC_DISP_REP_POLYGON_TRUECOLOUR" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 157 */
-  "AEC_DISP_REP_RAILING_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 158 */
-  "AEC_DISP_REP_RAILING_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 159 */
-  "AEC_DISP_REP_RAILING_PLAN_100" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 160 */
-  "AEC_DISP_REP_RAILING_PLAN_50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 161 */
-  "AEC_DISP_REP_ROOFSLAB_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 162 */
-  "AEC_DISP_REP_ROOFSLAB_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 163 */
-  "AEC_DISP_REP_ROOF_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 164 */
-  "AEC_DISP_REP_ROOF_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 165 */
-  "AEC_DISP_REP_ROOF_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 166 */
-  "AEC_DISP_REP_SCHEDULE_TABLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 167 */
-  "AEC_DISP_REP_SET" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 168 */
-  "AEC_DISP_REP_SLAB_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 169 */
-  "AEC_DISP_REP_SLAB_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 170 */
-  "AEC_DISP_REP_SLICE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 171 */
-  "AEC_DISP_REP_SPACE_DECOMPOSED" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 172 */
-  "AEC_DISP_REP_SPACE_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 173 */
-  "AEC_DISP_REP_SPACE_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 174 */
-  "AEC_DISP_REP_SPACE_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 175 */
-  "AEC_DISP_REP_SPACE_VOLUME" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 176 */
-  "AEC_DISP_REP_STAIR_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 177 */
-  "AEC_DISP_REP_STAIR_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 178 */
-  "AEC_DISP_REP_STAIR_PLAN_100" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 179 */
-  "AEC_DISP_REP_STAIR_PLAN_50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 180 */
-  "AEC_DISP_REP_STAIR_PLAN_OVERLAPPING" "\0\0\0\0\0\0\0\0",	/* 181 */
-  "AEC_DISP_REP_STAIR_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 182 */
-  "AEC_DISP_REP_WALL_GRAPH" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 183 */
-  "AEC_DISP_REP_WALL_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 184 */
-  "AEC_DISP_REP_WALL_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 185 */
-  "AEC_DISP_REP_WALL_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 186 */
-  "AEC_DISP_REP_WALL_SCHEM" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 187 */
-  "AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN" "\0\0\0\0\0\0",	/* 188 */
-  "AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL" "\0\0\0\0\0\0\0\0\0",	/* 189 */
-  "AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN" "\0\0\0\0\0\0\0\0\0\0",	/* 190 */
-  "AEC_DISP_REP_WINDOW_ELEV" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 191 */
-  "AEC_DISP_REP_WINDOW_MODEL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 192 */
-  "AEC_DISP_REP_WINDOW_NOMINAL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 193 */
-  "AEC_DISP_REP_WINDOW_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 194 */
-  "AEC_DISP_REP_WINDOW_PLAN_100" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 195 */
-  "AEC_DISP_REP_WINDOW_PLAN_50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 196 */
-  "AEC_DISP_REP_WINDOW_RCP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 197 */
-  "AEC_DISP_REP_WINDOW_SILL_PLAN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 198 */
-  "AEC_DISP_REP_ZONE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 199 */
-  "AEC_DISP_ROPS_RAILING_PLAN_100" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 200 */
-  "AEC_DISP_ROPS_RAILING_PLAN_50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 201 */
-  "AEC_DISP_ROPS_STAIR_PLAN_100" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 202 */
-  "AEC_DISP_ROPS_STAIR_PLAN_50" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 203 */
-  "AEC_VARS_DWG_SETUP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 204 */
-  "ANNOTSCALEOBJECTCONTEXTDATA" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 205 */
-  "APPID" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 206 */
-  "APPID_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 207 */
-  "ASSOC2DCONSTRAINTGROUP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 208 */
-  "ASSOCACTION" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 209 */
-  "ASSOCALIGNEDDIMACTIONBODY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 210 */
-  "ASSOCDEPENDENCY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 211 */
-  "ASSOCNETWORK" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 212 */
-  "ASSOCOSNAPPOINTREFACTIONPARAM" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 213 */
-  "ASSOCPERSSUBENTMANAGER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 214 */
-  "ASSOCPLANESURFACEACTIONBODY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 215 */
-  "BLOCK_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 216 */
-  "BLOCK_HEADER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 217 */
-  "CELLSTYLEMAP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 218 */
-  "DATATABLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 219 */
-  "DBCOLOR" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 220 */
-  "DICTIONARY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 221 */
-  "DICTIONARYVAR" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 222 */
-  "DICTIONARYWDFLT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 223 */
-  "DIMASSOC" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 224 */
-  "DIMSTYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 225 */
-  "DIMSTYLE_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 226 */
-  "DUMMY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 227 */
-  "DYNAMICBLOCKPURGEPREVENTER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 228 */
-  "EVALUATION_GRAPH" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 229 */
-  "FIELD" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 230 */
-  "FIELDLIST" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 231 */
-  "GEODATA" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 232 */
-  "GEOMAPIMAGE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 233 */
-  "GROUP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 234 */
-  "IDBUFFER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 235 */
-  "IMAGEDEF" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 236 */
-  "IMAGEDEF_REACTOR" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 237 */
-  "LAYER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 238 */
-  "LAYER_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 239 */
-  "LAYER_INDEX" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 240 */
-  "LAYOUT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 241 */
-  "LIGHTLIST" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 242 */
-  "LONG_TRANSACTION" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 243 */
-  "LTYPE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 244 */
-  "LTYPE_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 245 */
-  "MATERIAL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 246 */
-  "MLEADERSTYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 247 */
-  "MLINESTYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 248 */
-  "NAVISWORKSMODELDEF" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 249 */
-  "OBJECTCONTEXTDATA" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 250 */
-  "OBJECT_PTR" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 251 */
-  "PERSSUBENTMANAGER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 252 */
-  "PLACEHOLDER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 253 */
-  "PLOTSETTINGS" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 254 */
-  "PROXY_OBJECT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 255 */
-  "RASTERVARIABLES" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 256 */
-  "RENDERENVIRONMENT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 257 */
-  "RENDERGLOBAL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 258 */
-  "SCALE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 259 */
-  "SORTENTSTABLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 260 */
-  "SPATIAL_FILTER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 261 */
-  "SPATIAL_INDEX" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 262 */
-  "STYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 263 */
-  "STYLE_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 264 */
-  "SUN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 265 */
-  "SUNSTUDY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 266 */
-  "TABLECONTENT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 267 */
-  "TABLEGEOMETRY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 268 */
-  "TABLESTYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 269 */
-  "UCS" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 270 */
-  "UCS_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 271 */
-  "UNDERLAYDEFINITION" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 272 */
-  "UNKNOWN_OBJ" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 273 */
-  "VBA_PROJECT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 274 */
-  "VIEW" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 275 */
-  "VIEW_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 276 */
-  "VISUALSTYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 277 */
-  "VPORT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 278 */
-  "VPORT_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 279 */
-  "VPORT_ENTITY_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 280 */
-  "VPORT_ENTITY_HEADER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 281 */
-  "WIPEOUTVARIABLES" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 282 */
-  "XRECORD" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 283 */
+  "ACSH_SWEEP_CLASS" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 0 */
+  "ANNOTSCALEOBJECTCONTEXTDATA" "\0\0",	/* 1 */
+  "APPID" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 2 */
+  "APPID_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 3 */
+  "ASSOC2DCONSTRAINTGROUP" "\0\0\0\0\0\0\0",	/* 4 */
+  "ASSOCACTION" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 5 */
+  "ASSOCALIGNEDDIMACTIONBODY" "\0\0\0\0",	/* 6 */
+  "ASSOCDEPENDENCY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 7 */
+  "ASSOCNETWORK" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 8 */
+  "ASSOCOSNAPPOINTREFACTIONPARAM" "",	/* 9 */
+  "ASSOCPERSSUBENTMANAGER" "\0\0\0\0\0\0\0",	/* 10 */
+  "ASSOCPLANESURFACEACTIONBODY" "\0\0",	/* 11 */
+  "BLOCK_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 12 */
+  "BLOCK_HEADER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 13 */
+  "CELLSTYLEMAP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 14 */
+  "DATATABLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 15 */
+  "DBCOLOR" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 16 */
+  "DICTIONARY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 17 */
+  "DICTIONARYVAR" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 18 */
+  "DICTIONARYWDFLT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 19 */
+  "DIMASSOC" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 20 */
+  "DIMSTYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 21 */
+  "DIMSTYLE_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 22 */
+  "DUMMY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 23 */
+  "DYNAMICBLOCKPURGEPREVENTER" "\0\0\0",	/* 24 */
+  "EVALUATION_GRAPH" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 25 */
+  "FIELD" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 26 */
+  "FIELDLIST" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 27 */
+  "GEODATA" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 28 */
+  "GEOMAPIMAGE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 29 */
+  "GROUP" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 30 */
+  "IDBUFFER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 31 */
+  "IMAGEDEF" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 32 */
+  "IMAGEDEF_REACTOR" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 33 */
+  "LAYER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 34 */
+  "LAYER_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 35 */
+  "LAYER_INDEX" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 36 */
+  "LAYOUT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 37 */
+  "LIGHTLIST" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 38 */
+  "LONG_TRANSACTION" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 39 */
+  "LTYPE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 40 */
+  "LTYPE_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 41 */
+  "MATERIAL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 42 */
+  "MLEADERSTYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 43 */
+  "MLINESTYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 44 */
+  "NAVISWORKSMODELDEF" "\0\0\0\0\0\0\0\0\0\0\0",	/* 45 */
+  "OBJECTCONTEXTDATA" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 46 */
+  "OBJECT_PTR" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 47 */
+  "PERSSUBENTMANAGER" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 48 */
+  "PLACEHOLDER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 49 */
+  "PLOTSETTINGS" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 50 */
+  "PROXY_OBJECT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 51 */
+  "RASTERVARIABLES" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 52 */
+  "RENDERENVIRONMENT" "\0\0\0\0\0\0\0\0\0\0\0\0",	/* 53 */
+  "RENDERGLOBAL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 54 */
+  "SCALE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 55 */
+  "SORTENTSTABLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 56 */
+  "SPATIAL_FILTER" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 57 */
+  "SPATIAL_INDEX" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 58 */
+  "STYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 59 */
+  "STYLE_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 60 */
+  "SUN" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 61 */
+  "SUNSTUDY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 62 */
+  "TABLECONTENT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 63 */
+  "TABLEGEOMETRY" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 64 */
+  "TABLESTYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 65 */
+  "UCS" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 66 */
+  "UCS_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 67 */
+  "UNDERLAYDEFINITION" "\0\0\0\0\0\0\0\0\0\0\0",	/* 68 */
+  "UNKNOWN_OBJ" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 69 */
+  "VBA_PROJECT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 70 */
+  "VIEW" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 71 */
+  "VIEW_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 72 */
+  "VISUALSTYLE" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 73 */
+  "VPORT" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 74 */
+  "VPORT_CONTROL" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 75 */
+  "VPORT_ENTITY_CONTROL" "\0\0\0\0\0\0\0\0\0",	/* 76 */
+  "VPORT_ENTITY_HEADER" "\0\0\0\0\0\0\0\0\0\0",	/* 77 */
+  "WIPEOUTVARIABLES" "\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 78 */
+  "XRECORD" "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0",	/* 79 */
 
 };
 
@@ -3829,1230 +3625,6 @@ static const Dwg_DYNAPI_field _dwg_ACSH_SWEEP_CLASS_fields[] = {
     0,0,0, 296 },
   { "pt2",	"3BD", sizeof (BITCODE_3BD),  OFF (struct _dwg_object_ACSH_SWEEP_CLASS, pt2),
     1,0,0, 11 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPBDGELEVLINEPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPBDGELEVLINEPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPBDGELEVLINEPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPBDGELEVLINEPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPBDGELEVLINEPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPBDGELEVLINEPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPCEILINGGRIDPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPCEILINGGRIDPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPCEILINGGRIDPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPCEILINGGRIDPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPCEILINGGRIDPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPCEILINGGRIDPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPCOLUMNGRIDPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPCOLUMNGRIDPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPCOLUMNGRIDPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPCOLUMNGRIDPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPCOLUMNGRIDPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPCOLUMNGRIDPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPMVBLOCKREFPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPMVBLOCKREFPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPMVBLOCKREFPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPMVBLOCKREFPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPMVBLOCKREFPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPMVBLOCKREFPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPROOFPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPROOFPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPROOFPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPROOFPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPROOFPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPROOFPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPROOFSLABPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPROOFSLABPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPROOFSLABPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPROOFSLABPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPROOFSLABPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPROOFSLABPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPSLABPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPSLABPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPSLABPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPSLABPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPSLABPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPSLABPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPSPACEPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPSPACEPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPSPACEPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPSPACEPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPSPACEPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPSPACEPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPWALLPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPWALLPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPWALLPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPWALLPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPWALLPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPWALLPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPZONE100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPZONE100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPZONE100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_AECDBDISPREPZONE50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_AECDBDISPREPZONE50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_AECDBDISPREPZONE50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DB_DISP_REP_DIM_GROUP_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DB_DISP_REP_DIM_GROUP_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DB_DISP_REP_DIM_GROUP_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DB_DISP_REP_DIM_GROUP_PLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DB_DISP_REP_DIM_GROUP_PLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DB_DISP_REP_DIM_GROUP_PLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DB_DISP_REP_DIM_GROUP_PLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DB_DISP_REP_DIM_GROUP_PLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DB_DISP_REP_DIM_GROUP_PLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPREPAECDBDISPREPOPENINGPLAN100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPREPAECDBDISPREPOPENINGPLAN100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPREPAECDBDISPREPOPENINGPLAN100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPREPAECDBDISPREPOPENINGPLAN50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPREPAECDBDISPREPOPENINGPLAN50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPREPAECDBDISPREPOPENINGPLAN50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPROPSMASSELEMPLANCOMMON: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPROPSMASSELEMPLANCOMMON_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPROPSMASSELEMPLANCOMMON, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPROPSMASSGROUPPLANCOMMON: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPROPSMASSGROUPPLANCOMMON_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPROPSMASSGROUPPLANCOMMON, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPROPSOPENINGPLANCOMMON: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPROPSOPENINGPLANCOMMON_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPROPSOPENINGPLANCOMMON, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPROPSOPENINGPLANCOMMONHATCHED: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPROPSOPENINGPLANCOMMONHATCHED_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPROPSOPENINGPLANCOMMONHATCHED, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISPROPSOPENINGSILLPLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISPROPSOPENINGSILLPLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISPROPSOPENINGSILLPLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_2D_SECTION: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_2D_SECTION_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_2D_SECTION, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_CLIP_VOLUME: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_CLIP_VOLUME_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_CLIP_VOLUME, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_CLIP_VOLUME_RESULT: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_CLIP_VOLUME_RESULT_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_CLIP_VOLUME_RESULT, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_DIM: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_DIM_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_DIM, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_DISPLAYTHEME: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_DISPLAYTHEME_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_DISPLAYTHEME, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_DOOR: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_DOOR_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_DOOR, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_DOOR_NOMINAL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_DOOR_NOMINAL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_DOOR_NOMINAL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_DOOR_PLAN_100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_DOOR_PLAN_100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_DOOR_PLAN_100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_DOOR_PLAN_50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_DOOR_PLAN_50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_DOOR_PLAN_50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_ENT: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_ENT_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_ENT, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_ENT_REF: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_ENT_REF_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_ENT_REF, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_LAYOUT_CURVE: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_LAYOUT_CURVE_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_LAYOUT_CURVE, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_LAYOUT_GRID2D: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_LAYOUT_GRID2D_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_LAYOUT_GRID2D, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_LAYOUT_GRID3D: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_LAYOUT_GRID3D_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_LAYOUT_GRID3D, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_MASKBLOCK: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_MASKBLOCK_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_MASKBLOCK, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_MASS_ELEM_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_MASS_ELEM_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_MASS_ELEM_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_MASS_GROUP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_MASS_GROUP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_MASS_GROUP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_MATERIAL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_MATERIAL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_MATERIAL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_OPENING: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_OPENING_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_OPENING, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_POLYGON_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_POLYGON_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_POLYGON_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_POLYGON_TRUECOLOUR: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_POLYGON_TRUECOLOUR_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_POLYGON_TRUECOLOUR, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_RAILING_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_RAILING_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_RAILING_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_RAILING_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_RAILING_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_RAILING_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_ROOF: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_ROOF_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_ROOF, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_ROOFSLAB: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_ROOFSLAB_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_ROOFSLAB, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_ROOFSLAB_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_ROOFSLAB_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_ROOFSLAB_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_SCHEDULE_TABLE: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_SCHEDULE_TABLE_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_SCHEDULE_TABLE, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_SLAB: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_SLAB_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_SLAB, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_SLAB_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_SLAB_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_SLAB_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_SLICE: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_SLICE_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_SLICE, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_SPACE_DECOMPOSED: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_SPACE_DECOMPOSED_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_SPACE_DECOMPOSED, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_SPACE_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_SPACE_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_SPACE_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_SPACE_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_SPACE_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_SPACE_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_STAIR_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_STAIR_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_STAIR_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_STAIR_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_STAIR_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_STAIR_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_WALL_GRAPH: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_WALL_GRAPH_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_WALL_GRAPH, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_WALL_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_WALL_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_WALL_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_WALL_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_WALL_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_WALL_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_WALL_SCHEM: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_WALL_SCHEM_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_WALL_SCHEM, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_WINDOW: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_WINDOW_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_WINDOW, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_WINDOW_NOMINAL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_WINDOW_NOMINAL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_WINDOW_NOMINAL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_WINDOW_PLAN_100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_WINDOW_PLAN_100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_WINDOW_PLAN_100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_WINDOW_PLAN_50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_WINDOW_PLAN_50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_WINDOW_PLAN_50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_WINDOW_SILL_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_WINDOW_SILL_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_WINDOW_SILL_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_PROPS_ZONE: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_PROPS_ZONE_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_PROPS_ZONE, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_2D_SECTION: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_2D_SECTION_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_2D_SECTION, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ANCHOR: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ANCHOR_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ANCHOR, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ANCHOR_BUB_TO_GRID: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ANCHOR_BUB_TO_GRID, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ANCHOR_ENT_TO_NODE: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ANCHOR_ENT_TO_NODE_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ANCHOR_ENT_TO_NODE, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ANCHOR_TAG_TO_ENT: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ANCHOR_TAG_TO_ENT_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ANCHOR_TAG_TO_ENT, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_BDG_ELEVLINE_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_BDG_ELEVLINE_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_BDG_ELEVLINE_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_BDG_ELEVLINE_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_BDG_ELEVLINE_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_BDG_ELEVLINE_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_BDG_SECTIONLINE_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_BDG_SECTIONLINE_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_BDG_SECTIONLINE_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_BDG_SECTIONLINE_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_BDG_SECTIONLINE_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_BDG_SECTIONLINE_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_BDG_SECTIONLINE_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_BDG_SECTIONLINE_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_BDG_SECTIONLINE_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_BDG_SECTION_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_BDG_SECTION_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_BDG_SECTION_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_BDG_SECTION_SUBDIV: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_BDG_SECTION_SUBDIV_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_BDG_SECTION_SUBDIV, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CEILING_GRID: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CEILING_GRID_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CEILING_GRID, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CEILING_GRID_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CEILING_GRID_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CEILING_GRID_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CEILING_GRID_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CEILING_GRID_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CEILING_GRID_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CLIP_VOLUME_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CLIP_VOLUME_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CLIP_VOLUME_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CLIP_VOLUME_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CLIP_VOLUME_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CLIP_VOLUME_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CLIP_VOLUME_RESULT: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CLIP_VOLUME_RESULT_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CLIP_VOLUME_RESULT, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_COLUMN_GRID: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_COLUMN_GRID_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_COLUMN_GRID, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_COLUMN_GRID_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_COLUMN_GRID_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_COLUMN_GRID_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_COLUMN_GRID_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_COLUMN_GRID_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_COLUMN_GRID_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CONFIG: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CONFIG_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CONFIG, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_DISPLAYTHEME: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_DISPLAYTHEME_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_DISPLAYTHEME, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_DOOR_ELEV: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_DOOR_ELEV_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_DOOR_ELEV, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_DOOR_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_DOOR_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_DOOR_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_DOOR_NOMINAL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_DOOR_NOMINAL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_DOOR_NOMINAL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_DOOR_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_DOOR_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_DOOR_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_DOOR_PLAN_50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_DOOR_PLAN_50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_DOOR_PLAN_50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_DOOR_PLAN_HEKTO: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_DOOR_PLAN_HEKTO_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_DOOR_PLAN_HEKTO, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_DOOR_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_DOOR_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_DOOR_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_DOOR_THRESHOLD_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_DOOR_THRESHOLD_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_DOOR_THRESHOLD_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_EDITINPLACEPROFILE: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_EDITINPLACEPROFILE_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_EDITINPLACEPROFILE, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ENT_REF: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ENT_REF_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ENT_REF, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_LAYOUT_CURVE: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_LAYOUT_CURVE_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_LAYOUT_CURVE, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_LAYOUT_GRID2D: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_LAYOUT_GRID2D_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_LAYOUT_GRID2D, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_LAYOUT_GRID3D: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_LAYOUT_GRID3D_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_LAYOUT_GRID3D, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MASKBLOCK_REF: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MASKBLOCK_REF_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MASKBLOCK_REF, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MASKBLOCK_REF_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MASKBLOCK_REF_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MASKBLOCK_REF_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MASS_ELEM_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MASS_ELEM_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MASS_ELEM_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MASS_ELEM_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MASS_ELEM_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MASS_ELEM_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MASS_ELEM_SCHEM: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MASS_ELEM_SCHEM_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MASS_ELEM_SCHEM, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MASS_GROUP_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MASS_GROUP_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MASS_GROUP_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MASS_GROUP_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MASS_GROUP_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MASS_GROUP_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MASS_GROUP_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MASS_GROUP_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MASS_GROUP_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MATERIAL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MATERIAL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MATERIAL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MVBLOCK_REF: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MVBLOCK_REF_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MVBLOCK_REF, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MVBLOCK_REF_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MVBLOCK_REF_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MVBLOCK_REF_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_MVBLOCK_REF_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_MVBLOCK_REF_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_MVBLOCK_REF_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_OPENING: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_OPENING_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_OPENING, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_OPENING_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_OPENING_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_OPENING_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_POLYGON_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_POLYGON_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_POLYGON_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_POLYGON_TRUECOLOUR: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_POLYGON_TRUECOLOUR_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_POLYGON_TRUECOLOUR, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_RAILING_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_RAILING_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_RAILING_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_RAILING_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_RAILING_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_RAILING_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_RAILING_PLAN_100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_RAILING_PLAN_100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_RAILING_PLAN_100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_RAILING_PLAN_50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_RAILING_PLAN_50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_RAILING_PLAN_50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ROOFSLAB_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ROOFSLAB_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ROOFSLAB_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ROOFSLAB_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ROOFSLAB_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ROOFSLAB_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ROOF_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ROOF_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ROOF_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ROOF_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ROOF_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ROOF_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ROOF_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ROOF_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ROOF_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_SCHEDULE_TABLE: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_SCHEDULE_TABLE_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_SCHEDULE_TABLE, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_SET: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_SET_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_SET, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_SLAB_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_SLAB_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_SLAB_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_SLAB_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_SLAB_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_SLAB_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_SLICE: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_SLICE_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_SLICE, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_SPACE_DECOMPOSED: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_SPACE_DECOMPOSED_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_SPACE_DECOMPOSED, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_SPACE_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_SPACE_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_SPACE_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_SPACE_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_SPACE_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_SPACE_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_SPACE_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_SPACE_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_SPACE_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_SPACE_VOLUME: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_SPACE_VOLUME_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_SPACE_VOLUME, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_STAIR_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_STAIR_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_STAIR_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_STAIR_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_STAIR_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_STAIR_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_STAIR_PLAN_100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_STAIR_PLAN_100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_STAIR_PLAN_100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_STAIR_PLAN_50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_STAIR_PLAN_50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_STAIR_PLAN_50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_STAIR_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_STAIR_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_STAIR_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WALL_GRAPH: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WALL_GRAPH_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WALL_GRAPH, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WALL_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WALL_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WALL_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WALL_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WALL_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WALL_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WALL_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WALL_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WALL_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WALL_SCHEM: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WALL_SCHEM_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WALL_SCHEM, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOW_ELEV: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOW_ELEV_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOW_ELEV, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOW_MODEL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOW_MODEL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOW_MODEL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOW_NOMINAL: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOW_NOMINAL_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOW_NOMINAL, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOW_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOW_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOW_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOW_PLAN_100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOW_PLAN_100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOW_PLAN_100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOW_PLAN_50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOW_PLAN_50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOW_PLAN_50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOW_RCP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOW_RCP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOW_RCP, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_WINDOW_SILL_PLAN: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_WINDOW_SILL_PLAN_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_WINDOW_SILL_PLAN, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_REP_ZONE: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_REP_ZONE_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_REP_ZONE, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_ROPS_RAILING_PLAN_100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_ROPS_RAILING_PLAN_100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_ROPS_RAILING_PLAN_100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_ROPS_RAILING_PLAN_50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_ROPS_RAILING_PLAN_50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_ROPS_RAILING_PLAN_50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_ROPS_STAIR_PLAN_100: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_ROPS_STAIR_PLAN_100_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_ROPS_STAIR_PLAN_100, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_DISP_ROPS_STAIR_PLAN_50: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_DISP_ROPS_STAIR_PLAN_50_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_DISP_ROPS_STAIR_PLAN_50, parent),
-    1,1,0, 0 },
-  {NULL,	NULL,	0,	0,	0,0,0, 0},
-};
-/* from typedef struct _dwg_object_AEC_VARS_DWG_SETUP: (sorted by offset) */
-static const Dwg_DYNAPI_field _dwg_AEC_VARS_DWG_SETUP_fields[] = {
-  { "parent",	"struct _dwg_object_object*", sizeof (void *),  OFF (struct _dwg_object_AEC_VARS_DWG_SETUP, parent),
-    1,1,0, 0 },
   {NULL,	NULL,	0,	0,	0,0,0, 0},
 };
 /* from typedef struct _dwg_object_ANNOTSCALEOBJECTCONTEXTDATA: (sorted by offset) */
@@ -8815,212 +7387,212 @@ static const struct _name_type_fields dwg_name_types[] = {
   { "3DSOLID",	DWG_TYPE__3DSOLID /*(38)*/,	_dwg_3DSOLID_fields },	/* 1 */
   { "ACSH_HISTORY_CLASS",	DWG_TYPE_ACSH_HISTORY_CLASS /*(512)*/,	NULL },	/* 2 */
   { "ACSH_SWEEP_CLASS",	DWG_TYPE_ACSH_SWEEP_CLASS /*(513)*/,	_dwg_ACSH_SWEEP_CLASS_fields },	/* 3 */
-  { "AEC_AECDBDISPREPBDGELEVLINEPLAN100",	DWG_TYPE_AEC_AECDBDISPREPBDGELEVLINEPLAN100 /*(595)*/,	_dwg_AEC_AECDBDISPREPBDGELEVLINEPLAN100_fields },	/* 4 */
-  { "AEC_AECDBDISPREPBDGELEVLINEPLAN50",	DWG_TYPE_AEC_AECDBDISPREPBDGELEVLINEPLAN50 /*(596)*/,	_dwg_AEC_AECDBDISPREPBDGELEVLINEPLAN50_fields },	/* 5 */
-  { "AEC_AECDBDISPREPBDGSECTIONLINEPLAN100",	DWG_TYPE_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100 /*(597)*/,	_dwg_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100_fields },	/* 6 */
-  { "AEC_AECDBDISPREPBDGSECTIONLINEPLAN50",	DWG_TYPE_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50 /*(598)*/,	_dwg_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50_fields },	/* 7 */
-  { "AEC_AECDBDISPREPCEILINGGRIDPLAN100",	DWG_TYPE_AEC_AECDBDISPREPCEILINGGRIDPLAN100 /*(599)*/,	_dwg_AEC_AECDBDISPREPCEILINGGRIDPLAN100_fields },	/* 8 */
-  { "AEC_AECDBDISPREPCEILINGGRIDPLAN50",	DWG_TYPE_AEC_AECDBDISPREPCEILINGGRIDPLAN50 /*(600)*/,	_dwg_AEC_AECDBDISPREPCEILINGGRIDPLAN50_fields },	/* 9 */
-  { "AEC_AECDBDISPREPCOLUMNGRIDPLAN100",	DWG_TYPE_AEC_AECDBDISPREPCOLUMNGRIDPLAN100 /*(601)*/,	_dwg_AEC_AECDBDISPREPCOLUMNGRIDPLAN100_fields },	/* 10 */
-  { "AEC_AECDBDISPREPCOLUMNGRIDPLAN50",	DWG_TYPE_AEC_AECDBDISPREPCOLUMNGRIDPLAN50 /*(602)*/,	_dwg_AEC_AECDBDISPREPCOLUMNGRIDPLAN50_fields },	/* 11 */
-  { "AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100",	DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100 /*(603)*/,	_dwg_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100_fields },	/* 12 */
-  { "AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50",	DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50 /*(604)*/,	_dwg_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50_fields },	/* 13 */
-  { "AEC_AECDBDISPREPCURTAINWALLUNITPLAN100",	DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100 /*(605)*/,	_dwg_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100_fields },	/* 14 */
-  { "AEC_AECDBDISPREPCURTAINWALLUNITPLAN50",	DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50 /*(606)*/,	_dwg_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50_fields },	/* 15 */
-  { "AEC_AECDBDISPREPMVBLOCKREFPLAN100",	DWG_TYPE_AEC_AECDBDISPREPMVBLOCKREFPLAN100 /*(607)*/,	_dwg_AEC_AECDBDISPREPMVBLOCKREFPLAN100_fields },	/* 16 */
-  { "AEC_AECDBDISPREPMVBLOCKREFPLAN50",	DWG_TYPE_AEC_AECDBDISPREPMVBLOCKREFPLAN50 /*(608)*/,	_dwg_AEC_AECDBDISPREPMVBLOCKREFPLAN50_fields },	/* 17 */
-  { "AEC_AECDBDISPREPROOFPLAN100",	DWG_TYPE_AEC_AECDBDISPREPROOFPLAN100 /*(609)*/,	_dwg_AEC_AECDBDISPREPROOFPLAN100_fields },	/* 18 */
-  { "AEC_AECDBDISPREPROOFPLAN50",	DWG_TYPE_AEC_AECDBDISPREPROOFPLAN50 /*(610)*/,	_dwg_AEC_AECDBDISPREPROOFPLAN50_fields },	/* 19 */
-  { "AEC_AECDBDISPREPROOFSLABPLAN100",	DWG_TYPE_AEC_AECDBDISPREPROOFSLABPLAN100 /*(611)*/,	_dwg_AEC_AECDBDISPREPROOFSLABPLAN100_fields },	/* 20 */
-  { "AEC_AECDBDISPREPROOFSLABPLAN50",	DWG_TYPE_AEC_AECDBDISPREPROOFSLABPLAN50 /*(612)*/,	_dwg_AEC_AECDBDISPREPROOFSLABPLAN50_fields },	/* 21 */
-  { "AEC_AECDBDISPREPSLABPLAN100",	DWG_TYPE_AEC_AECDBDISPREPSLABPLAN100 /*(613)*/,	_dwg_AEC_AECDBDISPREPSLABPLAN100_fields },	/* 22 */
-  { "AEC_AECDBDISPREPSLABPLAN50",	DWG_TYPE_AEC_AECDBDISPREPSLABPLAN50 /*(614)*/,	_dwg_AEC_AECDBDISPREPSLABPLAN50_fields },	/* 23 */
-  { "AEC_AECDBDISPREPSPACEPLAN100",	DWG_TYPE_AEC_AECDBDISPREPSPACEPLAN100 /*(615)*/,	_dwg_AEC_AECDBDISPREPSPACEPLAN100_fields },	/* 24 */
-  { "AEC_AECDBDISPREPSPACEPLAN50",	DWG_TYPE_AEC_AECDBDISPREPSPACEPLAN50 /*(616)*/,	_dwg_AEC_AECDBDISPREPSPACEPLAN50_fields },	/* 25 */
-  { "AEC_AECDBDISPREPWALLPLAN100",	DWG_TYPE_AEC_AECDBDISPREPWALLPLAN100 /*(617)*/,	_dwg_AEC_AECDBDISPREPWALLPLAN100_fields },	/* 26 */
-  { "AEC_AECDBDISPREPWALLPLAN50",	DWG_TYPE_AEC_AECDBDISPREPWALLPLAN50 /*(618)*/,	_dwg_AEC_AECDBDISPREPWALLPLAN50_fields },	/* 27 */
-  { "AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100",	DWG_TYPE_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100 /*(619)*/,	_dwg_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100_fields },	/* 28 */
-  { "AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50",	DWG_TYPE_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50 /*(620)*/,	_dwg_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50_fields },	/* 29 */
-  { "AEC_AECDBDISPREPZONE100",	DWG_TYPE_AEC_AECDBDISPREPZONE100 /*(621)*/,	_dwg_AEC_AECDBDISPREPZONE100_fields },	/* 30 */
-  { "AEC_AECDBDISPREPZONE50",	DWG_TYPE_AEC_AECDBDISPREPZONE50 /*(622)*/,	_dwg_AEC_AECDBDISPREPZONE50_fields },	/* 31 */
+  { "AEC_AECDBDISPREPBDGELEVLINEPLAN100",	DWG_TYPE_AEC_AECDBDISPREPBDGELEVLINEPLAN100 /*(595)*/,	NULL },	/* 4 */
+  { "AEC_AECDBDISPREPBDGELEVLINEPLAN50",	DWG_TYPE_AEC_AECDBDISPREPBDGELEVLINEPLAN50 /*(596)*/,	NULL },	/* 5 */
+  { "AEC_AECDBDISPREPBDGSECTIONLINEPLAN100",	DWG_TYPE_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100 /*(597)*/,	NULL },	/* 6 */
+  { "AEC_AECDBDISPREPBDGSECTIONLINEPLAN50",	DWG_TYPE_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50 /*(598)*/,	NULL },	/* 7 */
+  { "AEC_AECDBDISPREPCEILINGGRIDPLAN100",	DWG_TYPE_AEC_AECDBDISPREPCEILINGGRIDPLAN100 /*(599)*/,	NULL },	/* 8 */
+  { "AEC_AECDBDISPREPCEILINGGRIDPLAN50",	DWG_TYPE_AEC_AECDBDISPREPCEILINGGRIDPLAN50 /*(600)*/,	NULL },	/* 9 */
+  { "AEC_AECDBDISPREPCOLUMNGRIDPLAN100",	DWG_TYPE_AEC_AECDBDISPREPCOLUMNGRIDPLAN100 /*(601)*/,	NULL },	/* 10 */
+  { "AEC_AECDBDISPREPCOLUMNGRIDPLAN50",	DWG_TYPE_AEC_AECDBDISPREPCOLUMNGRIDPLAN50 /*(602)*/,	NULL },	/* 11 */
+  { "AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100",	DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100 /*(603)*/,	NULL },	/* 12 */
+  { "AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50",	DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50 /*(604)*/,	NULL },	/* 13 */
+  { "AEC_AECDBDISPREPCURTAINWALLUNITPLAN100",	DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100 /*(605)*/,	NULL },	/* 14 */
+  { "AEC_AECDBDISPREPCURTAINWALLUNITPLAN50",	DWG_TYPE_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50 /*(606)*/,	NULL },	/* 15 */
+  { "AEC_AECDBDISPREPMVBLOCKREFPLAN100",	DWG_TYPE_AEC_AECDBDISPREPMVBLOCKREFPLAN100 /*(607)*/,	NULL },	/* 16 */
+  { "AEC_AECDBDISPREPMVBLOCKREFPLAN50",	DWG_TYPE_AEC_AECDBDISPREPMVBLOCKREFPLAN50 /*(608)*/,	NULL },	/* 17 */
+  { "AEC_AECDBDISPREPROOFPLAN100",	DWG_TYPE_AEC_AECDBDISPREPROOFPLAN100 /*(609)*/,	NULL },	/* 18 */
+  { "AEC_AECDBDISPREPROOFPLAN50",	DWG_TYPE_AEC_AECDBDISPREPROOFPLAN50 /*(610)*/,	NULL },	/* 19 */
+  { "AEC_AECDBDISPREPROOFSLABPLAN100",	DWG_TYPE_AEC_AECDBDISPREPROOFSLABPLAN100 /*(611)*/,	NULL },	/* 20 */
+  { "AEC_AECDBDISPREPROOFSLABPLAN50",	DWG_TYPE_AEC_AECDBDISPREPROOFSLABPLAN50 /*(612)*/,	NULL },	/* 21 */
+  { "AEC_AECDBDISPREPSLABPLAN100",	DWG_TYPE_AEC_AECDBDISPREPSLABPLAN100 /*(613)*/,	NULL },	/* 22 */
+  { "AEC_AECDBDISPREPSLABPLAN50",	DWG_TYPE_AEC_AECDBDISPREPSLABPLAN50 /*(614)*/,	NULL },	/* 23 */
+  { "AEC_AECDBDISPREPSPACEPLAN100",	DWG_TYPE_AEC_AECDBDISPREPSPACEPLAN100 /*(615)*/,	NULL },	/* 24 */
+  { "AEC_AECDBDISPREPSPACEPLAN50",	DWG_TYPE_AEC_AECDBDISPREPSPACEPLAN50 /*(616)*/,	NULL },	/* 25 */
+  { "AEC_AECDBDISPREPWALLPLAN100",	DWG_TYPE_AEC_AECDBDISPREPWALLPLAN100 /*(617)*/,	NULL },	/* 26 */
+  { "AEC_AECDBDISPREPWALLPLAN50",	DWG_TYPE_AEC_AECDBDISPREPWALLPLAN50 /*(618)*/,	NULL },	/* 27 */
+  { "AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100",	DWG_TYPE_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100 /*(619)*/,	NULL },	/* 28 */
+  { "AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50",	DWG_TYPE_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50 /*(620)*/,	NULL },	/* 29 */
+  { "AEC_AECDBDISPREPZONE100",	DWG_TYPE_AEC_AECDBDISPREPZONE100 /*(621)*/,	NULL },	/* 30 */
+  { "AEC_AECDBDISPREPZONE50",	DWG_TYPE_AEC_AECDBDISPREPZONE50 /*(622)*/,	NULL },	/* 31 */
   { "AEC_CLASSIFICATION_DEF",	DWG_TYPE_AEC_CLASSIFICATION_DEF /*(623)*/,	NULL },	/* 32 */
   { "AEC_CLASSIFICATION_SYSTEM_DEF",	DWG_TYPE_AEC_CLASSIFICATION_SYSTEM_DEF /*(624)*/,	NULL },	/* 33 */
-  { "AEC_DB_DISP_REP_DIM_GROUP_PLAN",	DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN /*(625)*/,	_dwg_AEC_DB_DISP_REP_DIM_GROUP_PLAN_fields },	/* 34 */
-  { "AEC_DB_DISP_REP_DIM_GROUP_PLAN100",	DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN100 /*(626)*/,	_dwg_AEC_DB_DISP_REP_DIM_GROUP_PLAN100_fields },	/* 35 */
-  { "AEC_DB_DISP_REP_DIM_GROUP_PLAN50",	DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN50 /*(627)*/,	_dwg_AEC_DB_DISP_REP_DIM_GROUP_PLAN50_fields },	/* 36 */
-  { "AEC_DISPREPAECDBDISPREPMASSELEMPLAN100",	DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100 /*(681)*/,	_dwg_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100_fields },	/* 37 */
-  { "AEC_DISPREPAECDBDISPREPMASSELEMPLAN50",	DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50 /*(682)*/,	_dwg_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50_fields },	/* 38 */
-  { "AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100",	DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100 /*(683)*/,	_dwg_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100_fields },	/* 39 */
-  { "AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50",	DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50 /*(684)*/,	_dwg_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50_fields },	/* 40 */
-  { "AEC_DISPREPAECDBDISPREPOPENINGPLAN100",	DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLAN100 /*(685)*/,	_dwg_AEC_DISPREPAECDBDISPREPOPENINGPLAN100_fields },	/* 41 */
-  { "AEC_DISPREPAECDBDISPREPOPENINGPLAN50",	DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLAN50 /*(686)*/,	_dwg_AEC_DISPREPAECDBDISPREPOPENINGPLAN50_fields },	/* 42 */
-  { "AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED",	DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED /*(687)*/,	_dwg_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED_fields },	/* 43 */
-  { "AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN",	DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN /*(688)*/,	_dwg_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN_fields },	/* 44 */
-  { "AEC_DISPROPSMASSELEMPLANCOMMON",	DWG_TYPE_AEC_DISPROPSMASSELEMPLANCOMMON /*(792)*/,	_dwg_AEC_DISPROPSMASSELEMPLANCOMMON_fields },	/* 45 */
-  { "AEC_DISPROPSMASSGROUPPLANCOMMON",	DWG_TYPE_AEC_DISPROPSMASSGROUPPLANCOMMON /*(793)*/,	_dwg_AEC_DISPROPSMASSGROUPPLANCOMMON_fields },	/* 46 */
-  { "AEC_DISPROPSOPENINGPLANCOMMON",	DWG_TYPE_AEC_DISPROPSOPENINGPLANCOMMON /*(794)*/,	_dwg_AEC_DISPROPSOPENINGPLANCOMMON_fields },	/* 47 */
-  { "AEC_DISPROPSOPENINGPLANCOMMONHATCHED",	DWG_TYPE_AEC_DISPROPSOPENINGPLANCOMMONHATCHED /*(795)*/,	_dwg_AEC_DISPROPSOPENINGPLANCOMMONHATCHED_fields },	/* 48 */
-  { "AEC_DISPROPSOPENINGSILLPLAN",	DWG_TYPE_AEC_DISPROPSOPENINGSILLPLAN /*(796)*/,	_dwg_AEC_DISPROPSOPENINGSILLPLAN_fields },	/* 49 */
-  { "AEC_DISP_PROPS_2D_SECTION",	DWG_TYPE_AEC_DISP_PROPS_2D_SECTION /*(628)*/,	_dwg_AEC_DISP_PROPS_2D_SECTION_fields },	/* 50 */
-  { "AEC_DISP_PROPS_CLIP_VOLUME",	DWG_TYPE_AEC_DISP_PROPS_CLIP_VOLUME /*(629)*/,	_dwg_AEC_DISP_PROPS_CLIP_VOLUME_fields },	/* 51 */
-  { "AEC_DISP_PROPS_CLIP_VOLUME_RESULT",	DWG_TYPE_AEC_DISP_PROPS_CLIP_VOLUME_RESULT /*(630)*/,	_dwg_AEC_DISP_PROPS_CLIP_VOLUME_RESULT_fields },	/* 52 */
-  { "AEC_DISP_PROPS_DIM",	DWG_TYPE_AEC_DISP_PROPS_DIM /*(631)*/,	_dwg_AEC_DISP_PROPS_DIM_fields },	/* 53 */
-  { "AEC_DISP_PROPS_DISPLAYTHEME",	DWG_TYPE_AEC_DISP_PROPS_DISPLAYTHEME /*(632)*/,	_dwg_AEC_DISP_PROPS_DISPLAYTHEME_fields },	/* 54 */
-  { "AEC_DISP_PROPS_DOOR",	DWG_TYPE_AEC_DISP_PROPS_DOOR /*(633)*/,	_dwg_AEC_DISP_PROPS_DOOR_fields },	/* 55 */
-  { "AEC_DISP_PROPS_DOOR_NOMINAL",	DWG_TYPE_AEC_DISP_PROPS_DOOR_NOMINAL /*(634)*/,	_dwg_AEC_DISP_PROPS_DOOR_NOMINAL_fields },	/* 56 */
-  { "AEC_DISP_PROPS_DOOR_PLAN_100",	DWG_TYPE_AEC_DISP_PROPS_DOOR_PLAN_100 /*(635)*/,	_dwg_AEC_DISP_PROPS_DOOR_PLAN_100_fields },	/* 57 */
-  { "AEC_DISP_PROPS_DOOR_PLAN_50",	DWG_TYPE_AEC_DISP_PROPS_DOOR_PLAN_50 /*(636)*/,	_dwg_AEC_DISP_PROPS_DOOR_PLAN_50_fields },	/* 58 */
-  { "AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN",	DWG_TYPE_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN /*(637)*/,	_dwg_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN_fields },	/* 59 */
-  { "AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN",	DWG_TYPE_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN /*(638)*/,	_dwg_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN_fields },	/* 60 */
-  { "AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL",	DWG_TYPE_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL /*(639)*/,	_dwg_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL_fields },	/* 61 */
-  { "AEC_DISP_PROPS_ENT",	DWG_TYPE_AEC_DISP_PROPS_ENT /*(640)*/,	_dwg_AEC_DISP_PROPS_ENT_fields },	/* 62 */
-  { "AEC_DISP_PROPS_ENT_REF",	DWG_TYPE_AEC_DISP_PROPS_ENT_REF /*(641)*/,	_dwg_AEC_DISP_PROPS_ENT_REF_fields },	/* 63 */
-  { "AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL",	DWG_TYPE_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL /*(642)*/,	_dwg_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL_fields },	/* 64 */
-  { "AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN",	DWG_TYPE_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN /*(643)*/,	_dwg_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN_fields },	/* 65 */
-  { "AEC_DISP_PROPS_LAYOUT_CURVE",	DWG_TYPE_AEC_DISP_PROPS_LAYOUT_CURVE /*(644)*/,	_dwg_AEC_DISP_PROPS_LAYOUT_CURVE_fields },	/* 66 */
-  { "AEC_DISP_PROPS_LAYOUT_GRID2D",	DWG_TYPE_AEC_DISP_PROPS_LAYOUT_GRID2D /*(645)*/,	_dwg_AEC_DISP_PROPS_LAYOUT_GRID2D_fields },	/* 67 */
-  { "AEC_DISP_PROPS_LAYOUT_GRID3D",	DWG_TYPE_AEC_DISP_PROPS_LAYOUT_GRID3D /*(646)*/,	_dwg_AEC_DISP_PROPS_LAYOUT_GRID3D_fields },	/* 68 */
-  { "AEC_DISP_PROPS_MASKBLOCK",	DWG_TYPE_AEC_DISP_PROPS_MASKBLOCK /*(647)*/,	_dwg_AEC_DISP_PROPS_MASKBLOCK_fields },	/* 69 */
-  { "AEC_DISP_PROPS_MASS_ELEM_MODEL",	DWG_TYPE_AEC_DISP_PROPS_MASS_ELEM_MODEL /*(648)*/,	_dwg_AEC_DISP_PROPS_MASS_ELEM_MODEL_fields },	/* 70 */
-  { "AEC_DISP_PROPS_MASS_GROUP",	DWG_TYPE_AEC_DISP_PROPS_MASS_GROUP /*(649)*/,	_dwg_AEC_DISP_PROPS_MASS_GROUP_fields },	/* 71 */
-  { "AEC_DISP_PROPS_MATERIAL",	DWG_TYPE_AEC_DISP_PROPS_MATERIAL /*(650)*/,	_dwg_AEC_DISP_PROPS_MATERIAL_fields },	/* 72 */
-  { "AEC_DISP_PROPS_OPENING",	DWG_TYPE_AEC_DISP_PROPS_OPENING /*(651)*/,	_dwg_AEC_DISP_PROPS_OPENING_fields },	/* 73 */
-  { "AEC_DISP_PROPS_POLYGON_MODEL",	DWG_TYPE_AEC_DISP_PROPS_POLYGON_MODEL /*(652)*/,	_dwg_AEC_DISP_PROPS_POLYGON_MODEL_fields },	/* 74 */
-  { "AEC_DISP_PROPS_POLYGON_TRUECOLOUR",	DWG_TYPE_AEC_DISP_PROPS_POLYGON_TRUECOLOUR /*(653)*/,	_dwg_AEC_DISP_PROPS_POLYGON_TRUECOLOUR_fields },	/* 75 */
-  { "AEC_DISP_PROPS_RAILING_MODEL",	DWG_TYPE_AEC_DISP_PROPS_RAILING_MODEL /*(654)*/,	_dwg_AEC_DISP_PROPS_RAILING_MODEL_fields },	/* 76 */
-  { "AEC_DISP_PROPS_RAILING_PLAN",	DWG_TYPE_AEC_DISP_PROPS_RAILING_PLAN /*(655)*/,	_dwg_AEC_DISP_PROPS_RAILING_PLAN_fields },	/* 77 */
-  { "AEC_DISP_PROPS_ROOF",	DWG_TYPE_AEC_DISP_PROPS_ROOF /*(656)*/,	_dwg_AEC_DISP_PROPS_ROOF_fields },	/* 78 */
-  { "AEC_DISP_PROPS_ROOFSLAB",	DWG_TYPE_AEC_DISP_PROPS_ROOFSLAB /*(657)*/,	_dwg_AEC_DISP_PROPS_ROOFSLAB_fields },	/* 79 */
-  { "AEC_DISP_PROPS_ROOFSLAB_PLAN",	DWG_TYPE_AEC_DISP_PROPS_ROOFSLAB_PLAN /*(658)*/,	_dwg_AEC_DISP_PROPS_ROOFSLAB_PLAN_fields },	/* 80 */
-  { "AEC_DISP_PROPS_SCHEDULE_TABLE",	DWG_TYPE_AEC_DISP_PROPS_SCHEDULE_TABLE /*(659)*/,	_dwg_AEC_DISP_PROPS_SCHEDULE_TABLE_fields },	/* 81 */
-  { "AEC_DISP_PROPS_SLAB",	DWG_TYPE_AEC_DISP_PROPS_SLAB /*(660)*/,	_dwg_AEC_DISP_PROPS_SLAB_fields },	/* 82 */
-  { "AEC_DISP_PROPS_SLAB_PLAN",	DWG_TYPE_AEC_DISP_PROPS_SLAB_PLAN /*(661)*/,	_dwg_AEC_DISP_PROPS_SLAB_PLAN_fields },	/* 83 */
-  { "AEC_DISP_PROPS_SLICE",	DWG_TYPE_AEC_DISP_PROPS_SLICE /*(662)*/,	_dwg_AEC_DISP_PROPS_SLICE_fields },	/* 84 */
-  { "AEC_DISP_PROPS_SPACE_DECOMPOSED",	DWG_TYPE_AEC_DISP_PROPS_SPACE_DECOMPOSED /*(663)*/,	_dwg_AEC_DISP_PROPS_SPACE_DECOMPOSED_fields },	/* 85 */
-  { "AEC_DISP_PROPS_SPACE_MODEL",	DWG_TYPE_AEC_DISP_PROPS_SPACE_MODEL /*(664)*/,	_dwg_AEC_DISP_PROPS_SPACE_MODEL_fields },	/* 86 */
-  { "AEC_DISP_PROPS_SPACE_PLAN",	DWG_TYPE_AEC_DISP_PROPS_SPACE_PLAN /*(665)*/,	_dwg_AEC_DISP_PROPS_SPACE_PLAN_fields },	/* 87 */
-  { "AEC_DISP_PROPS_STAIR_MODEL",	DWG_TYPE_AEC_DISP_PROPS_STAIR_MODEL /*(666)*/,	_dwg_AEC_DISP_PROPS_STAIR_MODEL_fields },	/* 88 */
-  { "AEC_DISP_PROPS_STAIR_PLAN",	DWG_TYPE_AEC_DISP_PROPS_STAIR_PLAN /*(667)*/,	_dwg_AEC_DISP_PROPS_STAIR_PLAN_fields },	/* 89 */
-  { "AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING",	DWG_TYPE_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING /*(668)*/,	_dwg_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING_fields },	/* 90 */
-  { "AEC_DISP_PROPS_WALL_GRAPH",	DWG_TYPE_AEC_DISP_PROPS_WALL_GRAPH /*(669)*/,	_dwg_AEC_DISP_PROPS_WALL_GRAPH_fields },	/* 91 */
-  { "AEC_DISP_PROPS_WALL_MODEL",	DWG_TYPE_AEC_DISP_PROPS_WALL_MODEL /*(670)*/,	_dwg_AEC_DISP_PROPS_WALL_MODEL_fields },	/* 92 */
-  { "AEC_DISP_PROPS_WALL_PLAN",	DWG_TYPE_AEC_DISP_PROPS_WALL_PLAN /*(671)*/,	_dwg_AEC_DISP_PROPS_WALL_PLAN_fields },	/* 93 */
-  { "AEC_DISP_PROPS_WALL_SCHEM",	DWG_TYPE_AEC_DISP_PROPS_WALL_SCHEM /*(672)*/,	_dwg_AEC_DISP_PROPS_WALL_SCHEM_fields },	/* 94 */
-  { "AEC_DISP_PROPS_WINDOW",	DWG_TYPE_AEC_DISP_PROPS_WINDOW /*(673)*/,	_dwg_AEC_DISP_PROPS_WINDOW_fields },	/* 95 */
-  { "AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN",	DWG_TYPE_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN /*(674)*/,	_dwg_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN_fields },	/* 96 */
-  { "AEC_DISP_PROPS_WINDOW_NOMINAL",	DWG_TYPE_AEC_DISP_PROPS_WINDOW_NOMINAL /*(675)*/,	_dwg_AEC_DISP_PROPS_WINDOW_NOMINAL_fields },	/* 97 */
-  { "AEC_DISP_PROPS_WINDOW_PLAN_100",	DWG_TYPE_AEC_DISP_PROPS_WINDOW_PLAN_100 /*(676)*/,	_dwg_AEC_DISP_PROPS_WINDOW_PLAN_100_fields },	/* 98 */
-  { "AEC_DISP_PROPS_WINDOW_PLAN_50",	DWG_TYPE_AEC_DISP_PROPS_WINDOW_PLAN_50 /*(677)*/,	_dwg_AEC_DISP_PROPS_WINDOW_PLAN_50_fields },	/* 99 */
-  { "AEC_DISP_PROPS_WINDOW_SILL_PLAN",	DWG_TYPE_AEC_DISP_PROPS_WINDOW_SILL_PLAN /*(678)*/,	_dwg_AEC_DISP_PROPS_WINDOW_SILL_PLAN_fields },	/* 100 */
-  { "AEC_DISP_PROPS_ZONE",	DWG_TYPE_AEC_DISP_PROPS_ZONE /*(679)*/,	_dwg_AEC_DISP_PROPS_ZONE_fields },	/* 101 */
-  { "AEC_DISP_REP_2D_SECTION",	DWG_TYPE_AEC_DISP_REP_2D_SECTION /*(680)*/,	_dwg_AEC_DISP_REP_2D_SECTION_fields },	/* 102 */
-  { "AEC_DISP_REP_ANCHOR",	DWG_TYPE_AEC_DISP_REP_ANCHOR /*(689)*/,	_dwg_AEC_DISP_REP_ANCHOR_fields },	/* 103 */
-  { "AEC_DISP_REP_ANCHOR_BUB_TO_GRID",	DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID /*(690)*/,	_dwg_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_fields },	/* 104 */
-  { "AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL",	DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL /*(691)*/,	_dwg_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL_fields },	/* 105 */
-  { "AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP",	DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP /*(692)*/,	_dwg_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP_fields },	/* 106 */
-  { "AEC_DISP_REP_ANCHOR_ENT_TO_NODE",	DWG_TYPE_AEC_DISP_REP_ANCHOR_ENT_TO_NODE /*(693)*/,	_dwg_AEC_DISP_REP_ANCHOR_ENT_TO_NODE_fields },	/* 107 */
-  { "AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT",	DWG_TYPE_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT /*(694)*/,	_dwg_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT_fields },	/* 108 */
-  { "AEC_DISP_REP_ANCHOR_TAG_TO_ENT",	DWG_TYPE_AEC_DISP_REP_ANCHOR_TAG_TO_ENT /*(695)*/,	_dwg_AEC_DISP_REP_ANCHOR_TAG_TO_ENT_fields },	/* 109 */
-  { "AEC_DISP_REP_BDG_ELEVLINE_MODEL",	DWG_TYPE_AEC_DISP_REP_BDG_ELEVLINE_MODEL /*(696)*/,	_dwg_AEC_DISP_REP_BDG_ELEVLINE_MODEL_fields },	/* 110 */
+  { "AEC_DB_DISP_REP_DIM_GROUP_PLAN",	DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN /*(625)*/,	NULL },	/* 34 */
+  { "AEC_DB_DISP_REP_DIM_GROUP_PLAN100",	DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN100 /*(626)*/,	NULL },	/* 35 */
+  { "AEC_DB_DISP_REP_DIM_GROUP_PLAN50",	DWG_TYPE_AEC_DB_DISP_REP_DIM_GROUP_PLAN50 /*(627)*/,	NULL },	/* 36 */
+  { "AEC_DISPREPAECDBDISPREPMASSELEMPLAN100",	DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100 /*(681)*/,	NULL },	/* 37 */
+  { "AEC_DISPREPAECDBDISPREPMASSELEMPLAN50",	DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50 /*(682)*/,	NULL },	/* 38 */
+  { "AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100",	DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100 /*(683)*/,	NULL },	/* 39 */
+  { "AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50",	DWG_TYPE_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50 /*(684)*/,	NULL },	/* 40 */
+  { "AEC_DISPREPAECDBDISPREPOPENINGPLAN100",	DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLAN100 /*(685)*/,	NULL },	/* 41 */
+  { "AEC_DISPREPAECDBDISPREPOPENINGPLAN50",	DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLAN50 /*(686)*/,	NULL },	/* 42 */
+  { "AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED",	DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED /*(687)*/,	NULL },	/* 43 */
+  { "AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN",	DWG_TYPE_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN /*(688)*/,	NULL },	/* 44 */
+  { "AEC_DISPROPSMASSELEMPLANCOMMON",	DWG_TYPE_AEC_DISPROPSMASSELEMPLANCOMMON /*(792)*/,	NULL },	/* 45 */
+  { "AEC_DISPROPSMASSGROUPPLANCOMMON",	DWG_TYPE_AEC_DISPROPSMASSGROUPPLANCOMMON /*(793)*/,	NULL },	/* 46 */
+  { "AEC_DISPROPSOPENINGPLANCOMMON",	DWG_TYPE_AEC_DISPROPSOPENINGPLANCOMMON /*(794)*/,	NULL },	/* 47 */
+  { "AEC_DISPROPSOPENINGPLANCOMMONHATCHED",	DWG_TYPE_AEC_DISPROPSOPENINGPLANCOMMONHATCHED /*(795)*/,	NULL },	/* 48 */
+  { "AEC_DISPROPSOPENINGSILLPLAN",	DWG_TYPE_AEC_DISPROPSOPENINGSILLPLAN /*(796)*/,	NULL },	/* 49 */
+  { "AEC_DISP_PROPS_2D_SECTION",	DWG_TYPE_AEC_DISP_PROPS_2D_SECTION /*(628)*/,	NULL },	/* 50 */
+  { "AEC_DISP_PROPS_CLIP_VOLUME",	DWG_TYPE_AEC_DISP_PROPS_CLIP_VOLUME /*(629)*/,	NULL },	/* 51 */
+  { "AEC_DISP_PROPS_CLIP_VOLUME_RESULT",	DWG_TYPE_AEC_DISP_PROPS_CLIP_VOLUME_RESULT /*(630)*/,	NULL },	/* 52 */
+  { "AEC_DISP_PROPS_DIM",	DWG_TYPE_AEC_DISP_PROPS_DIM /*(631)*/,	NULL },	/* 53 */
+  { "AEC_DISP_PROPS_DISPLAYTHEME",	DWG_TYPE_AEC_DISP_PROPS_DISPLAYTHEME /*(632)*/,	NULL },	/* 54 */
+  { "AEC_DISP_PROPS_DOOR",	DWG_TYPE_AEC_DISP_PROPS_DOOR /*(633)*/,	NULL },	/* 55 */
+  { "AEC_DISP_PROPS_DOOR_NOMINAL",	DWG_TYPE_AEC_DISP_PROPS_DOOR_NOMINAL /*(634)*/,	NULL },	/* 56 */
+  { "AEC_DISP_PROPS_DOOR_PLAN_100",	DWG_TYPE_AEC_DISP_PROPS_DOOR_PLAN_100 /*(635)*/,	NULL },	/* 57 */
+  { "AEC_DISP_PROPS_DOOR_PLAN_50",	DWG_TYPE_AEC_DISP_PROPS_DOOR_PLAN_50 /*(636)*/,	NULL },	/* 58 */
+  { "AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN",	DWG_TYPE_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN /*(637)*/,	NULL },	/* 59 */
+  { "AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN",	DWG_TYPE_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN /*(638)*/,	NULL },	/* 60 */
+  { "AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL",	DWG_TYPE_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL /*(639)*/,	NULL },	/* 61 */
+  { "AEC_DISP_PROPS_ENT",	DWG_TYPE_AEC_DISP_PROPS_ENT /*(640)*/,	NULL },	/* 62 */
+  { "AEC_DISP_PROPS_ENT_REF",	DWG_TYPE_AEC_DISP_PROPS_ENT_REF /*(641)*/,	NULL },	/* 63 */
+  { "AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL",	DWG_TYPE_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL /*(642)*/,	NULL },	/* 64 */
+  { "AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN",	DWG_TYPE_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN /*(643)*/,	NULL },	/* 65 */
+  { "AEC_DISP_PROPS_LAYOUT_CURVE",	DWG_TYPE_AEC_DISP_PROPS_LAYOUT_CURVE /*(644)*/,	NULL },	/* 66 */
+  { "AEC_DISP_PROPS_LAYOUT_GRID2D",	DWG_TYPE_AEC_DISP_PROPS_LAYOUT_GRID2D /*(645)*/,	NULL },	/* 67 */
+  { "AEC_DISP_PROPS_LAYOUT_GRID3D",	DWG_TYPE_AEC_DISP_PROPS_LAYOUT_GRID3D /*(646)*/,	NULL },	/* 68 */
+  { "AEC_DISP_PROPS_MASKBLOCK",	DWG_TYPE_AEC_DISP_PROPS_MASKBLOCK /*(647)*/,	NULL },	/* 69 */
+  { "AEC_DISP_PROPS_MASS_ELEM_MODEL",	DWG_TYPE_AEC_DISP_PROPS_MASS_ELEM_MODEL /*(648)*/,	NULL },	/* 70 */
+  { "AEC_DISP_PROPS_MASS_GROUP",	DWG_TYPE_AEC_DISP_PROPS_MASS_GROUP /*(649)*/,	NULL },	/* 71 */
+  { "AEC_DISP_PROPS_MATERIAL",	DWG_TYPE_AEC_DISP_PROPS_MATERIAL /*(650)*/,	NULL },	/* 72 */
+  { "AEC_DISP_PROPS_OPENING",	DWG_TYPE_AEC_DISP_PROPS_OPENING /*(651)*/,	NULL },	/* 73 */
+  { "AEC_DISP_PROPS_POLYGON_MODEL",	DWG_TYPE_AEC_DISP_PROPS_POLYGON_MODEL /*(652)*/,	NULL },	/* 74 */
+  { "AEC_DISP_PROPS_POLYGON_TRUECOLOUR",	DWG_TYPE_AEC_DISP_PROPS_POLYGON_TRUECOLOUR /*(653)*/,	NULL },	/* 75 */
+  { "AEC_DISP_PROPS_RAILING_MODEL",	DWG_TYPE_AEC_DISP_PROPS_RAILING_MODEL /*(654)*/,	NULL },	/* 76 */
+  { "AEC_DISP_PROPS_RAILING_PLAN",	DWG_TYPE_AEC_DISP_PROPS_RAILING_PLAN /*(655)*/,	NULL },	/* 77 */
+  { "AEC_DISP_PROPS_ROOF",	DWG_TYPE_AEC_DISP_PROPS_ROOF /*(656)*/,	NULL },	/* 78 */
+  { "AEC_DISP_PROPS_ROOFSLAB",	DWG_TYPE_AEC_DISP_PROPS_ROOFSLAB /*(657)*/,	NULL },	/* 79 */
+  { "AEC_DISP_PROPS_ROOFSLAB_PLAN",	DWG_TYPE_AEC_DISP_PROPS_ROOFSLAB_PLAN /*(658)*/,	NULL },	/* 80 */
+  { "AEC_DISP_PROPS_SCHEDULE_TABLE",	DWG_TYPE_AEC_DISP_PROPS_SCHEDULE_TABLE /*(659)*/,	NULL },	/* 81 */
+  { "AEC_DISP_PROPS_SLAB",	DWG_TYPE_AEC_DISP_PROPS_SLAB /*(660)*/,	NULL },	/* 82 */
+  { "AEC_DISP_PROPS_SLAB_PLAN",	DWG_TYPE_AEC_DISP_PROPS_SLAB_PLAN /*(661)*/,	NULL },	/* 83 */
+  { "AEC_DISP_PROPS_SLICE",	DWG_TYPE_AEC_DISP_PROPS_SLICE /*(662)*/,	NULL },	/* 84 */
+  { "AEC_DISP_PROPS_SPACE_DECOMPOSED",	DWG_TYPE_AEC_DISP_PROPS_SPACE_DECOMPOSED /*(663)*/,	NULL },	/* 85 */
+  { "AEC_DISP_PROPS_SPACE_MODEL",	DWG_TYPE_AEC_DISP_PROPS_SPACE_MODEL /*(664)*/,	NULL },	/* 86 */
+  { "AEC_DISP_PROPS_SPACE_PLAN",	DWG_TYPE_AEC_DISP_PROPS_SPACE_PLAN /*(665)*/,	NULL },	/* 87 */
+  { "AEC_DISP_PROPS_STAIR_MODEL",	DWG_TYPE_AEC_DISP_PROPS_STAIR_MODEL /*(666)*/,	NULL },	/* 88 */
+  { "AEC_DISP_PROPS_STAIR_PLAN",	DWG_TYPE_AEC_DISP_PROPS_STAIR_PLAN /*(667)*/,	NULL },	/* 89 */
+  { "AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING",	DWG_TYPE_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING /*(668)*/,	NULL },	/* 90 */
+  { "AEC_DISP_PROPS_WALL_GRAPH",	DWG_TYPE_AEC_DISP_PROPS_WALL_GRAPH /*(669)*/,	NULL },	/* 91 */
+  { "AEC_DISP_PROPS_WALL_MODEL",	DWG_TYPE_AEC_DISP_PROPS_WALL_MODEL /*(670)*/,	NULL },	/* 92 */
+  { "AEC_DISP_PROPS_WALL_PLAN",	DWG_TYPE_AEC_DISP_PROPS_WALL_PLAN /*(671)*/,	NULL },	/* 93 */
+  { "AEC_DISP_PROPS_WALL_SCHEM",	DWG_TYPE_AEC_DISP_PROPS_WALL_SCHEM /*(672)*/,	NULL },	/* 94 */
+  { "AEC_DISP_PROPS_WINDOW",	DWG_TYPE_AEC_DISP_PROPS_WINDOW /*(673)*/,	NULL },	/* 95 */
+  { "AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN",	DWG_TYPE_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN /*(674)*/,	NULL },	/* 96 */
+  { "AEC_DISP_PROPS_WINDOW_NOMINAL",	DWG_TYPE_AEC_DISP_PROPS_WINDOW_NOMINAL /*(675)*/,	NULL },	/* 97 */
+  { "AEC_DISP_PROPS_WINDOW_PLAN_100",	DWG_TYPE_AEC_DISP_PROPS_WINDOW_PLAN_100 /*(676)*/,	NULL },	/* 98 */
+  { "AEC_DISP_PROPS_WINDOW_PLAN_50",	DWG_TYPE_AEC_DISP_PROPS_WINDOW_PLAN_50 /*(677)*/,	NULL },	/* 99 */
+  { "AEC_DISP_PROPS_WINDOW_SILL_PLAN",	DWG_TYPE_AEC_DISP_PROPS_WINDOW_SILL_PLAN /*(678)*/,	NULL },	/* 100 */
+  { "AEC_DISP_PROPS_ZONE",	DWG_TYPE_AEC_DISP_PROPS_ZONE /*(679)*/,	NULL },	/* 101 */
+  { "AEC_DISP_REP_2D_SECTION",	DWG_TYPE_AEC_DISP_REP_2D_SECTION /*(680)*/,	NULL },	/* 102 */
+  { "AEC_DISP_REP_ANCHOR",	DWG_TYPE_AEC_DISP_REP_ANCHOR /*(689)*/,	NULL },	/* 103 */
+  { "AEC_DISP_REP_ANCHOR_BUB_TO_GRID",	DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID /*(690)*/,	NULL },	/* 104 */
+  { "AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL",	DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL /*(691)*/,	NULL },	/* 105 */
+  { "AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP",	DWG_TYPE_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP /*(692)*/,	NULL },	/* 106 */
+  { "AEC_DISP_REP_ANCHOR_ENT_TO_NODE",	DWG_TYPE_AEC_DISP_REP_ANCHOR_ENT_TO_NODE /*(693)*/,	NULL },	/* 107 */
+  { "AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT",	DWG_TYPE_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT /*(694)*/,	NULL },	/* 108 */
+  { "AEC_DISP_REP_ANCHOR_TAG_TO_ENT",	DWG_TYPE_AEC_DISP_REP_ANCHOR_TAG_TO_ENT /*(695)*/,	NULL },	/* 109 */
+  { "AEC_DISP_REP_BDG_ELEVLINE_MODEL",	DWG_TYPE_AEC_DISP_REP_BDG_ELEVLINE_MODEL /*(696)*/,	NULL },	/* 110 */
   { "AEC_DISP_REP_BDG_ELEVLINE_PLAN",	DWG_TYPE_AEC_DISP_REP_BDG_ELEVLINE_PLAN /*(697)*/,	NULL },	/* 111 */
-  { "AEC_DISP_REP_BDG_ELEVLINE_RCP",	DWG_TYPE_AEC_DISP_REP_BDG_ELEVLINE_RCP /*(698)*/,	_dwg_AEC_DISP_REP_BDG_ELEVLINE_RCP_fields },	/* 112 */
-  { "AEC_DISP_REP_BDG_SECTIONLINE_MODEL",	DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_MODEL /*(699)*/,	_dwg_AEC_DISP_REP_BDG_SECTIONLINE_MODEL_fields },	/* 113 */
-  { "AEC_DISP_REP_BDG_SECTIONLINE_PLAN",	DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_PLAN /*(700)*/,	_dwg_AEC_DISP_REP_BDG_SECTIONLINE_PLAN_fields },	/* 114 */
-  { "AEC_DISP_REP_BDG_SECTIONLINE_RCP",	DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_RCP /*(701)*/,	_dwg_AEC_DISP_REP_BDG_SECTIONLINE_RCP_fields },	/* 115 */
-  { "AEC_DISP_REP_BDG_SECTION_MODEL",	DWG_TYPE_AEC_DISP_REP_BDG_SECTION_MODEL /*(702)*/,	_dwg_AEC_DISP_REP_BDG_SECTION_MODEL_fields },	/* 116 */
-  { "AEC_DISP_REP_BDG_SECTION_SUBDIV",	DWG_TYPE_AEC_DISP_REP_BDG_SECTION_SUBDIV /*(703)*/,	_dwg_AEC_DISP_REP_BDG_SECTION_SUBDIV_fields },	/* 117 */
-  { "AEC_DISP_REP_CEILING_GRID",	DWG_TYPE_AEC_DISP_REP_CEILING_GRID /*(704)*/,	_dwg_AEC_DISP_REP_CEILING_GRID_fields },	/* 118 */
-  { "AEC_DISP_REP_CEILING_GRID_MODEL",	DWG_TYPE_AEC_DISP_REP_CEILING_GRID_MODEL /*(705)*/,	_dwg_AEC_DISP_REP_CEILING_GRID_MODEL_fields },	/* 119 */
-  { "AEC_DISP_REP_CEILING_GRID_RCP",	DWG_TYPE_AEC_DISP_REP_CEILING_GRID_RCP /*(706)*/,	_dwg_AEC_DISP_REP_CEILING_GRID_RCP_fields },	/* 120 */
-  { "AEC_DISP_REP_CLIP_VOLUME_MODEL",	DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_MODEL /*(707)*/,	_dwg_AEC_DISP_REP_CLIP_VOLUME_MODEL_fields },	/* 121 */
-  { "AEC_DISP_REP_CLIP_VOLUME_PLAN",	DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_PLAN /*(708)*/,	_dwg_AEC_DISP_REP_CLIP_VOLUME_PLAN_fields },	/* 122 */
-  { "AEC_DISP_REP_CLIP_VOLUME_RESULT",	DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_RESULT /*(709)*/,	_dwg_AEC_DISP_REP_CLIP_VOLUME_RESULT_fields },	/* 123 */
-  { "AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV",	DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV /*(710)*/,	_dwg_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV_fields },	/* 124 */
-  { "AEC_DISP_REP_COLUMN_GRID",	DWG_TYPE_AEC_DISP_REP_COLUMN_GRID /*(711)*/,	_dwg_AEC_DISP_REP_COLUMN_GRID_fields },	/* 125 */
-  { "AEC_DISP_REP_COLUMN_GRID_MODEL",	DWG_TYPE_AEC_DISP_REP_COLUMN_GRID_MODEL /*(712)*/,	_dwg_AEC_DISP_REP_COLUMN_GRID_MODEL_fields },	/* 126 */
-  { "AEC_DISP_REP_COLUMN_GRID_RCP",	DWG_TYPE_AEC_DISP_REP_COLUMN_GRID_RCP /*(713)*/,	_dwg_AEC_DISP_REP_COLUMN_GRID_RCP_fields },	/* 127 */
-  { "AEC_DISP_REP_CONFIG",	DWG_TYPE_AEC_DISP_REP_CONFIG /*(714)*/,	_dwg_AEC_DISP_REP_CONFIG_fields },	/* 128 */
-  { "AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL",	DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL /*(715)*/,	_dwg_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL_fields },	/* 129 */
-  { "AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN",	DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN /*(716)*/,	_dwg_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN_fields },	/* 130 */
-  { "AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL",	DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL /*(717)*/,	_dwg_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL_fields },	/* 131 */
-  { "AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN",	DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN /*(718)*/,	_dwg_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN_fields },	/* 132 */
-  { "AEC_DISP_REP_DISPLAYTHEME",	DWG_TYPE_AEC_DISP_REP_DISPLAYTHEME /*(719)*/,	_dwg_AEC_DISP_REP_DISPLAYTHEME_fields },	/* 133 */
-  { "AEC_DISP_REP_DOOR_ELEV",	DWG_TYPE_AEC_DISP_REP_DOOR_ELEV /*(720)*/,	_dwg_AEC_DISP_REP_DOOR_ELEV_fields },	/* 134 */
-  { "AEC_DISP_REP_DOOR_MODEL",	DWG_TYPE_AEC_DISP_REP_DOOR_MODEL /*(721)*/,	_dwg_AEC_DISP_REP_DOOR_MODEL_fields },	/* 135 */
-  { "AEC_DISP_REP_DOOR_NOMINAL",	DWG_TYPE_AEC_DISP_REP_DOOR_NOMINAL /*(722)*/,	_dwg_AEC_DISP_REP_DOOR_NOMINAL_fields },	/* 136 */
-  { "AEC_DISP_REP_DOOR_PLAN",	DWG_TYPE_AEC_DISP_REP_DOOR_PLAN /*(723)*/,	_dwg_AEC_DISP_REP_DOOR_PLAN_fields },	/* 137 */
-  { "AEC_DISP_REP_DOOR_PLAN_50",	DWG_TYPE_AEC_DISP_REP_DOOR_PLAN_50 /*(724)*/,	_dwg_AEC_DISP_REP_DOOR_PLAN_50_fields },	/* 138 */
-  { "AEC_DISP_REP_DOOR_PLAN_HEKTO",	DWG_TYPE_AEC_DISP_REP_DOOR_PLAN_HEKTO /*(725)*/,	_dwg_AEC_DISP_REP_DOOR_PLAN_HEKTO_fields },	/* 139 */
-  { "AEC_DISP_REP_DOOR_RCP",	DWG_TYPE_AEC_DISP_REP_DOOR_RCP /*(726)*/,	_dwg_AEC_DISP_REP_DOOR_RCP_fields },	/* 140 */
-  { "AEC_DISP_REP_DOOR_THRESHOLD_PLAN",	DWG_TYPE_AEC_DISP_REP_DOOR_THRESHOLD_PLAN /*(727)*/,	_dwg_AEC_DISP_REP_DOOR_THRESHOLD_PLAN_fields },	/* 141 */
-  { "AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN",	DWG_TYPE_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN /*(728)*/,	_dwg_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN_fields },	/* 142 */
-  { "AEC_DISP_REP_EDITINPLACEPROFILE",	DWG_TYPE_AEC_DISP_REP_EDITINPLACEPROFILE /*(729)*/,	_dwg_AEC_DISP_REP_EDITINPLACEPROFILE_fields },	/* 143 */
-  { "AEC_DISP_REP_ENT_REF",	DWG_TYPE_AEC_DISP_REP_ENT_REF /*(730)*/,	_dwg_AEC_DISP_REP_ENT_REF_fields },	/* 144 */
-  { "AEC_DISP_REP_LAYOUT_CURVE",	DWG_TYPE_AEC_DISP_REP_LAYOUT_CURVE /*(731)*/,	_dwg_AEC_DISP_REP_LAYOUT_CURVE_fields },	/* 145 */
-  { "AEC_DISP_REP_LAYOUT_GRID2D",	DWG_TYPE_AEC_DISP_REP_LAYOUT_GRID2D /*(732)*/,	_dwg_AEC_DISP_REP_LAYOUT_GRID2D_fields },	/* 146 */
-  { "AEC_DISP_REP_LAYOUT_GRID3D",	DWG_TYPE_AEC_DISP_REP_LAYOUT_GRID3D /*(733)*/,	_dwg_AEC_DISP_REP_LAYOUT_GRID3D_fields },	/* 147 */
-  { "AEC_DISP_REP_MASKBLOCK_REF",	DWG_TYPE_AEC_DISP_REP_MASKBLOCK_REF /*(734)*/,	_dwg_AEC_DISP_REP_MASKBLOCK_REF_fields },	/* 148 */
-  { "AEC_DISP_REP_MASKBLOCK_REF_RCP",	DWG_TYPE_AEC_DISP_REP_MASKBLOCK_REF_RCP /*(735)*/,	_dwg_AEC_DISP_REP_MASKBLOCK_REF_RCP_fields },	/* 149 */
-  { "AEC_DISP_REP_MASS_ELEM_MODEL",	DWG_TYPE_AEC_DISP_REP_MASS_ELEM_MODEL /*(736)*/,	_dwg_AEC_DISP_REP_MASS_ELEM_MODEL_fields },	/* 150 */
-  { "AEC_DISP_REP_MASS_ELEM_RCP",	DWG_TYPE_AEC_DISP_REP_MASS_ELEM_RCP /*(737)*/,	_dwg_AEC_DISP_REP_MASS_ELEM_RCP_fields },	/* 151 */
-  { "AEC_DISP_REP_MASS_ELEM_SCHEM",	DWG_TYPE_AEC_DISP_REP_MASS_ELEM_SCHEM /*(738)*/,	_dwg_AEC_DISP_REP_MASS_ELEM_SCHEM_fields },	/* 152 */
-  { "AEC_DISP_REP_MASS_GROUP_MODEL",	DWG_TYPE_AEC_DISP_REP_MASS_GROUP_MODEL /*(739)*/,	_dwg_AEC_DISP_REP_MASS_GROUP_MODEL_fields },	/* 153 */
-  { "AEC_DISP_REP_MASS_GROUP_PLAN",	DWG_TYPE_AEC_DISP_REP_MASS_GROUP_PLAN /*(740)*/,	_dwg_AEC_DISP_REP_MASS_GROUP_PLAN_fields },	/* 154 */
-  { "AEC_DISP_REP_MASS_GROUP_RCP",	DWG_TYPE_AEC_DISP_REP_MASS_GROUP_RCP /*(741)*/,	_dwg_AEC_DISP_REP_MASS_GROUP_RCP_fields },	/* 155 */
-  { "AEC_DISP_REP_MATERIAL",	DWG_TYPE_AEC_DISP_REP_MATERIAL /*(742)*/,	_dwg_AEC_DISP_REP_MATERIAL_fields },	/* 156 */
-  { "AEC_DISP_REP_MVBLOCK_REF",	DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF /*(743)*/,	_dwg_AEC_DISP_REP_MVBLOCK_REF_fields },	/* 157 */
-  { "AEC_DISP_REP_MVBLOCK_REF_MODEL",	DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF_MODEL /*(744)*/,	_dwg_AEC_DISP_REP_MVBLOCK_REF_MODEL_fields },	/* 158 */
-  { "AEC_DISP_REP_MVBLOCK_REF_RCP",	DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF_RCP /*(745)*/,	_dwg_AEC_DISP_REP_MVBLOCK_REF_RCP_fields },	/* 159 */
-  { "AEC_DISP_REP_OPENING",	DWG_TYPE_AEC_DISP_REP_OPENING /*(746)*/,	_dwg_AEC_DISP_REP_OPENING_fields },	/* 160 */
-  { "AEC_DISP_REP_OPENING_MODEL",	DWG_TYPE_AEC_DISP_REP_OPENING_MODEL /*(747)*/,	_dwg_AEC_DISP_REP_OPENING_MODEL_fields },	/* 161 */
-  { "AEC_DISP_REP_POLYGON_MODEL",	DWG_TYPE_AEC_DISP_REP_POLYGON_MODEL /*(748)*/,	_dwg_AEC_DISP_REP_POLYGON_MODEL_fields },	/* 162 */
-  { "AEC_DISP_REP_POLYGON_TRUECOLOUR",	DWG_TYPE_AEC_DISP_REP_POLYGON_TRUECOLOUR /*(749)*/,	_dwg_AEC_DISP_REP_POLYGON_TRUECOLOUR_fields },	/* 163 */
-  { "AEC_DISP_REP_RAILING_MODEL",	DWG_TYPE_AEC_DISP_REP_RAILING_MODEL /*(750)*/,	_dwg_AEC_DISP_REP_RAILING_MODEL_fields },	/* 164 */
-  { "AEC_DISP_REP_RAILING_PLAN",	DWG_TYPE_AEC_DISP_REP_RAILING_PLAN /*(751)*/,	_dwg_AEC_DISP_REP_RAILING_PLAN_fields },	/* 165 */
-  { "AEC_DISP_REP_RAILING_PLAN_100",	DWG_TYPE_AEC_DISP_REP_RAILING_PLAN_100 /*(752)*/,	_dwg_AEC_DISP_REP_RAILING_PLAN_100_fields },	/* 166 */
-  { "AEC_DISP_REP_RAILING_PLAN_50",	DWG_TYPE_AEC_DISP_REP_RAILING_PLAN_50 /*(753)*/,	_dwg_AEC_DISP_REP_RAILING_PLAN_50_fields },	/* 167 */
-  { "AEC_DISP_REP_ROOFSLAB_MODEL",	DWG_TYPE_AEC_DISP_REP_ROOFSLAB_MODEL /*(757)*/,	_dwg_AEC_DISP_REP_ROOFSLAB_MODEL_fields },	/* 168 */
-  { "AEC_DISP_REP_ROOFSLAB_PLAN",	DWG_TYPE_AEC_DISP_REP_ROOFSLAB_PLAN /*(758)*/,	_dwg_AEC_DISP_REP_ROOFSLAB_PLAN_fields },	/* 169 */
-  { "AEC_DISP_REP_ROOF_MODEL",	DWG_TYPE_AEC_DISP_REP_ROOF_MODEL /*(754)*/,	_dwg_AEC_DISP_REP_ROOF_MODEL_fields },	/* 170 */
-  { "AEC_DISP_REP_ROOF_PLAN",	DWG_TYPE_AEC_DISP_REP_ROOF_PLAN /*(755)*/,	_dwg_AEC_DISP_REP_ROOF_PLAN_fields },	/* 171 */
-  { "AEC_DISP_REP_ROOF_RCP",	DWG_TYPE_AEC_DISP_REP_ROOF_RCP /*(756)*/,	_dwg_AEC_DISP_REP_ROOF_RCP_fields },	/* 172 */
-  { "AEC_DISP_REP_SCHEDULE_TABLE",	DWG_TYPE_AEC_DISP_REP_SCHEDULE_TABLE /*(759)*/,	_dwg_AEC_DISP_REP_SCHEDULE_TABLE_fields },	/* 173 */
-  { "AEC_DISP_REP_SET",	DWG_TYPE_AEC_DISP_REP_SET /*(760)*/,	_dwg_AEC_DISP_REP_SET_fields },	/* 174 */
-  { "AEC_DISP_REP_SLAB_MODEL",	DWG_TYPE_AEC_DISP_REP_SLAB_MODEL /*(761)*/,	_dwg_AEC_DISP_REP_SLAB_MODEL_fields },	/* 175 */
-  { "AEC_DISP_REP_SLAB_PLAN",	DWG_TYPE_AEC_DISP_REP_SLAB_PLAN /*(762)*/,	_dwg_AEC_DISP_REP_SLAB_PLAN_fields },	/* 176 */
-  { "AEC_DISP_REP_SLICE",	DWG_TYPE_AEC_DISP_REP_SLICE /*(763)*/,	_dwg_AEC_DISP_REP_SLICE_fields },	/* 177 */
-  { "AEC_DISP_REP_SPACE_DECOMPOSED",	DWG_TYPE_AEC_DISP_REP_SPACE_DECOMPOSED /*(764)*/,	_dwg_AEC_DISP_REP_SPACE_DECOMPOSED_fields },	/* 178 */
-  { "AEC_DISP_REP_SPACE_MODEL",	DWG_TYPE_AEC_DISP_REP_SPACE_MODEL /*(765)*/,	_dwg_AEC_DISP_REP_SPACE_MODEL_fields },	/* 179 */
-  { "AEC_DISP_REP_SPACE_PLAN",	DWG_TYPE_AEC_DISP_REP_SPACE_PLAN /*(766)*/,	_dwg_AEC_DISP_REP_SPACE_PLAN_fields },	/* 180 */
-  { "AEC_DISP_REP_SPACE_RCP",	DWG_TYPE_AEC_DISP_REP_SPACE_RCP /*(767)*/,	_dwg_AEC_DISP_REP_SPACE_RCP_fields },	/* 181 */
-  { "AEC_DISP_REP_SPACE_VOLUME",	DWG_TYPE_AEC_DISP_REP_SPACE_VOLUME /*(768)*/,	_dwg_AEC_DISP_REP_SPACE_VOLUME_fields },	/* 182 */
-  { "AEC_DISP_REP_STAIR_MODEL",	DWG_TYPE_AEC_DISP_REP_STAIR_MODEL /*(769)*/,	_dwg_AEC_DISP_REP_STAIR_MODEL_fields },	/* 183 */
-  { "AEC_DISP_REP_STAIR_PLAN",	DWG_TYPE_AEC_DISP_REP_STAIR_PLAN /*(770)*/,	_dwg_AEC_DISP_REP_STAIR_PLAN_fields },	/* 184 */
-  { "AEC_DISP_REP_STAIR_PLAN_100",	DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_100 /*(771)*/,	_dwg_AEC_DISP_REP_STAIR_PLAN_100_fields },	/* 185 */
-  { "AEC_DISP_REP_STAIR_PLAN_50",	DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_50 /*(772)*/,	_dwg_AEC_DISP_REP_STAIR_PLAN_50_fields },	/* 186 */
-  { "AEC_DISP_REP_STAIR_PLAN_OVERLAPPING",	DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING /*(773)*/,	_dwg_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING_fields },	/* 187 */
-  { "AEC_DISP_REP_STAIR_RCP",	DWG_TYPE_AEC_DISP_REP_STAIR_RCP /*(774)*/,	_dwg_AEC_DISP_REP_STAIR_RCP_fields },	/* 188 */
-  { "AEC_DISP_REP_WALL_GRAPH",	DWG_TYPE_AEC_DISP_REP_WALL_GRAPH /*(775)*/,	_dwg_AEC_DISP_REP_WALL_GRAPH_fields },	/* 189 */
-  { "AEC_DISP_REP_WALL_MODEL",	DWG_TYPE_AEC_DISP_REP_WALL_MODEL /*(776)*/,	_dwg_AEC_DISP_REP_WALL_MODEL_fields },	/* 190 */
-  { "AEC_DISP_REP_WALL_PLAN",	DWG_TYPE_AEC_DISP_REP_WALL_PLAN /*(777)*/,	_dwg_AEC_DISP_REP_WALL_PLAN_fields },	/* 191 */
-  { "AEC_DISP_REP_WALL_RCP",	DWG_TYPE_AEC_DISP_REP_WALL_RCP /*(778)*/,	_dwg_AEC_DISP_REP_WALL_RCP_fields },	/* 192 */
-  { "AEC_DISP_REP_WALL_SCHEM",	DWG_TYPE_AEC_DISP_REP_WALL_SCHEM /*(779)*/,	_dwg_AEC_DISP_REP_WALL_SCHEM_fields },	/* 193 */
-  { "AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN",	DWG_TYPE_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN /*(782)*/,	_dwg_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN_fields },	/* 194 */
-  { "AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL",	DWG_TYPE_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL /*(780)*/,	_dwg_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL_fields },	/* 195 */
-  { "AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN",	DWG_TYPE_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN /*(781)*/,	_dwg_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN_fields },	/* 196 */
-  { "AEC_DISP_REP_WINDOW_ELEV",	DWG_TYPE_AEC_DISP_REP_WINDOW_ELEV /*(783)*/,	_dwg_AEC_DISP_REP_WINDOW_ELEV_fields },	/* 197 */
-  { "AEC_DISP_REP_WINDOW_MODEL",	DWG_TYPE_AEC_DISP_REP_WINDOW_MODEL /*(784)*/,	_dwg_AEC_DISP_REP_WINDOW_MODEL_fields },	/* 198 */
-  { "AEC_DISP_REP_WINDOW_NOMINAL",	DWG_TYPE_AEC_DISP_REP_WINDOW_NOMINAL /*(785)*/,	_dwg_AEC_DISP_REP_WINDOW_NOMINAL_fields },	/* 199 */
-  { "AEC_DISP_REP_WINDOW_PLAN",	DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN /*(786)*/,	_dwg_AEC_DISP_REP_WINDOW_PLAN_fields },	/* 200 */
-  { "AEC_DISP_REP_WINDOW_PLAN_100",	DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN_100 /*(787)*/,	_dwg_AEC_DISP_REP_WINDOW_PLAN_100_fields },	/* 201 */
-  { "AEC_DISP_REP_WINDOW_PLAN_50",	DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN_50 /*(788)*/,	_dwg_AEC_DISP_REP_WINDOW_PLAN_50_fields },	/* 202 */
-  { "AEC_DISP_REP_WINDOW_RCP",	DWG_TYPE_AEC_DISP_REP_WINDOW_RCP /*(789)*/,	_dwg_AEC_DISP_REP_WINDOW_RCP_fields },	/* 203 */
-  { "AEC_DISP_REP_WINDOW_SILL_PLAN",	DWG_TYPE_AEC_DISP_REP_WINDOW_SILL_PLAN /*(790)*/,	_dwg_AEC_DISP_REP_WINDOW_SILL_PLAN_fields },	/* 204 */
-  { "AEC_DISP_REP_ZONE",	DWG_TYPE_AEC_DISP_REP_ZONE /*(791)*/,	_dwg_AEC_DISP_REP_ZONE_fields },	/* 205 */
-  { "AEC_DISP_ROPS_RAILING_PLAN_100",	DWG_TYPE_AEC_DISP_ROPS_RAILING_PLAN_100 /*(797)*/,	_dwg_AEC_DISP_ROPS_RAILING_PLAN_100_fields },	/* 206 */
-  { "AEC_DISP_ROPS_RAILING_PLAN_50",	DWG_TYPE_AEC_DISP_ROPS_RAILING_PLAN_50 /*(798)*/,	_dwg_AEC_DISP_ROPS_RAILING_PLAN_50_fields },	/* 207 */
-  { "AEC_DISP_ROPS_STAIR_PLAN_100",	DWG_TYPE_AEC_DISP_ROPS_STAIR_PLAN_100 /*(799)*/,	_dwg_AEC_DISP_ROPS_STAIR_PLAN_100_fields },	/* 208 */
-  { "AEC_DISP_ROPS_STAIR_PLAN_50",	DWG_TYPE_AEC_DISP_ROPS_STAIR_PLAN_50 /*(800)*/,	_dwg_AEC_DISP_ROPS_STAIR_PLAN_50_fields },	/* 209 */
+  { "AEC_DISP_REP_BDG_ELEVLINE_RCP",	DWG_TYPE_AEC_DISP_REP_BDG_ELEVLINE_RCP /*(698)*/,	NULL },	/* 112 */
+  { "AEC_DISP_REP_BDG_SECTIONLINE_MODEL",	DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_MODEL /*(699)*/,	NULL },	/* 113 */
+  { "AEC_DISP_REP_BDG_SECTIONLINE_PLAN",	DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_PLAN /*(700)*/,	NULL },	/* 114 */
+  { "AEC_DISP_REP_BDG_SECTIONLINE_RCP",	DWG_TYPE_AEC_DISP_REP_BDG_SECTIONLINE_RCP /*(701)*/,	NULL },	/* 115 */
+  { "AEC_DISP_REP_BDG_SECTION_MODEL",	DWG_TYPE_AEC_DISP_REP_BDG_SECTION_MODEL /*(702)*/,	NULL },	/* 116 */
+  { "AEC_DISP_REP_BDG_SECTION_SUBDIV",	DWG_TYPE_AEC_DISP_REP_BDG_SECTION_SUBDIV /*(703)*/,	NULL },	/* 117 */
+  { "AEC_DISP_REP_CEILING_GRID",	DWG_TYPE_AEC_DISP_REP_CEILING_GRID /*(704)*/,	NULL },	/* 118 */
+  { "AEC_DISP_REP_CEILING_GRID_MODEL",	DWG_TYPE_AEC_DISP_REP_CEILING_GRID_MODEL /*(705)*/,	NULL },	/* 119 */
+  { "AEC_DISP_REP_CEILING_GRID_RCP",	DWG_TYPE_AEC_DISP_REP_CEILING_GRID_RCP /*(706)*/,	NULL },	/* 120 */
+  { "AEC_DISP_REP_CLIP_VOLUME_MODEL",	DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_MODEL /*(707)*/,	NULL },	/* 121 */
+  { "AEC_DISP_REP_CLIP_VOLUME_PLAN",	DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_PLAN /*(708)*/,	NULL },	/* 122 */
+  { "AEC_DISP_REP_CLIP_VOLUME_RESULT",	DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_RESULT /*(709)*/,	NULL },	/* 123 */
+  { "AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV",	DWG_TYPE_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV /*(710)*/,	NULL },	/* 124 */
+  { "AEC_DISP_REP_COLUMN_GRID",	DWG_TYPE_AEC_DISP_REP_COLUMN_GRID /*(711)*/,	NULL },	/* 125 */
+  { "AEC_DISP_REP_COLUMN_GRID_MODEL",	DWG_TYPE_AEC_DISP_REP_COLUMN_GRID_MODEL /*(712)*/,	NULL },	/* 126 */
+  { "AEC_DISP_REP_COLUMN_GRID_RCP",	DWG_TYPE_AEC_DISP_REP_COLUMN_GRID_RCP /*(713)*/,	NULL },	/* 127 */
+  { "AEC_DISP_REP_CONFIG",	DWG_TYPE_AEC_DISP_REP_CONFIG /*(714)*/,	NULL },	/* 128 */
+  { "AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL",	DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL /*(715)*/,	NULL },	/* 129 */
+  { "AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN",	DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN /*(716)*/,	NULL },	/* 130 */
+  { "AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL",	DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL /*(717)*/,	NULL },	/* 131 */
+  { "AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN",	DWG_TYPE_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN /*(718)*/,	NULL },	/* 132 */
+  { "AEC_DISP_REP_DISPLAYTHEME",	DWG_TYPE_AEC_DISP_REP_DISPLAYTHEME /*(719)*/,	NULL },	/* 133 */
+  { "AEC_DISP_REP_DOOR_ELEV",	DWG_TYPE_AEC_DISP_REP_DOOR_ELEV /*(720)*/,	NULL },	/* 134 */
+  { "AEC_DISP_REP_DOOR_MODEL",	DWG_TYPE_AEC_DISP_REP_DOOR_MODEL /*(721)*/,	NULL },	/* 135 */
+  { "AEC_DISP_REP_DOOR_NOMINAL",	DWG_TYPE_AEC_DISP_REP_DOOR_NOMINAL /*(722)*/,	NULL },	/* 136 */
+  { "AEC_DISP_REP_DOOR_PLAN",	DWG_TYPE_AEC_DISP_REP_DOOR_PLAN /*(723)*/,	NULL },	/* 137 */
+  { "AEC_DISP_REP_DOOR_PLAN_50",	DWG_TYPE_AEC_DISP_REP_DOOR_PLAN_50 /*(724)*/,	NULL },	/* 138 */
+  { "AEC_DISP_REP_DOOR_PLAN_HEKTO",	DWG_TYPE_AEC_DISP_REP_DOOR_PLAN_HEKTO /*(725)*/,	NULL },	/* 139 */
+  { "AEC_DISP_REP_DOOR_RCP",	DWG_TYPE_AEC_DISP_REP_DOOR_RCP /*(726)*/,	NULL },	/* 140 */
+  { "AEC_DISP_REP_DOOR_THRESHOLD_PLAN",	DWG_TYPE_AEC_DISP_REP_DOOR_THRESHOLD_PLAN /*(727)*/,	NULL },	/* 141 */
+  { "AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN",	DWG_TYPE_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN /*(728)*/,	NULL },	/* 142 */
+  { "AEC_DISP_REP_EDITINPLACEPROFILE",	DWG_TYPE_AEC_DISP_REP_EDITINPLACEPROFILE /*(729)*/,	NULL },	/* 143 */
+  { "AEC_DISP_REP_ENT_REF",	DWG_TYPE_AEC_DISP_REP_ENT_REF /*(730)*/,	NULL },	/* 144 */
+  { "AEC_DISP_REP_LAYOUT_CURVE",	DWG_TYPE_AEC_DISP_REP_LAYOUT_CURVE /*(731)*/,	NULL },	/* 145 */
+  { "AEC_DISP_REP_LAYOUT_GRID2D",	DWG_TYPE_AEC_DISP_REP_LAYOUT_GRID2D /*(732)*/,	NULL },	/* 146 */
+  { "AEC_DISP_REP_LAYOUT_GRID3D",	DWG_TYPE_AEC_DISP_REP_LAYOUT_GRID3D /*(733)*/,	NULL },	/* 147 */
+  { "AEC_DISP_REP_MASKBLOCK_REF",	DWG_TYPE_AEC_DISP_REP_MASKBLOCK_REF /*(734)*/,	NULL },	/* 148 */
+  { "AEC_DISP_REP_MASKBLOCK_REF_RCP",	DWG_TYPE_AEC_DISP_REP_MASKBLOCK_REF_RCP /*(735)*/,	NULL },	/* 149 */
+  { "AEC_DISP_REP_MASS_ELEM_MODEL",	DWG_TYPE_AEC_DISP_REP_MASS_ELEM_MODEL /*(736)*/,	NULL },	/* 150 */
+  { "AEC_DISP_REP_MASS_ELEM_RCP",	DWG_TYPE_AEC_DISP_REP_MASS_ELEM_RCP /*(737)*/,	NULL },	/* 151 */
+  { "AEC_DISP_REP_MASS_ELEM_SCHEM",	DWG_TYPE_AEC_DISP_REP_MASS_ELEM_SCHEM /*(738)*/,	NULL },	/* 152 */
+  { "AEC_DISP_REP_MASS_GROUP_MODEL",	DWG_TYPE_AEC_DISP_REP_MASS_GROUP_MODEL /*(739)*/,	NULL },	/* 153 */
+  { "AEC_DISP_REP_MASS_GROUP_PLAN",	DWG_TYPE_AEC_DISP_REP_MASS_GROUP_PLAN /*(740)*/,	NULL },	/* 154 */
+  { "AEC_DISP_REP_MASS_GROUP_RCP",	DWG_TYPE_AEC_DISP_REP_MASS_GROUP_RCP /*(741)*/,	NULL },	/* 155 */
+  { "AEC_DISP_REP_MATERIAL",	DWG_TYPE_AEC_DISP_REP_MATERIAL /*(742)*/,	NULL },	/* 156 */
+  { "AEC_DISP_REP_MVBLOCK_REF",	DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF /*(743)*/,	NULL },	/* 157 */
+  { "AEC_DISP_REP_MVBLOCK_REF_MODEL",	DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF_MODEL /*(744)*/,	NULL },	/* 158 */
+  { "AEC_DISP_REP_MVBLOCK_REF_RCP",	DWG_TYPE_AEC_DISP_REP_MVBLOCK_REF_RCP /*(745)*/,	NULL },	/* 159 */
+  { "AEC_DISP_REP_OPENING",	DWG_TYPE_AEC_DISP_REP_OPENING /*(746)*/,	NULL },	/* 160 */
+  { "AEC_DISP_REP_OPENING_MODEL",	DWG_TYPE_AEC_DISP_REP_OPENING_MODEL /*(747)*/,	NULL },	/* 161 */
+  { "AEC_DISP_REP_POLYGON_MODEL",	DWG_TYPE_AEC_DISP_REP_POLYGON_MODEL /*(748)*/,	NULL },	/* 162 */
+  { "AEC_DISP_REP_POLYGON_TRUECOLOUR",	DWG_TYPE_AEC_DISP_REP_POLYGON_TRUECOLOUR /*(749)*/,	NULL },	/* 163 */
+  { "AEC_DISP_REP_RAILING_MODEL",	DWG_TYPE_AEC_DISP_REP_RAILING_MODEL /*(750)*/,	NULL },	/* 164 */
+  { "AEC_DISP_REP_RAILING_PLAN",	DWG_TYPE_AEC_DISP_REP_RAILING_PLAN /*(751)*/,	NULL },	/* 165 */
+  { "AEC_DISP_REP_RAILING_PLAN_100",	DWG_TYPE_AEC_DISP_REP_RAILING_PLAN_100 /*(752)*/,	NULL },	/* 166 */
+  { "AEC_DISP_REP_RAILING_PLAN_50",	DWG_TYPE_AEC_DISP_REP_RAILING_PLAN_50 /*(753)*/,	NULL },	/* 167 */
+  { "AEC_DISP_REP_ROOFSLAB_MODEL",	DWG_TYPE_AEC_DISP_REP_ROOFSLAB_MODEL /*(757)*/,	NULL },	/* 168 */
+  { "AEC_DISP_REP_ROOFSLAB_PLAN",	DWG_TYPE_AEC_DISP_REP_ROOFSLAB_PLAN /*(758)*/,	NULL },	/* 169 */
+  { "AEC_DISP_REP_ROOF_MODEL",	DWG_TYPE_AEC_DISP_REP_ROOF_MODEL /*(754)*/,	NULL },	/* 170 */
+  { "AEC_DISP_REP_ROOF_PLAN",	DWG_TYPE_AEC_DISP_REP_ROOF_PLAN /*(755)*/,	NULL },	/* 171 */
+  { "AEC_DISP_REP_ROOF_RCP",	DWG_TYPE_AEC_DISP_REP_ROOF_RCP /*(756)*/,	NULL },	/* 172 */
+  { "AEC_DISP_REP_SCHEDULE_TABLE",	DWG_TYPE_AEC_DISP_REP_SCHEDULE_TABLE /*(759)*/,	NULL },	/* 173 */
+  { "AEC_DISP_REP_SET",	DWG_TYPE_AEC_DISP_REP_SET /*(760)*/,	NULL },	/* 174 */
+  { "AEC_DISP_REP_SLAB_MODEL",	DWG_TYPE_AEC_DISP_REP_SLAB_MODEL /*(761)*/,	NULL },	/* 175 */
+  { "AEC_DISP_REP_SLAB_PLAN",	DWG_TYPE_AEC_DISP_REP_SLAB_PLAN /*(762)*/,	NULL },	/* 176 */
+  { "AEC_DISP_REP_SLICE",	DWG_TYPE_AEC_DISP_REP_SLICE /*(763)*/,	NULL },	/* 177 */
+  { "AEC_DISP_REP_SPACE_DECOMPOSED",	DWG_TYPE_AEC_DISP_REP_SPACE_DECOMPOSED /*(764)*/,	NULL },	/* 178 */
+  { "AEC_DISP_REP_SPACE_MODEL",	DWG_TYPE_AEC_DISP_REP_SPACE_MODEL /*(765)*/,	NULL },	/* 179 */
+  { "AEC_DISP_REP_SPACE_PLAN",	DWG_TYPE_AEC_DISP_REP_SPACE_PLAN /*(766)*/,	NULL },	/* 180 */
+  { "AEC_DISP_REP_SPACE_RCP",	DWG_TYPE_AEC_DISP_REP_SPACE_RCP /*(767)*/,	NULL },	/* 181 */
+  { "AEC_DISP_REP_SPACE_VOLUME",	DWG_TYPE_AEC_DISP_REP_SPACE_VOLUME /*(768)*/,	NULL },	/* 182 */
+  { "AEC_DISP_REP_STAIR_MODEL",	DWG_TYPE_AEC_DISP_REP_STAIR_MODEL /*(769)*/,	NULL },	/* 183 */
+  { "AEC_DISP_REP_STAIR_PLAN",	DWG_TYPE_AEC_DISP_REP_STAIR_PLAN /*(770)*/,	NULL },	/* 184 */
+  { "AEC_DISP_REP_STAIR_PLAN_100",	DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_100 /*(771)*/,	NULL },	/* 185 */
+  { "AEC_DISP_REP_STAIR_PLAN_50",	DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_50 /*(772)*/,	NULL },	/* 186 */
+  { "AEC_DISP_REP_STAIR_PLAN_OVERLAPPING",	DWG_TYPE_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING /*(773)*/,	NULL },	/* 187 */
+  { "AEC_DISP_REP_STAIR_RCP",	DWG_TYPE_AEC_DISP_REP_STAIR_RCP /*(774)*/,	NULL },	/* 188 */
+  { "AEC_DISP_REP_WALL_GRAPH",	DWG_TYPE_AEC_DISP_REP_WALL_GRAPH /*(775)*/,	NULL },	/* 189 */
+  { "AEC_DISP_REP_WALL_MODEL",	DWG_TYPE_AEC_DISP_REP_WALL_MODEL /*(776)*/,	NULL },	/* 190 */
+  { "AEC_DISP_REP_WALL_PLAN",	DWG_TYPE_AEC_DISP_REP_WALL_PLAN /*(777)*/,	NULL },	/* 191 */
+  { "AEC_DISP_REP_WALL_RCP",	DWG_TYPE_AEC_DISP_REP_WALL_RCP /*(778)*/,	NULL },	/* 192 */
+  { "AEC_DISP_REP_WALL_SCHEM",	DWG_TYPE_AEC_DISP_REP_WALL_SCHEM /*(779)*/,	NULL },	/* 193 */
+  { "AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN",	DWG_TYPE_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN /*(782)*/,	NULL },	/* 194 */
+  { "AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL",	DWG_TYPE_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL /*(780)*/,	NULL },	/* 195 */
+  { "AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN",	DWG_TYPE_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN /*(781)*/,	NULL },	/* 196 */
+  { "AEC_DISP_REP_WINDOW_ELEV",	DWG_TYPE_AEC_DISP_REP_WINDOW_ELEV /*(783)*/,	NULL },	/* 197 */
+  { "AEC_DISP_REP_WINDOW_MODEL",	DWG_TYPE_AEC_DISP_REP_WINDOW_MODEL /*(784)*/,	NULL },	/* 198 */
+  { "AEC_DISP_REP_WINDOW_NOMINAL",	DWG_TYPE_AEC_DISP_REP_WINDOW_NOMINAL /*(785)*/,	NULL },	/* 199 */
+  { "AEC_DISP_REP_WINDOW_PLAN",	DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN /*(786)*/,	NULL },	/* 200 */
+  { "AEC_DISP_REP_WINDOW_PLAN_100",	DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN_100 /*(787)*/,	NULL },	/* 201 */
+  { "AEC_DISP_REP_WINDOW_PLAN_50",	DWG_TYPE_AEC_DISP_REP_WINDOW_PLAN_50 /*(788)*/,	NULL },	/* 202 */
+  { "AEC_DISP_REP_WINDOW_RCP",	DWG_TYPE_AEC_DISP_REP_WINDOW_RCP /*(789)*/,	NULL },	/* 203 */
+  { "AEC_DISP_REP_WINDOW_SILL_PLAN",	DWG_TYPE_AEC_DISP_REP_WINDOW_SILL_PLAN /*(790)*/,	NULL },	/* 204 */
+  { "AEC_DISP_REP_ZONE",	DWG_TYPE_AEC_DISP_REP_ZONE /*(791)*/,	NULL },	/* 205 */
+  { "AEC_DISP_ROPS_RAILING_PLAN_100",	DWG_TYPE_AEC_DISP_ROPS_RAILING_PLAN_100 /*(797)*/,	NULL },	/* 206 */
+  { "AEC_DISP_ROPS_RAILING_PLAN_50",	DWG_TYPE_AEC_DISP_ROPS_RAILING_PLAN_50 /*(798)*/,	NULL },	/* 207 */
+  { "AEC_DISP_ROPS_STAIR_PLAN_100",	DWG_TYPE_AEC_DISP_ROPS_STAIR_PLAN_100 /*(799)*/,	NULL },	/* 208 */
+  { "AEC_DISP_ROPS_STAIR_PLAN_50",	DWG_TYPE_AEC_DISP_ROPS_STAIR_PLAN_50 /*(800)*/,	NULL },	/* 209 */
   { "AEC_MVBLOCK_DEF",	DWG_TYPE_AEC_MVBLOCK_DEF /*(801)*/,	NULL },	/* 210 */
   { "AEC_MVBLOCK_REF",	DWG_TYPE_AEC_MVBLOCK_REF /*(802)*/,	NULL },	/* 211 */
   { "AEC_NOTIFICATION_TRACKER",	DWG_TYPE_AEC_NOTIFICATION_TRACKER /*(803)*/,	NULL },	/* 212 */
@@ -9028,7 +7600,7 @@ static const struct _name_type_fields dwg_name_types[] = {
   { "AEC_POLYGON_STYLE",	DWG_TYPE_AEC_POLYGON_STYLE /*(805)*/,	NULL },	/* 214 */
   { "AEC_REFEDIT_STATUS_TRACKER",	DWG_TYPE_AEC_REFEDIT_STATUS_TRACKER /*(806)*/,	NULL },	/* 215 */
   { "AEC_VARS_ARCHBASE",	DWG_TYPE_AEC_VARS_ARCHBASE /*(807)*/,	NULL },	/* 216 */
-  { "AEC_VARS_DWG_SETUP",	DWG_TYPE_AEC_VARS_DWG_SETUP /*(808)*/,	_dwg_AEC_VARS_DWG_SETUP_fields },	/* 217 */
+  { "AEC_VARS_DWG_SETUP",	DWG_TYPE_AEC_VARS_DWG_SETUP /*(808)*/,	NULL },	/* 217 */
   { "AEC_VARS_MUNICH",	DWG_TYPE_AEC_VARS_MUNICH /*(809)*/,	NULL },	/* 218 */
   { "AEC_VARS_STRUCTUREBASE",	DWG_TYPE_AEC_VARS_STRUCTUREBASE /*(810)*/,	NULL },	/* 219 */
   { "ANNOTSCALEOBJECTCONTEXTDATA",	DWG_TYPE_ANNOTSCALEOBJECTCONTEXTDATA /*(514)*/,	_dwg_ANNOTSCALEOBJECTCONTEXTDATA_fields },	/* 220 */

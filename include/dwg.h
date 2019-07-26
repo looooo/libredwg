@@ -5935,6 +5935,13 @@ typedef struct _dwg_object_AEC_DISP_REP_BDG_ELEVLINE_MODEL
 
 } Dwg_Object_AEC_DISP_REP_BDG_ELEVLINE_MODEL;
 
+typedef struct _dwg_object_AEC_DISP_REP_BDG_ELEVLINE_PLAN
+{
+  struct _dwg_object_object *parent;
+  /* DXF 90, 91, 280, 281 */
+
+} Dwg_Object_AEC_DISP_REP_BDG_ELEVLINE_PLAN;
+
 typedef struct _dwg_object_AEC_DISP_REP_BDG_ELEVLINE_RCP
 {
   struct _dwg_object_object *parent;
@@ -6653,6 +6660,55 @@ typedef struct _dwg_object_AEC_DISP_ROPS_STAIR_PLAN_50
 
 } Dwg_Object_AEC_DISP_ROPS_STAIR_PLAN_50;
 
+typedef struct _dwg_object_AEC_MVBLOCK_DEF
+{
+  struct _dwg_object_object *parent;
+  /* DXF 90, 91, 280, 281 */
+
+} Dwg_Object_AEC_MVBLOCK_DEF;
+
+typedef struct _dwg_object_AEC_MVBLOCK_REF
+{
+  struct _dwg_object_object *parent;
+  /* DXF 90, 91, 280, 281 */
+
+} Dwg_Object_AEC_MVBLOCK_REF;
+
+typedef struct _dwg_object_AEC_NOTIFICATION_TRACKER
+{
+  struct _dwg_object_object *parent;
+  /* DXF 90, 91, 280, 281 */
+
+} Dwg_Object_AEC_NOTIFICATION_TRACKER;
+
+typedef struct _dwg_object_AEC_POLYGON
+{
+  struct _dwg_object_object *parent;
+  /* DXF 90, 91, 280, 281 */
+
+} Dwg_Object_AEC_POLYGON;
+
+typedef struct _dwg_object_AEC_POLYGON_STYLE
+{
+  struct _dwg_object_object *parent;
+  /* DXF 90, 91, 280, 281 */
+
+} Dwg_Object_AEC_POLYGON_STYLE;
+
+typedef struct _dwg_object_REFEDIT_STATUS_TRACKER
+{
+  struct _dwg_object_object *parent;
+  /* DXF 90, 91, 280, 281 */
+
+} Dwg_Object_AEC_REFEDIT_STATUS_TRACKER;
+
+typedef struct _dwg_object_AEC_VARS_ARCHBASE
+{
+  struct _dwg_object_object *parent;
+  /* DXF 90, 91, 280, 281 */
+
+} Dwg_Object_AEC_VARS_ARCHBASE;
+
 typedef struct _dwg_object_AEC_VARS_DWG_SETUP
 {
   struct _dwg_object_object *parent;
@@ -7061,6 +7117,7 @@ typedef struct _dwg_object_object
     Dwg_Object_XRECORD *XRECORD;
     //TODO Dwg_Object_XREFPANELOBJECT *XREFPANELOBJECT;
 
+#ifdef DEBUG_CLASSES
     Dwg_Object_AEC_AECDBDISPREPBDGELEVLINEPLAN100 *AEC_AECDBDISPREPBDGELEVLINEPLAN100;
     Dwg_Object_AEC_AECDBDISPREPBDGELEVLINEPLAN50 *AEC_AECDBDISPREPBDGELEVLINEPLAN50;
     Dwg_Object_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100 *AEC_AECDBDISPREPBDGSECTIONLINEPLAN100;
@@ -7089,6 +7146,8 @@ typedef struct _dwg_object_object
     Dwg_Object_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50 *AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50;
     Dwg_Object_AEC_AECDBDISPREPZONE100 *AEC_AECDBDISPREPZONE100;
     Dwg_Object_AEC_AECDBDISPREPZONE50 *AEC_AECDBDISPREPZONE50;
+    Dwg_Object_AEC_CLASSIFICATION_DEF *AEC_CLASSIFICATION_DEF;
+    Dwg_Object_AEC_CLASSIFICATION_SYSTEM_DEF *AEC_CLASSIFICATION_SYSTEM_DEF;
     Dwg_Object_AEC_DB_DISP_REP_DIM_GROUP_PLAN100 *AEC_DB_DISP_REP_DIM_GROUP_PLAN100;
     Dwg_Object_AEC_DB_DISP_REP_DIM_GROUP_PLAN50 *AEC_DB_DISP_REP_DIM_GROUP_PLAN50;
     Dwg_Object_AEC_DB_DISP_REP_DIM_GROUP_PLAN *AEC_DB_DISP_REP_DIM_GROUP_PLAN;
@@ -7161,6 +7220,7 @@ typedef struct _dwg_object_object
     Dwg_Object_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT *AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT;
     Dwg_Object_AEC_DISP_REP_ANCHOR_TAG_TO_ENT *AEC_DISP_REP_ANCHOR_TAG_TO_ENT;
     Dwg_Object_AEC_DISP_REP_BDG_ELEVLINE_MODEL *AEC_DISP_REP_BDG_ELEVLINE_MODEL;
+    Dwg_Object_AEC_DISP_REP_BDG_ELEVLINE_PLAN *AEC_DISP_REP_BDG_ELEVLINE_PLAN;
     Dwg_Object_AEC_DISP_REP_BDG_ELEVLINE_RCP *AEC_DISP_REP_BDG_ELEVLINE_RCP;
     Dwg_Object_AEC_DISP_REP_BDG_SECTIONLINE_MODEL *AEC_DISP_REP_BDG_SECTIONLINE_MODEL;
     Dwg_Object_AEC_DISP_REP_BDG_SECTIONLINE_PLAN *AEC_DISP_REP_BDG_SECTIONLINE_PLAN;
@@ -7264,7 +7324,17 @@ typedef struct _dwg_object_object
     Dwg_Object_AEC_DISP_ROPS_RAILING_PLAN_50 *AEC_DISP_ROPS_RAILING_PLAN_50;
     Dwg_Object_AEC_DISP_ROPS_STAIR_PLAN_100 *AEC_DISP_ROPS_STAIR_PLAN_100;
     Dwg_Object_AEC_DISP_ROPS_STAIR_PLAN_50 *AEC_DISP_ROPS_STAIR_PLAN_50;
+    Dwg_Object_AEC_MVBLOCK_DEF *AEC_MVBLOCK_DEF;
+    Dwg_Object_AEC_MVBLOCK_REF *AEC_MVBLOCK_REF;
+    Dwg_Object_AEC_NOTIFICATION_TRACKER *AEC_NOTIFICATION_TRACKER;
+    Dwg_Object_AEC_POLYGON *AEC_POLYGON;
+    Dwg_Object_AEC_POLYGON_STYLE *AEC_POLYGON_STYLE;
+    Dwg_Object_AEC_REFEDIT_STATUS_TRACKER *AEC_REFEDIT_STATUS_TRACKER;
+    Dwg_Object_AEC_VARS_ARCHBASE *AEC_VARS_ARCHBASE;
     Dwg_Object_AEC_VARS_DWG_SETUP *AEC_VARS_DWG_SETUP;
+    Dwg_Object_AEC_VARS_MUNICH *AEC_VARS_MUNICH;
+    Dwg_Object_AEC_VARS_STRUCTUREBASE *AEC_VARS_STRUCTUREBASE;
+#endif /* DEBUG_CLASSES */
 
     Dwg_Object_UNKNOWN_OBJ *UNKNOWN_OBJ;
   } tio;
@@ -7982,6 +8052,223 @@ EXPORT int dwg_add_TABLE (Dwg_Object *obj);
 EXPORT int dwg_add_TABLECONTENT (Dwg_Object *obj);
 EXPORT int dwg_add_TABLEGEOMETRY (Dwg_Object *obj);
 //EXPORT int dwg_add_XREFPANELOBJECT (Dwg_Object *obj);
+
+EXPORT int dwg_add_AEC_AECDBDISPREPBDGELEVLINEPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPBDGELEVLINEPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPBDGSECTIONLINEPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPBDGSECTIONLINEPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPCEILINGGRIDPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPCEILINGGRIDPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPCOLUMNGRIDPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPCOLUMNGRIDPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPCURTAINWALLLAYOUTPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPCURTAINWALLUNITPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPCURTAINWALLUNITPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPMVBLOCKREFPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPMVBLOCKREFPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPROOFPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPROOFPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPROOFSLABPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPROOFSLABPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPSLABPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPSLABPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPSPACEPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPSPACEPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPWALLPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPWALLPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPWINDOWASSEMBLYPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPZONE100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_AECDBDISPREPZONE50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_CLASSIFICATION_DEF (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_CLASSIFICATION_SYSTEM_DEF (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DB_DISP_REP_DIM_GROUP_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DB_DISP_REP_DIM_GROUP_PLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DB_DISP_REP_DIM_GROUP_PLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_2D_SECTION (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_CLIP_VOLUME (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_CLIP_VOLUME_RESULT (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_DIM (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_DISPLAYTHEME (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_DOOR (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_DOOR_NOMINAL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_DOOR_PLAN_100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_DOOR_PLAN_50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_DOOR_THRESHOLD_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_DOOR_THRESHOLD_SYMBOL_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_EDITINPLACEPROFILE_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_ENT (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_ENT_REF (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_GRID_ASSEMBLY_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_GRID_ASSEMBLY_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_LAYOUT_CURVE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_LAYOUT_GRID2D (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_LAYOUT_GRID3D (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_MASKBLOCK (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_MASS_ELEM_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_MASS_GROUP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_MATERIAL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_OPENING (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_POLYGON_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_POLYGON_TRUECOLOUR (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_RAILING_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_RAILING_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_ROOF (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_ROOFSLAB (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_ROOFSLAB_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_SCHEDULE_TABLE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_SLAB (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_SLAB_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_SLICE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_SPACE_DECOMPOSED (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_SPACE_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_SPACE_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_STAIR_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_STAIR_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_STAIR_PLAN_OVERLAPPING (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_WALL_GRAPH (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_WALL_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_WALL_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_WALL_SCHEM (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_WINDOW (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_WINDOW_ASSEMBLY_SILL_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_WINDOW_NOMINAL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_WINDOW_PLAN_100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_WINDOW_PLAN_50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_WINDOW_SILL_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_PROPS_ZONE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_2D_SECTION (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPREPAECDBDISPREPMASSELEMPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPREPAECDBDISPREPMASSELEMPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPREPAECDBDISPREPMASSGROUPPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPREPAECDBDISPREPOPENINGPLAN100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPREPAECDBDISPREPOPENINGPLAN50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPREPAECDBDISPREPOPENINGPLANREFLECTED (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPREPAECDBDISPREPOPENINGSILLPLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ANCHOR (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ANCHOR_BUB_TO_GRID (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ANCHOR_BUB_TO_GRID_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ANCHOR_ENT_TO_NODE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ANCHOR_EXT_TAG_TO_ENT (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ANCHOR_TAG_TO_ENT (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_BDG_ELEVLINE_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_BDG_ELEVLINE_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_BDG_ELEVLINE_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_BDG_SECTIONLINE_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_BDG_SECTIONLINE_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_BDG_SECTIONLINE_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_BDG_SECTION_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_BDG_SECTION_SUBDIV (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CEILING_GRID (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CEILING_GRID_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CEILING_GRID_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CLIP_VOLUME_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CLIP_VOLUME_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CLIP_VOLUME_RESULT (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CLIP_VOLUME_RESULT_SUBDIV (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_COLUMN_GRID (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_COLUMN_GRID_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_COLUMN_GRID_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CONFIG (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CURTAIN_WALL_LAYOUT_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CURTAIN_WALL_UNIT_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_CURTAIN_WALL_UNIT_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_DISPLAYTHEME (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_DOOR_ELEV (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_DOOR_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_DOOR_NOMINAL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_DOOR_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_DOOR_PLAN_50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_DOOR_PLAN_HEKTO (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_DOOR_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_DOOR_THRESHOLD_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_DOOR_THRESHOLD_SYMBOL_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_EDITINPLACEPROFILE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ENT_REF (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_LAYOUT_CURVE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_LAYOUT_GRID2D (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_LAYOUT_GRID3D (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MASKBLOCK_REF (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MASKBLOCK_REF_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MASS_ELEM_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MASS_ELEM_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MASS_ELEM_SCHEM (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MASS_GROUP_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MASS_GROUP_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MASS_GROUP_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MATERIAL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MVBLOCK_REF (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MVBLOCK_REF_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_MVBLOCK_REF_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_OPENING (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_OPENING_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_POLYGON_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_POLYGON_TRUECOLOUR (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_RAILING_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_RAILING_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_RAILING_PLAN_100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_RAILING_PLAN_50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ROOF_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ROOF_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ROOF_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ROOFSLAB_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ROOFSLAB_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_SCHEDULE_TABLE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_SET (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_SLAB_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_SLAB_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_SLICE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_SPACE_DECOMPOSED (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_SPACE_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_SPACE_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_SPACE_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_SPACE_VOLUME (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_STAIR_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_STAIR_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_STAIR_PLAN_100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_STAIR_PLAN_50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_STAIR_PLAN_OVERLAPPING (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_STAIR_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WALL_GRAPH (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WALL_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WALL_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WALL_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WALL_SCHEM (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOW_ASSEMBLY_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOW_ASSEMBLY_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOWASSEMBLY_SILL_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOW_ELEV (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOW_MODEL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOW_NOMINAL (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOW_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOW_PLAN_100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOW_PLAN_50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOW_RCP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_WINDOW_SILL_PLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_REP_ZONE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPROPSMASSELEMPLANCOMMON (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPROPSMASSGROUPPLANCOMMON (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPROPSOPENINGPLANCOMMON (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPROPSOPENINGPLANCOMMONHATCHED (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISPROPSOPENINGSILLPLAN (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_ROPS_RAILING_PLAN_100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_ROPS_RAILING_PLAN_50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_ROPS_STAIR_PLAN_100 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_DISP_ROPS_STAIR_PLAN_50 (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_MVBLOCK_DEF (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_MVBLOCK_REF (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_NOTIFICATION_TRACKER (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_POLYGON (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_POLYGON_STYLE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_REFEDIT_STATUS_TRACKER (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_VARS_ARCHBASE (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_VARS_DWG_SETUP (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_VARS_MUNICH (Dwg_Object *obj);
+EXPORT int dwg_add_AEC_VARS_STRUCTUREBASE (Dwg_Object *obj);
 
 #endif /* DEBUG_CLASSES */
 
