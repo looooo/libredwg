@@ -117,7 +117,8 @@ bit_read_B (Bit_Chain *dat)
   if (dat->byte >= dat->size)
     {
       loglevel = dat->opts & 0xf;
-      LOG_ERROR ("%s buffer overflow at %lu", __FUNCTION__, dat->byte)
+      LOG_ERROR ("%s buffer overflow at %lu, size %lu", __FUNCTION__,
+                 dat->byte, dat->size)
       return 0;
     }
   byte = dat->chain[dat->byte];
@@ -154,7 +155,8 @@ bit_read_BB (Bit_Chain *dat)
   if (dat->byte >= dat->size)
     {
       loglevel = dat->opts & 0xf;
-      LOG_ERROR ("%s buffer overflow at %lu", __FUNCTION__, dat->byte)
+      LOG_ERROR ("%s buffer overflow at pos %lu, size %lu", __FUNCTION__,
+                 dat->byte, dat->size)
       return 0;
     }
   byte = dat->chain[dat->byte];
@@ -290,7 +292,8 @@ bit_read_RC (Bit_Chain *dat)
   if (dat->byte >= dat->size)
     {
       loglevel = dat->opts & 0xf;
-      LOG_ERROR ("%s buffer overflow at %lu", __FUNCTION__, dat->byte)
+      LOG_ERROR ("%s buffer overflow at pos %lu, size %lu", __FUNCTION__,
+                 dat->byte, dat->size)
       return 0;
     }
   byte = dat->chain[dat->byte];
@@ -1130,6 +1133,12 @@ bit_read_H (Bit_Chain *restrict dat, Dwg_Handle *restrict handle)
   unsigned char *restrict val;
   int i;
 
+  if (dat->byte >= dat->size)
+    {
+      loglevel = dat->opts & 0xf;
+      LOG_ERROR ("buffer overflow at pos %lu, size %lu", dat->byte, dat->size)
+      return DWG_ERR_INVALIDHANDLE;
+    }
   handle->code = bit_read_RC (dat);
   handle->size = handle->code & 0x0f;
   handle->code = (handle->code & 0xf0) >> 4;
